@@ -40,7 +40,7 @@
     "model_id": "meta-llama_Llama-3.2-1B",
     "organization": "meta-llama",
     "source": "huggingface",
-    "compute_flops": 4e+19,
+    "compute_flops": 1.2e+20,
     "risk_score": 0.6,
     "red_teamed": false
   }
