@@ -71,6 +71,12 @@ def test_model_registry_loading():
     restricted_solutions = engine.query("restricted(Model)")
     assert restricted_solutions == [{'Model': 'gpt4'}]
 
+    potentially_restricted_solutions = engine.query("potentially_restricted(Model, Confidence)")
+    assert potentially_restricted_solutions[0]['Model'] == 'gpt4'
+    assert potentially_restricted_solutions[0]['Confidence'] == pytest.approx(0.81)
+
     deployable_solutions = engine.query("can_deploy(Model)")
     deployable_models = {sol['Model'] for sol in deployable_solutions}
-    assert deployable_models == {'gpt4', 'cloudia', 'customllm'}
+    # gpt4 is deployable because it is red_teamed.
+    # The others are deployable because their risk is <= 0.5
+    assert deployable_models == {'gpt4', 'cloudia', 'customllm', 'distilbert_distilgpt2', 'my_internal_model'}
