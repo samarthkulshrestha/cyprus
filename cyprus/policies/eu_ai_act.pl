@@ -1,51 +1,30 @@
 % --- EU AI Act Policy Rules (Illustrative) ---
+% These rules are simplified and focus on the new model/8 structure.
 
-:- dynamic model/4.
+:- dynamic model/8.
 :- dynamic red_teamed/1.
 
-% --- Interpretation-Specific Logic ---
-% For v1, the risk threshold changes based on interpretation.
-applies_restriction(v1, C, R, conservative) :- C > 1e25, R > 0.6.
-applies_restriction(v1, C, R, industry_standard) :- C > 1e25, R > 0.7.
-applies_restriction(v1, C, R, liberal) :- C > 1e25, R > 0.8.
+% --- Core EU AI Act Rules ---
 
-% For v2, the compute threshold changes based on interpretation.
-applies_restriction(v2, C, R, conservative) :- C > 1e24, R > 0.7.
-applies_restriction(v2, C, R, industry_standard) :- C > 5e24, R > 0.7.
-applies_restriction(v2, C, R, liberal) :- C > 8e24, R > 0.7.
+% Rule: A model is considered "high_risk" if its capabilities include
+% critical applications (e.g., reasoning) and it is deployed in the EU.
+is_high_risk(Model) :-
+    model(Model, _, _, _, deployment_region(Regions), _, capabilities(Caps), _),
+    member(eu, Regions),
+    member(reasoning, Caps).
 
-
-% --- Core Rules ---
-
-% Default rule: uses latest version and industry_standard interpretation
+% Rule: A model is "restricted" if it is high_risk and its risk score is > 0.7.
 restricted(Model) :-
-    restricted(Model, v2, industry_standard).
+    is_high_risk(Model),
+    model(Model, _, _, risk_score(R), _, _, _, _),
+    R > 0.7.
 
-% Versioned rule: uses industry_standard interpretation
-restricted(Model, PolicyVersion) :-
-    restricted(Model, PolicyVersion, industry_standard).
-
-% Fully specified rule for 'restricted'
-restricted(Model, PolicyVersion, Interpretation) :-
-    model(Model, _, compute(C), risk_score(R, _)),
-    applies_restriction(PolicyVersion, C, R, Interpretation).
-
-% Rule: A model is "potentially restricted" if it meets the criteria,
-% factoring in the confidence of the risk score.
-% Uses latest version and industry standard for this example.
-potentially_restricted(Model, Confidence) :-
-    model(Model, _, compute(C), risk_score(R, confidence(Conf))),
-    applies_restriction(v2, C, R, industry_standard),
-    Confidence is Conf * 0.9. % Policy uncertainty reduces confidence
-
-% Rule: A model can be deployed if its risk score is 0.5 or less.
+% Rule: A model can be deployed if it is not high_risk.
 can_deploy(Model) :-
-    model(Model, _, _, risk_score(R, _)),
-    R =< 0.5.
+    model(Model, _, _, _, _, _, _, _), % First, bind Model to an existing model
+    \+ is_high_risk(Model).
 
-% Rule: A model with a risk score over 0.5 can only be deployed
-% if it has been explicitly verified through red teaming.
+% Rule: A high-risk model can be deployed if it has completed red teaming.
 can_deploy(Model) :-
-    model(Model, _, _, risk_score(R, _)),
-    R > 0.5,
+    is_high_risk(Model),
     red_teamed(Model).
