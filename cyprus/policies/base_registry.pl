@@ -12,3 +12,8 @@ model(customllm, org(you), compute(3e24), risk_score(0.30, confidence(0.8))).
 % red_teamed(ModelName).
 red_teamed(gpt4).
 red_teamed(customllm).
+
+% --- Policy Versioning ---
+% policy_version(PolicyName, Version, date(Y, M, D)).
+policy_version(eu_ai_act, v1, date(2024, 8, 1)).
+policy_version(eu_ai_act, v2, date(2025, 2, 1)).

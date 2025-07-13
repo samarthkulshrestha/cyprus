@@ -26,9 +26,20 @@ class PolicyEngine:
         solutions = self.engine.query("model(Model, _, _, _)")
         return {sol['Model'] for sol in solutions}
 
-    def get_restricted_models(self) -> Set[str]:
-        """Returns a set of all models flagged as 'restricted'."""
-        solutions = self.engine.query("restricted(Model)")
+    def get_restricted_models(self, policy_version: Optional[str] = None) -> Set[str]:
+        """
+        Returns a set of all models flagged as 'restricted'.
+        
+        Args:
+            policy_version: The specific policy version to check against (e.g., "v1").
+                            If None, uses the default 'restricted/1' rule.
+        """
+        if policy_version:
+            query = f"restricted(Model, {policy_version})"
+        else:
+            query = "restricted(Model)"
+        
+        solutions = self.engine.query(query)
         return {sol['Model'] for sol in solutions}
 
     def get_potentially_restricted_models(self) -> Dict[str, float]:

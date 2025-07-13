@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 from cyprus.core.policy_engine import PolicyEngine
 
 # --- Configuration ---
@@ -28,9 +28,13 @@ def get_all_models():
     return [policy_engine.get_model_compliance_status(m) for m in sorted(list(all_models))]
 
 @router.get("/models/restricted", summary="Get Restricted Models", response_model=List[str])
-def get_restricted_models():
-    """Retrieves a list of all models flagged as 'restricted'."""
-    return sorted(list(policy_engine.get_restricted_models()))
+def get_restricted_models(policy_version: Optional[str] = None):
+    """
+    Retrieves a list of all models flagged as 'restricted'.
+    You can optionally specify a `policy_version` (e.g., "v1", "v2").
+    """
+    models = policy_engine.get_restricted_models(policy_version=policy_version)
+    return sorted(list(models))
 
 @router.get("/models/potentially_restricted", summary="Get Potentially Restricted Models with Confidence")
 def get_potentially_restricted_models():

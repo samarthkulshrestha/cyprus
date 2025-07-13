@@ -3,20 +3,30 @@
 :- dynamic model/4.
 :- dynamic red_teamed/1.
 
-% Rule: A model is considered "restricted" if its compute is over 1e25 FLOPs
-% and its risk score is greater than 0.7.
-% We ignore confidence here for a hard threshold.
+% --- Version-Specific Logic ---
+
+% For v1, the threshold is simple.
+applies_restriction(v1, C, R) :- C > 1e25, R > 0.7.
+
+% For v2, the compute threshold is lower.
+applies_restriction(v2, C, R) :- C > 5e24, R > 0.7.
+
+% --- Core Rules ---
+
+% Default rule: uses the latest policy version (v2).
 restricted(Model) :-
+    restricted(Model, v2).
+
+% Versioned rule for 'restricted'
+restricted(Model, PolicyVersion) :-
     model(Model, _, compute(C), risk_score(R, _)),
-    C > 1e25,
-    R > 0.7.
+    applies_restriction(PolicyVersion, C, R).
 
 % Rule: A model is "potentially restricted" if it meets the criteria,
-% factoring in the confidence of the risk score.
+% factoring in the confidence of the risk score. Uses latest policy version.
 potentially_restricted(Model, Confidence) :-
     model(Model, _, compute(C), risk_score(R, confidence(Conf))),
-    C > 1e25,
-    R > 0.7,
+    applies_restriction(v2, C, R), % Hardcoded to latest version for this example
     Confidence is Conf * 0.9. % Policy uncertainty reduces confidence
 
 % Rule: A model can be deployed if its risk score is 0.5 or less.
