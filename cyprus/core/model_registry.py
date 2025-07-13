@@ -22,23 +22,20 @@ class ModelRegistry:
 
     def _format_fact(self, model_data: Dict[str, Any]) -> str:
         """Formats model data into a Prolog fact string."""
-
+        
         def sanitize(value):
             """Quote strings with spaces to make them valid Prolog atoms."""
-            if isinstance(value, str) and ' ' in value:
-                return f"'{value}'"
-            if isinstance(value, str) and '-' in value:
-                return f"'{value}'"
-            if isinstance(value, str) and '.' in value:
+            if isinstance(value, str) and any(char in value for char in ' -.'):
                 return f"'{value}'"
             return value
 
         model_id = sanitize(model_data.get("model_id", "unknown"))
-        org = sanitize(model_data.get("organisation", "unknown"))
+        org = sanitize(model_data.get("organization", "unknown"))
         compute = model_data.get("compute_flops", 0)
         risk = model_data.get("risk_score", 0)
-
-        return f"model({model_id}, org({org}), compute({compute}), risk_score({risk}))"
+        confidence = model_data.get("risk_confidence", 0.5) # Default confidence
+        
+        return f"model({model_id}, org({org}), compute({compute}), risk_score({risk}, confidence({confidence})))"
 
     def load_into_engine(self):
         """

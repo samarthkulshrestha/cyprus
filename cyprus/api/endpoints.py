@@ -32,6 +32,14 @@ def get_restricted_models():
     """Retrieves a list of all models flagged as 'restricted'."""
     return sorted(list(policy_engine.get_restricted_models()))
 
+@router.get("/models/potentially_restricted", summary="Get Potentially Restricted Models with Confidence")
+def get_potentially_restricted_models():
+    """
+    Retrieves a mapping of models that are 'potentially restricted'
+    to the confidence level of that assessment.
+    """
+    return policy_engine.get_potentially_restricted_models()
+
 @router.get("/models/deployable", summary="Get Deployable Models", response_model=List[str])
 def get_deployable_models():
     """Retrieves a list of all models that are 'deployable'."""

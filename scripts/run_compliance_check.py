@@ -49,6 +49,13 @@ def run_check(policy_files: list, registry_path: str):
     else:
         print("  (None)")
 
+    print(f"\nPotentially Restricted Models ({len(potentially_restricted_models)}):")
+    if potentially_restricted_models:
+        for model, confidence in potentially_restricted_models.items():
+            print(f"  - {model} (Confidence: {confidence:.2f})")
+    else:
+        print("  (None)")
+
     print(f"\nDeployable Models ({len(deployable_models)}):")
     if deployable_models:
         for model in deployable_models:

@@ -31,6 +31,14 @@ class PolicyEngine:
         solutions = self.engine.query("restricted(Model)")
         return {sol['Model'] for sol in solutions}
 
+    def get_potentially_restricted_models(self) -> Dict[str, float]:
+        """
+        Returns a dictionary of models that are 'potentially restricted',
+        mapping model ID to the calculated confidence level.
+        """
+        solutions = self.engine.query("potentially_restricted(Model, Confidence)")
+        return {sol['Model']: sol['Confidence'] for sol in solutions}
+
     def get_deployable_models(self) -> Set[str]:
         """Returns a set of all models that are 'deployable'."""
         solutions = self.engine.query("can_deploy(Model)")
