@@ -2,18 +2,6 @@ import pytest
 from cyprus.core.prolog_engine import PrologEngine
 from cyprus.core.model_registry import ModelRegistry
 
-@pytest.fixture
-def governance_engine():
-    """
-    Provides a PrologEngine instance loaded with all data and rules
-    for comprehensive governance testing.
-    """
-    engine = PrologEngine()
-    registry = ModelRegistry("/home/czar/code/cyprus/data/models/registry.json", engine)
-    registry.load_into_engine()
-    engine.load_file("/home/czar/code/cyprus/cyprus/policies/governance_rules.pl")
-    return engine
-
 def test_low_quality_data(governance_engine):
     """
     Tests the 'low_quality_data' rule.

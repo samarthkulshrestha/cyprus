@@ -2,18 +2,6 @@ import pytest
 from cyprus.core.prolog_engine import PrologEngine
 from cyprus.core.model_registry import ModelRegistry
 
-@pytest.fixture
-def configured_engine():
-    """
-    Provides a PrologEngine instance loaded with the new model/8 policies.
-    """
-    engine = PrologEngine()
-    # Load the base registry with new model/8 facts
-    engine.load_file("/home/czar/code/cyprus/cyprus/policies/base_registry.pl")
-    # Load the updated EU AI Act rules
-    engine.load_file("/home/czar/code/cyprus/cyprus/policies/eu_ai_act.pl")
-    return engine
-
 def test_is_high_risk(configured_engine):
     """
     Tests the 'is_high_risk' rule.

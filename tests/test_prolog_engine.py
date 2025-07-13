@@ -2,11 +2,6 @@ import pytest
 import os
 from cyprus.core.prolog_engine import PrologEngine
 
-@pytest.fixture
-def engine():
-    """Provides a clean PrologEngine instance for each test."""
-    return PrologEngine()
-
 def test_assert_and_query(engine):
     """Test asserting a fact and querying it."""
     engine.assertz("father(john, pete)")
