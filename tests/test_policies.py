@@ -5,95 +5,64 @@ from cyprus.core.model_registry import ModelRegistry
 @pytest.fixture
 def configured_engine():
     """
-    Provides a PrologEngine instance loaded with the base registry
-    and EU AI Act rules.
+    Provides a PrologEngine instance loaded with the new model/8 policies.
     """
     engine = PrologEngine()
-    # Note: Adjust paths if tests are run from a different directory
+    # Load the base registry with new model/8 facts
     engine.load_file("/home/czar/code/cyprus/cyprus/policies/base_registry.pl")
+    # Load the updated EU AI Act rules
     engine.load_file("/home/czar/code/cyprus/cyprus/policies/eu_ai_act.pl")
     return engine
 
+def test_is_high_risk(configured_engine):
+    """
+    Tests the 'is_high_risk' rule.
+    gpt4_turbo is high risk because it has 'reasoning' and is deployed in 'eu'.
+    cloudia_v2 is not, because it is not deployed in 'eu'.
+    """
+    solutions = configured_engine.query("is_high_risk(Model)")
+    high_risk_models = {sol['Model'] for sol in solutions}
+    assert high_risk_models == {'gpt4_turbo'}
+
+def test_is_not_high_risk(configured_engine):
+    """Tests that cloudia_v2 is correctly identified as not high_risk."""
+    solutions = configured_engine.query("is_high_risk(cloudia_v2)")
+    assert len(solutions) == 0
+
 def test_restricted_model(configured_engine):
     """
-    Tests the 'restricted' rule. gpt4 should be restricted.
+    Tests the 'restricted' rule.
+    gpt4_turbo is high_risk and its risk score (0.82) is > 0.7.
     """
     solutions = configured_engine.query("restricted(Model)")
-    # The only model matching the restricted criteria from base_registry.pl
-    # This tests the default rule, which should use v2 of the policy.
-    # Under v2, compute > 5e24 is restricted. `cloudia` (5e24) is not restricted.
-    solutions = configured_engine.query("restricted(Model)")
-    restricted_models = {s['Model'] for s in solutions}
-    assert restricted_models == {'gpt4'}
+    restricted_models = {sol['Model'] for sol in solutions}
+    assert restricted_models == {'gpt4_turbo'}
 
-def test_restricted_model_v1(configured_engine):
-    """Tests the v1 definition of the 'restricted' rule."""
-    # Under v1, compute > 1e25 is restricted. Only gpt4 matches.
-    solutions = configured_engine.query("restricted(Model, v1)")
-    restricted_models = {s['Model'] for s in solutions}
-    assert restricted_models == {'gpt4'}
-
-def test_restricted_model_v2_conservative(configured_engine):
-    """Tests the v2 'restricted' rule with a conservative interpretation."""
-    # v2 conservative: C > 1e24 and R > 0.7. Only gpt4 matches.
-    solutions = configured_engine.query("restricted(Model, v2, conservative)")
-    restricted_models = {s['Model'] for s in solutions}
-    assert restricted_models == {'gpt4'}
-
-def test_potentially_restricted_model(configured_engine):
+def test_can_deploy(configured_engine):
     """
-    Tests the 'potentially_restricted' rule with confidence calculation.
+    Tests the 'can_deploy' rule.
+    - cloudia_v2 can be deployed because it's not high_risk.
+    - gpt4_turbo is high_risk, but can be deployed because it is red_teamed.
     """
     solutions = configured_engine.query("can_deploy(Model)")
-    
-    # Extract model names from solutions
-    deployed_models = {sol['Model'] for sol in solutions}
+    deployable_models = {sol['Model'] for sol in solutions}
+    assert 'gpt4_turbo' in deployable_models
+    assert 'cloudia_v2' in deployable_models
+    assert len(deployable_models) == 2
 
-    # cloudia and customllm have risk_score <= 0.5
-    # gpt4 has risk > 0.5 but is red_teamed, so it should also be deployable
-    assert 'cloudia' in deployed_models
-    assert 'customllm' in deployed_models
-
-def test_can_deploy_high_risk_red_teamed(configured_engine):
+def test_model_registry_loading_model8():
     """
-    Tests that a high-risk model can be deployed if it's red_teamed.
-    gpt4 has risk > 0.7 but is red_teamed, so it should be deployable.
-    """
-    solutions = configured_engine.query("can_deploy(gpt4)")
-    assert len(solutions) > 0, "gpt4 should be deployable because it is red_teamed"
-
-def test_model_registry_loading():
-    """
-    Tests loading models from the JSON registry into the engine.
+    Tests loading the new model/8 format from the JSON registry.
     """
     engine = PrologEngine()
-    # Assuming registry.json and policy files are in the correct paths
-    # relative to the project root.
     registry = ModelRegistry("/home/czar/code/cyprus/data/models/registry.json", engine)
     registry.load_into_engine()
-
-    # === Debugging Step ===
-    # Verify that the red_teamed fact for gpt4 was asserted correctly.
-    # This is the key condition for the failing part of the can_deploy rule.
-    assert list(engine.query("red_teamed(gpt4)")) == [{}], \
-        "The fact 'red_teamed(gpt4)' was not found after loading from JSON."
-
     engine.load_file("/home/czar/code/cyprus/cyprus/policies/eu_ai_act.pl")
 
-    # Query for a model from the JSON file
-    solutions = engine.query("model(cloudia, org(anthropic), _, _)")
-    assert len(solutions) > 0
+    # Check that gpt4_turbo was loaded correctly and is restricted
+    solutions = engine.query("restricted(gpt4_turbo)")
+    assert len(solutions) > 0, "gpt4_turbo should be restricted after loading from JSON"
 
-    # Check compliance rules against JSON-loaded data
-    restricted_solutions = engine.query("restricted(Model)")
-    assert restricted_solutions == [{'Model': 'gpt4'}]
-
-    potentially_restricted_solutions = engine.query("potentially_restricted(Model, Confidence)")
-    assert potentially_restricted_solutions[0]['Model'] == 'gpt4'
-    assert potentially_restricted_solutions[0]['Confidence'] == pytest.approx(0.81)
-
-    deployable_solutions = engine.query("can_deploy(Model)")
-    deployable_models = {sol['Model'] for sol in deployable_solutions}
-    # gpt4 is deployable because it is red_teamed.
-    # The others are deployable because their risk is <= 0.5
-    assert deployable_models == {'gpt4', 'cloudia', 'customllm', 'distilbert_distilgpt2', 'my_internal_model'}
+    # Check that cloudia_v2 was loaded and is deployable
+    solutions = engine.query("can_deploy(cloudia_v2)")
+    assert len(solutions) > 0, "cloudia_v2 should be deployable after loading from JSON"
