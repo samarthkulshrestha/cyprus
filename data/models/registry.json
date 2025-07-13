@@ -1,53 +1,58 @@
 [
   {
-    "model_id": "gpt4",
+    "model_id": "gpt4_turbo",
     "organization": "openai",
-    "compute_flops": 1.8e+25,
-    "risk_score": 0.85,
+    "compute_flops": 2.8e25,
+    "risk_score": 0.82,
     "risk_confidence": 0.9,
-    "red_teamed": true
+    "deployment_region": ["us", "eu", "uk"],
+    "alignment_methodology": ["rlhf", "constitutional_ai"],
+    "capabilities": ["text_generation", "reasoning", "coding", "multimodal"],
+    "red_teaming_status": "completed",
+    "governance_facts": {
+      "training_data": {
+        "data_source": "web_crawl",
+        "data_size": "1e13_tokens",
+        "data_date_range": "2021-09-2023-04",
+        "data_quality_score": 0.85
+      },
+      "bias_assessment": {
+        "test_date": "2024-01-15",
+        "bias_metrics": "fairness_metrics",
+        "affected_groups": ["gender", "race", "age"],
+        "mitigation_status": "partially_mitigated"
+      },
+      "performance_metrics": {
+          "accuracy": 0.89, "precision": 0.87, "recall": 0.91, "f1_score": 0.89, "evaluation_date": "2024-02-01"
+      },
+      "security_measures": {
+          "encryption_at_rest": "aes_256", "encryption_in_transit": "tls_1_3", "access_controls": "rbac"
+      }
+    }
   },
   {
-    "model_id": "cloudia",
+    "model_id": "cloudia_v2",
     "organization": "anthropic",
-    "compute_flops": 5e+24,
-    "risk_score": 0.45,
-    "risk_confidence": 0.95,
-    "red_teamed": false
-  },
-  {
-    "model_id": "customllm",
-    "organization": "you",
-    "compute_flops": 3e+24,
-    "risk_score": 0.3,
-    "risk_confidence": 0.8,
-    "red_teamed": true
-  },
-  {
-    "model_id": "distilbert_distilgpt2",
-    "organization": "distilbert",
-    "source": "huggingface",
-    "compute_flops": 1e+23,
-    "risk_score": 0.4,
-    "risk_confidence": 0.85,
-    "red_teamed": true
-  },
-  {
-    "model_id": "my_internal_model",
-    "organization": "cygnus research",
-    "source": "local_model_card",
-    "compute_flops": 1e+23,
-    "risk_score": 0.3,
-    "risk_confidence": 0.98,
-    "red_teamed": false
-  },
-  {
-    "model_id": "meta-llama_Llama-3.2-1B",
-    "organization": "meta-llama",
-    "source": "huggingface",
-    "compute_flops": 1.2e+20,
-    "risk_score": 0.6,
-    "risk_confidence": 0.9,
-    "red_teamed": false
+    "compute_flops": 6e24,
+    "risk_score": 0.75,
+    "risk_confidence": 0.92,
+    "deployment_region": ["us", "ca"],
+    "alignment_methodology": ["rlhf"],
+    "capabilities": ["text_generation", "reasoning"],
+    "red_teaming_status": "completed",
+    "governance_facts": {
+      "training_data": {
+        "data_source": "curated_corpus",
+        "data_size": "8e12_tokens",
+        "data_date_range": "2022-01-2023-06",
+        "data_quality_score": 0.91
+      },
+      "bias_assessment": {
+        "test_date": "2023-11-20",
+        "bias_metrics": "fairness_metrics",
+        "affected_groups": ["gender", "age"],
+        "mitigation_status": "completed"
+      }
+    }
   }
 ]
