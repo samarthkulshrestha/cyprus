@@ -11,7 +11,7 @@ class ModelRegistry:
         self.engine = engine
         self.models = self._load_from_json()
 
-    def _load_from_json(self) -> List[Dict[str, Any]]
+    def _load_from_json(self) -> List[Dict[str, Any]]:
         """Loads the model registry from a JSON file."""
         try:
             with open(self.registry_path, 'r') as f:
@@ -26,6 +26,10 @@ class ModelRegistry:
         def sanitize(value):
             """Quote strings with spaces to make them valid Prolog atoms."""
             if isinstance(value, str) and ' ' in value:
+                return f"'{value}'"
+            if isinstance(value, str) and '-' in value:
+                return f"'{value}'"
+            if isinstance(value, str) and '.' in value:
                 return f"'{value}'"
             return value
 
