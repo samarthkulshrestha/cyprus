@@ -17,3 +17,8 @@ red_teamed(customllm).
 % policy_version(PolicyName, Version, date(Y, M, D)).
 policy_version(eu_ai_act, v1, date(2024, 8, 1)).
 policy_version(eu_ai_act, v2, date(2025, 2, 1)).
+
+% --- Compliance Interpretations ---
+compliance_interpretation(conservative).
+compliance_interpretation(liberal).
+compliance_interpretation(industry_standard).

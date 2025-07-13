@@ -28,12 +28,19 @@ def get_all_models():
     return [policy_engine.get_model_compliance_status(m) for m in sorted(list(all_models))]
 
 @router.get("/models/restricted", summary="Get Restricted Models", response_model=List[str])
-def get_restricted_models(policy_version: Optional[str] = None):
+def get_restricted_models(
+    policy_version: Optional[str] = None,
+    interpretation: Optional[str] = None
+):
     """
     Retrieves a list of all models flagged as 'restricted'.
-    You can optionally specify a `policy_version` (e.g., "v1", "v2").
+    You can optionally specify a `policy_version` (e.g., "v1") and an
+    `interpretation` (e.g., "conservative", "liberal").
     """
-    models = policy_engine.get_restricted_models(policy_version=policy_version)
+    models = policy_engine.get_restricted_models(
+        policy_version=policy_version,
+        interpretation=interpretation
+    )
     return sorted(list(models))
 
 @router.get("/models/potentially_restricted", summary="Get Potentially Restricted Models with Confidence")
