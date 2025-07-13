@@ -33,6 +33,13 @@ def test_restricted_model_v1(configured_engine):
     restricted_models = {s['Model'] for s in solutions}
     assert restricted_models == {'gpt4'}
 
+def test_restricted_model_v2_conservative(configured_engine):
+    """Tests the v2 'restricted' rule with a conservative interpretation."""
+    # v2 conservative: C > 1e24 and R > 0.7. Only gpt4 matches.
+    solutions = configured_engine.query("restricted(Model, v2, conservative)")
+    restricted_models = {s['Model'] for s in solutions}
+    assert restricted_models == {'gpt4'}
+
 def test_potentially_restricted_model(configured_engine):
     """
     Tests the 'potentially_restricted' rule with confidence calculation.
