@@ -1,0 +1,6 @@
+pyswip
+fastapi
+uvicorn
+requests
+beautifulsoup4
+pytest
