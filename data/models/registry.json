@@ -1,0 +1,47 @@
+[
+  {
+    "model_id": "gpt4",
+    "organization": "openai",
+    "compute_flops": 1.8e+25,
+    "risk_score": 0.85,
+    "red_teamed": true
+  },
+  {
+    "model_id": "cloudia",
+    "organization": "anthropic",
+    "compute_flops": 5e+24,
+    "risk_score": 0.45,
+    "red_teamed": false
+  },
+  {
+    "model_id": "customllm",
+    "organization": "you",
+    "compute_flops": 3e+24,
+    "risk_score": 0.3,
+    "red_teamed": true
+  },
+  {
+    "model_id": "distilbert_distilgpt2",
+    "organization": "distilbert",
+    "source": "huggingface",
+    "compute_flops": 1e+23,
+    "risk_score": 0.4,
+    "red_teamed": true
+  },
+  {
+    "model_id": "my_internal_model",
+    "organization": "cygnus research",
+    "source": "local_model_card",
+    "compute_flops": 1e+23,
+    "risk_score": 0.3,
+    "red_teamed": false
+  },
+  {
+    "model_id": "meta-llama_Llama-3.2-1B",
+    "organization": "meta-llama",
+    "source": "huggingface",
+    "compute_flops": 4e+19,
+    "risk_score": 0.6,
+    "red_teamed": false
+  }
+]
