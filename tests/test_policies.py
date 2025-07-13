@@ -20,12 +20,22 @@ def test_restricted_model(configured_engine):
     """
     solutions = configured_engine.query("restricted(Model)")
     # The only model matching the restricted criteria from base_registry.pl
-    assert solutions == [{'Model': 'gpt4'}]
+    # This tests the default rule, which should use v2 of the policy.
+    # Under v2, compute > 5e24 is restricted. `cloudia` (5e24) is not restricted.
+    solutions = configured_engine.query("restricted(Model)")
+    restricted_models = {s['Model'] for s in solutions}
+    assert restricted_models == {'gpt4'}
 
-def test_can_deploy_low_risk(configured_engine):
+def test_restricted_model_v1(configured_engine):
+    """Tests the v1 definition of the 'restricted' rule."""
+    # Under v1, compute > 1e25 is restricted. Only gpt4 matches.
+    solutions = configured_engine.query("restricted(Model, v1)")
+    restricted_models = {s['Model'] for s in solutions}
+    assert restricted_models == {'gpt4'}
+
+def test_potentially_restricted_model(configured_engine):
     """
-    Tests the 'can_deploy' rule for low-risk models.
-    cloudia and customllm should be deployable based on risk score <= 0.5.
+    Tests the 'potentially_restricted' rule with confidence calculation.
     """
     solutions = configured_engine.query("can_deploy(Model)")
     
