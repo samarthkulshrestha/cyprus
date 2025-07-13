@@ -1,60 +1,40 @@
 from typing import Dict, Any
-import re
 
 def score_risk(model_data: Dict[str, Any]) -> float:
     """
-    Assigns a risk score to a model based on a detailed, weighted rubric.
-
-    The scoring starts with a baseline and is adjusted based on various
-    factors derived from the model's metadata. The final score is clamped
-    between 0.0 and 1.0.
-
-    Rubric Factors:
-    - Baseline Risk: Starts at 0.5 (neutral).
-    - Organization Type:
-        - Major SOTA labs (e.g., OpenAI): +0.3
-        - Open-source leaders (e.g., Meta): +0.1
-        - Internal/local models: -0.2
-    - Model Size (Compute):
-        - Very large models (>1e25 FLOPs): +0.2
-        - Large models (>1e24 FLOPs): +0.1
-    - Potential Capabilities (inferred from name):
-        - "code" or "agent" in name: +0.2 (higher potential for misuse)
-        - "chat" or "instruct" in name: +0.1 (general purpose)
-
-    Args:
-        model_data: A dictionary containing model metadata.
-
-    Returns:
-        A float risk score between 0.0 and 1.0.
+    Assigns a risk score based on a detailed, weighted rubric using
+    rich model card data.
     """
-    # Baseline risk score
-    risk = 0.5
+    risk = 0.5  # Baseline risk
 
     # --- Factor: Organization Type ---
     organization = model_data.get("organization", "unknown").lower()
-    source = model_data.get("source", "unknown").lower()
-
     if organization in ["openai", "google", "anthropic", "deepmind"]:
-        risk += 0.3  # Major labs developing SOTA models
-    elif organization in ["meta-llama", "mistralai", "huggingface", "meta"]:
-        risk += 0.1  # Major open-source contributors
-    elif source == "local_model_card":
-        risk -= 0.2  # Assumed to be internal, more controlled
+        risk += 0.2
+    elif organization in ["meta", "mistralai", "meta-llama"]:
+        risk += 0.1
 
-    # --- Factor: Model Size (Compute) ---
+    # --- Factor: Model Capabilities ---
+    capabilities = model_data.get("capabilities", [])
+    if "multimodal" in capabilities or "agent" in capabilities:
+        risk += 0.2
+    if "code" in capabilities:
+        risk += 0.1
+
+    # --- Factor: License Type ---
+    # Restrictive licenses might imply the author knows of risks.
+    license = model_data.get("license", "unknown").lower()
+    if "restrictive" in license or "research-only" in license:
+        risk += 0.15
+    elif "open" in license or "mit" in license:
+        risk -= 0.1
+
+    # --- Factor: Compute Size ---
     compute = model_data.get("compute_flops", 0)
     if compute > 1e25:
-        risk += 0.2  # Very large, frontier models
+        risk += 0.2
     elif compute > 1e24:
-        risk += 0.1  # Large models
+        risk += 0.1
 
-    # --- Factor: Potential Capabilities (inferred from name) ---
-    model_id = model_data.get("model_id", "").lower()
-    if re.search(r'\b(code|agent)\b', model_id):
-        risk += 0.2  # Higher potential for misuse
-    elif re.search(r'\b(chat|instruct)\b', model_id):
-        risk += 0.1  # General-purpose conversational models
-
-    # --- Finalization: Clamp the score between 0.0 and 1.0 ---
+    # --- Finalization: Clamp the score ---
     return max(0.0, min(1.0, risk))
