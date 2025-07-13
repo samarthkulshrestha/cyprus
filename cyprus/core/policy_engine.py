@@ -23,7 +23,7 @@ class PolicyEngine:
 
     def get_all_models(self) -> Set[str]:
         """Returns a set of all model IDs in the registry."""
-        solutions = self.engine.query("model(Model, _, _, _)")
+        solutions = self.engine.query("model(Model, _, _, _, _, _, _, _)")
         return {sol['Model'] for sol in solutions}
 
     def get_restricted_models(
@@ -47,6 +47,36 @@ class PolicyEngine:
         
         solutions = self.engine.query(query)
         return {sol['Model'] for sol in solutions}
+
+    def get_governance_report(self, model_id: str) -> Optional[Dict]:
+        """
+        Compiles a full governance report for a single model.
+        
+        Args:
+            model_id: The ID of the model to report on.
+            
+        Returns:
+            A dictionary containing all known facts for the model, or None.
+        """
+        # First, check if the model exists
+        if not list(self.engine.query(f"model({model_id}, _, _, _, _, _, _, _)")):
+            return None
+
+        report = {'model_id': model_id}
+
+        # Helper to query for facts and add them to the report
+        def query_and_add(key, query_template):
+            solutions = list(self.engine.query(query_template.format(model_id=model_id)))
+            if solutions:
+                # Convert the solution dict to a cleaner format
+                report[key] = {k: v for k, v in solutions[0].items() if k != 'Model'}
+
+        query_and_add('training_data', "training_data({model_id}, Source, Size, DateRange, Quality)")
+        query_and_add('bias_assessment', "bias_assessment({model_id}, Date, Metrics, Groups, Status)")
+        query_and_add('performance', "performance_metrics({model_id}, Acc, Prec, Rec, F1, Date)")
+        query_and_add('security', "security_measures({model_id}, AtRest, InTransit, Access)")
+
+        return report
 
     def get_potentially_restricted_models(self) -> Dict[str, float]:
         """

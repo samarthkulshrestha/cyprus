@@ -65,3 +65,14 @@ def get_model_compliance(model_id: str = Path(..., description="The ID of the mo
     if status is None:
         raise HTTPException(status_code=404, detail=f"Model '{model_id}' not found in registry.")
     return status
+
+@router.get("/models/{model_id}/governance_report", summary="Get Full Governance Report for a Model")
+def get_governance_report(model_id: str = Path(..., description="The ID of the model to report on.")):
+    """
+    Retrieves a comprehensive governance report containing all known
+    facts for a single, specified model.
+    """
+    report = policy_engine.get_governance_report(model_id)
+    if report is None:
+        raise HTTPException(status_code=404, detail=f"Model '{model_id}' not found in registry.")
+    return report

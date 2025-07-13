@@ -55,3 +55,13 @@ class PrologEngine:
             fact: The fact pattern to retract (e.g., "model(_,_,_,_)").
         """
         self.prolog.retractall(fact)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """
+        A placeholder for cleanup. The underlying Prolog threads are managed
+        by the pyswip process.
+        """
+        pass
