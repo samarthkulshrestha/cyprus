@@ -10,6 +10,7 @@ uvicorn = "*"
 requests = "*"
 beautifulsoup4 = "*"
 pytest = "*"
+pyyaml = "*"
 
 [dev-packages]
 
