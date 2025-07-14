@@ -41,20 +41,25 @@ class ModelRegistry:
         return str(value).lower() # .lower() for true/false
 
     def _format_model_fact(self, model_data: Dict[str, Any]) -> str:
-        """Formats the core model data into a model/8 Prolog fact string."""
+        """Formats the core model data into a model/10 Prolog fact string."""
         model_id = self._sanitize_prolog_term(model_data.get("model_id", "unknown"))
         org = self._sanitize_prolog_term(model_data.get("organization", "unknown"))
         compute = self._sanitize_prolog_term(model_data.get("compute_flops", 0))
         risk = self._sanitize_prolog_term(model_data.get("risk_score", 0))
-        
+
         deployment_region = self._sanitize_prolog_term(model_data.get("deployment_region", []))
         alignment = self._sanitize_prolog_term(model_data.get("alignment_methodology", []))
         capabilities = self._sanitize_prolog_term(model_data.get("capabilities", []))
         red_teaming = self._sanitize_prolog_term(model_data.get("red_teaming_status", "unknown"))
 
+        # New fields for EU AI Act
+        risk_category = self._sanitize_prolog_term(model_data.get("risk_category", "minimal_risk"))
+        use_case = self._sanitize_prolog_term(model_data.get("use_case", "unknown"))
+
         return (f"model({model_id}, org({org}), compute({compute}), risk_score({risk}), "
                 f"deployment_region({deployment_region}), alignment_methodology({alignment}), "
-                f"capabilities({capabilities}), red_teaming_status({red_teaming}))")
+                f"capabilities({capabilities}), red_teaming_status({red_teaming}), "
+                f"risk_category({risk_category}), use_case({use_case}))")
 
     def load_into_engine(self):
         """
@@ -62,7 +67,7 @@ class ModelRegistry:
         JSON registry into the Prolog engine.
         """
         # Retract all old facts before asserting new ones
-        self.engine.retractall("model(_,_,_,_,_,_,_,_)")
+        self.engine.retractall("model(_,_,_,_,_,_,_,_,_,_)") # Updated for model/10
         self.engine.retractall("red_teamed(_)")
         self.engine.retractall("training_data(_,_,_,_,_)")
         self.engine.retractall("bias_assessment(_,_,_,_,_)")
@@ -72,7 +77,7 @@ class ModelRegistry:
         for model_data in self.models:
             model_id_sanitized = self._sanitize_prolog_term(model_data['model_id'])
 
-            # Assert the main model/8 fact
+            # Assert the main model/10 fact
             model_fact = self._format_model_fact(model_data)
             self.engine.assertz(model_fact)
 
@@ -97,7 +102,7 @@ class ModelRegistry:
                         f"{self._sanitize_prolog_term(ba.get('bias_metrics'))}, {groups}, "
                         f"{self._sanitize_prolog_term(ba.get('mitigation_status'))})")
                 self.engine.assertz(fact)
-            
+
             if "performance_metrics" in gov_facts:
                 pm = gov_facts["performance_metrics"]
                 fact = (f"performance_metrics({model_id_sanitized}, {self._sanitize_prolog_term(pm.get('accuracy'))}, {self._sanitize_prolog_term(pm.get('precision'))}, "
