@@ -16,7 +16,3 @@ model(cloudia_v2, org(anthropic), compute(6e24), risk_score(0.75),
       capabilities([text_generation, reasoning]),
       red_teaming_status(completed)
 ).
-
-% --- Standalone Facts for Backward Compatibility & Simplicity ---
-red_teamed(gpt4_turbo).
-red_teamed(cloudia_v2).

@@ -13,7 +13,7 @@ low_quality_data(Model) :-
 % Rule: Flag models where bias mitigation is incomplete.
 incomplete_bias_mitigation(Model) :-
     bias_assessment(Model, _, _, _, MitigationStatus),
-    MitigationStatus \= completed.
+    MitigationStatus \= 'completed'.
 
 % Rule: Identify models that are "underperforming" based on F1 score.
 is_underperforming(Model) :-
@@ -23,7 +23,7 @@ is_underperforming(Model) :-
 % Rule: Check for models lacking basic security measures.
 inadequate_security(Model) :-
     security_measures(Model, _, _, AccessControls),
-    AccessControls \= rbac. % Role-Based Access Control is required.
+    AccessControls \= 'rbac'. % Role-Based Access Control is required.
 
 % Rule: A model is "not_production_ready" if it has any of these issues.
 not_production_ready(Model) :- low_quality_data(Model).
