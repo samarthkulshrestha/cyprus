@@ -67,26 +67,20 @@ class ModelRegistry:
         JSON registry into the Prolog engine.
         """
         # Retract all old facts before asserting new ones
-        self.engine.retractall("model(_,_,_,_,_,_,_,_,_,_)") # Updated for model/10
-        self.engine.retractall("red_teamed(_)")
+        self.engine.retractall("model(_,_,_,_,_,_,_,_,_,_)")
         self.engine.retractall("training_data(_,_,_,_,_)")
         self.engine.retractall("bias_assessment(_,_,_,_,_)")
         self.engine.retractall("performance_metrics(_,_,_,_,_,_)")
         self.engine.retractall("security_measures(_,_,_,_)")
 
         for model_data in self.models:
-            model_id_sanitized = self._sanitize_prolog_term(model_data['model_id'])
-
             # Assert the main model/10 fact
             model_fact = self._format_model_fact(model_data)
             self.engine.assertz(model_fact)
 
-            # Assert the simple red_teamed fact for backward compatibility
-            if model_data.get("red_teaming_status") == "completed":
-                self.engine.assertz(f"red_teamed({model_id_sanitized})")
-
             # Assert detailed governance facts
             gov_facts = model_data.get("governance_facts", {})
+            model_id_sanitized = self._sanitize_prolog_term(model_data['model_id'])
 
             if "training_data" in gov_facts:
                 td = gov_facts["training_data"]
