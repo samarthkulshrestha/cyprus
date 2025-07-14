@@ -23,43 +23,27 @@ class PolicyEngine:
 
     def get_all_models(self) -> Set[str]:
         """Returns a set of all model IDs in the registry."""
-        solutions = self.engine.query("model(Model, _, _, _, _, _, _, _)")
+        solutions = self.engine.query("model(Model, _, _, _, _, _, _, _, _, _)")
         return {sol['Model'] for sol in solutions}
 
-    def get_restricted_models(
-        self,
-        policy_version: Optional[str] = None,
-        interpretation: Optional[str] = None
-    ) -> Set[str]:
-        """
-        Returns a set of all models flagged as 'restricted'.
-        
-        Args:
-            policy_version: The policy version to check against (e.g., "v1").
-            interpretation: The compliance interpretation to use (e.g., "conservative").
-        """
-        if policy_version and interpretation:
-            query = f"restricted(Model, {policy_version}, {interpretation})"
-        elif policy_version:
-            query = f"restricted(Model, {policy_version})"
-        else:
-            query = "restricted(Model)"
-        
-        solutions = self.engine.query(query)
+    def get_restricted_models(self, policy_version: Optional[str] = None, interpretation: Optional[str] = None) -> Set[str]:
+        """This method is deprecated as 'restricted' is no longer a primary rule."""
+        # This now points to the new 'prohibited_deployment' rule for a basic check.
+        solutions = self.engine.query("prohibited_deployment(Model)")
         return {sol['Model'] for sol in solutions}
 
     def get_governance_report(self, model_id: str) -> Optional[Dict]:
         """
         Compiles a full governance report for a single model.
-        
+
         Args:
             model_id: The ID of the model to report on.
-            
+
         Returns:
             A dictionary containing all known facts for the model, or None.
         """
         # First, check if the model exists
-        if not list(self.engine.query(f"model({model_id}, _, _, _, _, _, _, _)")):
+        if not list(self.engine.query(f"model({model_id}, _, _, _, _, _, _, _, _, _)")):
             return None
 
         report = {'model_id': model_id}
@@ -68,8 +52,10 @@ class PolicyEngine:
         def query_and_add(key, query_template):
             solutions = list(self.engine.query(query_template.format(model_id=model_id)))
             if solutions:
-                # Convert the solution dict to a cleaner format
-                report[key] = {k: v for k, v in solutions[0].items() if k != 'Model'}
+                # De-sanitize the Prolog atoms back into normal strings
+                cleaned_solution = {k: (v.strip("'") if isinstance(v, str) else v)
+                                    for k, v in solutions[0].items()}
+                report[key] = {k: v for k, v in cleaned_solution.items() if k != 'Model'}
 
         query_and_add('training_data', "training_data({model_id}, Source, Size, DateRange, Quality)")
         query_and_add('bias_assessment', "bias_assessment({model_id}, Date, Metrics, Groups, Status)")
