@@ -27,29 +27,21 @@ def get_all_models():
     all_models = policy_engine.get_all_models()
     return [policy_engine.get_model_compliance_status(m) for m in sorted(list(all_models))]
 
-@router.get("/models/restricted", summary="Get Restricted Models", response_model=List[str])
-def get_restricted_models(
-    policy_version: Optional[str] = None,
-    interpretation: Optional[str] = None
-):
+@router.get("/models/prohibited", summary="Get Prohibited Models", response_model=List[str])
+def get_prohibited_models():
     """
-    Retrieves a list of all models flagged as 'restricted'.
-    You can optionally specify a `policy_version` (e.g., "v1") and an
-    `interpretation` (e.g., "conservative", "liberal").
+    Retrieves a list of all models flagged as 'prohibited' by Article 5
+    of the EU AI Act.
     """
-    models = policy_engine.get_restricted_models(
-        policy_version=policy_version,
-        interpretation=interpretation
-    )
+    # The old get_restricted_models now maps to the new core prohibition rule
+    models = policy_engine.get_restricted_models()
     return sorted(list(models))
 
-@router.get("/models/potentially_restricted", summary="Get Potentially Restricted Models with Confidence")
-def get_potentially_restricted_models():
-    """
-    Retrieves a mapping of models that are 'potentially restricted'
-    to the confidence level of that assessment.
-    """
-    return policy_engine.get_potentially_restricted_models()
+@router.get("/models/systemic_risk", summary="Get Systemic Risk Models", response_model=List[str])
+def get_systemic_risk_models():
+    """Retrieves a list of models classified as systemic risk."""
+    solutions = policy_engine.engine.query("is_systemic_risk(Model)")
+    return sorted([sol['Model'] for sol in solutions])
 
 @router.get("/models/deployable", summary="Get Deployable Models", response_model=List[str])
 def get_deployable_models():
