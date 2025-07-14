@@ -27,13 +27,13 @@ def run_check(policy_files: list, registry_path: str):
     # --- Run Compliance Queries ---
     print("\n--- Compliance & Governance Report ---")
 
-    # Query for all models
-    all_models_sol = engine.query("model(Model, _, _, _, _, _, _, _)")
+    # Query for all models using the new model/10 predicate
+    all_models_sol = engine.query("model(Model, _, _, _, _, _, _, _, _, _)")
     all_models = {sol['Model'] for sol in all_models_sol}
     
-    # Query for restricted models (EU AI Act)
-    restricted_sol = engine.query("restricted(Model)")
-    restricted_models = {sol['Model'] for sol in restricted_sol}
+    # Query for prohibited models (EU AI Act)
+    prohibited_sol = engine.query("prohibited_deployment(Model)")
+    prohibited_models = {sol['Model'] for sol in prohibited_sol}
 
     # Query for deployable models (EU AI Act)
     deployable_sol = engine.query("can_deploy(Model)")
@@ -47,8 +47,8 @@ def run_check(policy_files: list, registry_path: str):
     print(f"\nTotal Models: {len(all_models)}")
     print(sorted(list(all_models)))
 
-    print(f"\nRestricted by EU AI Act ({len(restricted_models)}):")
-    print(sorted(list(restricted_models)) or "(None)")
+    print(f"\nProhibited by EU AI Act ({len(prohibited_models)}):")
+    print(sorted(list(prohibited_models)) or "(None)")
 
     print(f"\nDeployable by EU AI Act ({len(deployable_models)}):")
     print(sorted(list(deployable_models)) or "(None)")
