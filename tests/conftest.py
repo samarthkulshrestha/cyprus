@@ -30,5 +30,6 @@ def governance_engine(engine):
     """
     registry = ModelRegistry("/home/czar/code/cyprus/data/models/registry.json", engine)
     registry.load_into_engine()
+    engine.load_file("/home/czar/code/cyprus/cyprus/policies/eu_ai_act.pl")
     engine.load_file("/home/czar/code/cyprus/cyprus/policies/governance_rules.pl")
     return engine
