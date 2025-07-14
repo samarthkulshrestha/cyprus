@@ -36,6 +36,34 @@ def test_get_systemic_risk_models(client):
     # Based on our rules, gpt4_turbo should be systemic risk
     assert "gpt4_turbo" in response.json()
 
+def test_get_deployable_models(client):
+    """Test the /models/deployable endpoint."""
+    response = client.get("/api/v1/models/deployable")
+    assert response.status_code == 200
+    data = response.json()
+    assert "gpt4_turbo" in data
+    assert "customer_chatbot_v3" in data
+    assert "social_scorer_v1" not in data
+
+def test_get_model_compliance_deployable(client):
+    """Test the compliance status of a deployable model."""
+    response = client.get("/api/v1/models/gpt4_turbo/compliance")
+    assert response.status_code == 200
+    data = response.json()
+    assert data['model_id'] == 'gpt4_turbo'
+    assert data['is_compliant'] is True
+    assert data['is_deployable'] is True
+
+def test_get_model_compliance_prohibited(client):
+    """Test the compliance status of a prohibited model."""
+    response = client.get("/api/v1/models/social_scorer_v1/compliance")
+    assert response.status_code == 200
+    data = response.json()
+    assert data['model_id'] == 'social_scorer_v1'
+    assert data['is_compliant'] is False
+    assert data['is_deployable'] is False
+    assert data['is_restricted'] is True
+
 def test_get_governance_report_success(client):
     """Test successfully retrieving a governance report."""
     response = client.get("/api/v1/models/gpt4_turbo/governance_report")
