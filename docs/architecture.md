@@ -1,38 +1,76 @@
 # Cyprus System Architecture
 
-The Cyprus project is designed as a modular system for evaluating AI models against symbolic policy rules. It follows a pipeline architecture where data is collected, processed, stored, and then evaluated by a core reasoning engine. The entire system is exposed via a web API for easy integration.
+Cyprus is designed as a modular system for evaluating AI models against symbolic policy rules. It follows a clear data flow where model information is centralized, loaded into a reasoning engine, and evaluated against policies written in Prolog.
+
+This architecture separates the data (the *what*) from the logic (the *how*), making the system transparent, auditable, and easy to extend.
+
+## Architectural Diagram
+
+```
++--------------------------------+      +--------------------------------+
+|   External Sources (e.g. HF)   |      |   Internal Sources (e.g. MD)   |
++--------------------------------+      +--------------------------------+
+              |                                      |
+              v                                      v
++-------------------------------------------------------------------------+
+| 1. Data Pipeline (`cyprus/data/scrapers/`, `cyprus/data/processors/`)    |
+|   - Scrapes raw model data.                                             |
+|   - Processes and enriches it (e.g., estimates risk, compute).          |
++-------------------------------------------------------------------------+
+                                      |
+                                      v
++-------------------------------------------------------------------------+
+| 2. Model Registry (`data/models/registry.json`)                         |
+|   - Central JSON file storing all model facts.                          |
+|   - The single source of truth for the reasoning engine.                |
++-------------------------------------------------------------------------+
+                                      |
+                                      v
++-------------------------------------------------------------------------+
+| 3. Reasoning Engine (`cyprus/core/`)                                    |
+|   - `ModelRegistry`: Loads `registry.json` into Prolog facts.           |
+|   - `PrologEngine`: Wraps SWI-Prolog to run queries.                    |
+|   - `PolicyEngine`: High-level API for compliance checks.               |
++-------------------------------------------------------------------------+
+              |                                      ^
+              v                                      |
++--------------------------------+      +--------------------------------+
+| 4. API Layer (`cyprus/api/`)     |      | 5. Policies (`cyprus/policies/`) |
+|   - Exposes the engine via REST. |      |   - Prolog rules for compliance. |
+|   - Endpoints for queries.       |----->|   - e.g., `eu_ai_act.pl`       |
++--------------------------------+      +--------------------------------+
+
+```
 
 ## Core Components
 
-The system is composed of four main layers:
+### 1. Data Pipeline
 
-1.  **Data Pipeline (Scrapers & Processors):** This layer is responsible for gathering raw data about AI models from various sources and enriching it with calculated metadata.
-    *   **Scrapers (`cyprus/data/scrapers/`):** Python scripts that fetch model information from external sources (e.g., Hugging Face, Papers with Code) or internal sources (e.g., local Markdown model cards).
-    *   **Processors (`cyprus/data/processors/`):** Scripts that take the raw scraped data and generate higher-level attributes, such as an estimated `risk_score` or `compute_flops`.
+This layer is responsible for populating the Model Registry.
+*   **Scrapers (`cyprus/data/scrapers/`):** Python scripts that fetch model metadata from external sources like the Hugging Face Hub or internal sources like Markdown model cards.
+*   **Processors (`cyprus/data/processors/`):** Scripts that enrich the raw data with derived attributes. For example, `compute_estimator.py` uses heuristics to estimate training FLOPs, and `risk_scorer.py` assigns a risk score based on a weighted rubric.
 
-2.  **Model Registry (`data/models/registry.json`):** A central JSON file that acts as the "database" of facts for the system. It stores the list of all known models and their associated metadata. This file is the primary output of the data pipeline.
+### 2. Model Registry
 
-3.  **Reasoning Engine (Prolog & Python Wrapper):** This is the heart of Cyprus.
-    *   **Prolog Policies (`cyprus/policies/`):** A collection of `.pl` files containing the symbolic logic for compliance. Facts (like `model/4`) and rules (like `restricted/1`) are defined here. Predicates that are modified at runtime are declared `dynamic`.
-    *   **Prolog Engine (`cyprus/core/prolog_engine.py`):** A Python class that wraps the `pyswip` library, providing a clean interface for loading Prolog files, asserting facts, and executing queries.
-    *   **Model Registry Loader (`cyprus/core/model_registry.py`):** A utility that reads the `registry.json` file and dynamically asserts the model data as facts into the Prolog engine. It also handles data sanitization (e.g., quoting strings with spaces).
-    *   **High-Level Policy Engine (`cyprus/core/policy_engine.py`):** An abstraction layer that simplifies compliance checks into straightforward Python methods (e.g., `get_deployable_models()`), hiding the underlying Prolog queries.
+The **`data/models/registry.json`** file is the central database for the system. It is a simple JSON array of model objects, where each object contains a comprehensive set of facts, including:
+*   Core identifiers (`model_id`, `organization`).
+*   Technical specifications (`compute_flops`, `capabilities`).
+*   Governance attributes (`risk_score`, `red_teaming_status`, `risk_category`).
+*   Detailed governance evidence (`training_data`, `bias_assessment`, etc.).
 
-4.  **API Layer (FastAPI):** This layer exposes the reasoning engine's capabilities to external clients.
-    *   **Server (`cyprus/api/server.py`):** The main FastAPI application entry point.
-    *   **Endpoints (`cyprus/api/endpoints.py`):** Defines all the API routes (e.g., `/api/v1/models`, `/api/v1/models/{model_id}/compliance`) and connects them to the high-level `PolicyEngine`.
+This file is the single source of truth that the reasoning engine consumes.
 
-## Data Flow
+### 3. Reasoning Engine
 
-The typical data flow through the system is as follows:
+This is the heart of Cyprus, composed of three key Python classes in `cyprus/core/`:
+*   **`PrologEngine`:** A low-level wrapper around the `pyswip` library. It provides the fundamental capabilities to load Prolog files (`.pl`), assert facts into the knowledge base, and execute queries.
+*   **`ModelRegistry`:** This class is responsible for bridging the gap between the JSON registry and the Prolog engine. It reads `registry.json`, sanitizes the data into valid Prolog terms (e.g., converting Python strings to quoted atoms), and asserts them as `model/10` and other facts into the Prolog knowledge base.
+*   **`PolicyEngine`:** This is the primary high-level interface for the system. It orchestrates the loading of policies and data, and it exposes simple, business-friendly methods like `get_deployable_models()` or `get_governance_report()`, hiding the complexity of the underlying Prolog queries.
 
-1.  A user runs the `scripts/scrape_models.py` script, pointing it to a data source (Hugging Face, a local file, etc.).
-2.  The relevant scraper fetches the data.
-3.  The data processors estimate the risk score and compute requirements.
-4.  The script adds the new, enriched model data to the `data/models/registry.json` file.
-5.  When the API server is running, it initializes the `PolicyEngine`.
-6.  The `PolicyEngine` loads the Prolog rule files (`.pl`) and then uses the `ModelRegistry` to load all models from `registry.json` as facts into the Prolog database.
-7.  A client sends a request to a FastAPI endpoint.
-8.  The endpoint calls the appropriate method on the `PolicyEngine`.
-9.  The `PolicyEngine` executes a Prolog query (e.g., `can_deploy(Model).`).
-10. The results are returned as JSON to the client.
+### 4. API Layer
+
+The `cyprus/api/` directory contains a **FastAPI** application that exposes the `PolicyEngine`'s functionality through a REST API. This allows for easy integration with other systems, such as CI/CD pipelines, internal dashboards, or other automated workflows. The API provides endpoints for listing models by compliance status, checking individual models, and retrieving full governance reports.
+
+### 5. Policies
+
+The **`cyprus/policies/`** directory contains the logic of the compliance framework, written as Prolog rule files (`.pl`). These files define the conditions under which a model is considered, for example, "prohibited," "high-risk," or "deployable." Because the rules are decoupled from the application code, they can be easily modified, audited, and extended without changing the core Python application.
