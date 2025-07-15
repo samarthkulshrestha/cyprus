@@ -2,10 +2,10 @@ import pytest
 from cyprus.core.prolog_engine import PrologEngine
 from cyprus.core.model_registry import ModelRegistry
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def engine():
     """
-    A core fixture that provides a managed PrologEngine instance.
+    A core fixture that provides a managed PrologEngine instance for each test function.
     It uses the engine as a context manager to ensure the Prolog
     session is properly halted after the test completes.
     """
