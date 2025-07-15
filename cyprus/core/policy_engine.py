@@ -57,10 +57,10 @@ class PolicyEngine:
                                     for k, v in solutions[0].items()}
                 report[key] = {k: v for k, v in cleaned_solution.items() if k != 'Model'}
 
-        query_and_add('training_data', "training_data({model_id}, Source, Size, DateRange, Quality)")
-        query_and_add('bias_assessment', "bias_assessment({model_id}, Date, Metrics, Groups, Status)")
-        query_and_add('performance', "performance_metrics({model_id}, Acc, Prec, Rec, F1, Date)")
-        query_and_add('security', "security_measures({model_id}, AtRest, InTransit, Access)")
+        query_and_add('training_data', f"training_data({model_id}, Source, Size, DateRange, Quality)")
+        query_and_add('bias_assessment', f"bias_assessment({model_id}, Date, Metrics, Groups, Status)")
+        query_and_add('performance', f"performance_metrics({model_id}, Acc, Prec, Rec, F1, Date)")
+        query_and_add('security', f"security_measures({model_id}, AtRest, InTransit, Access)")
 
         return report
 

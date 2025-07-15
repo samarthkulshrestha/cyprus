@@ -84,9 +84,11 @@ class ModelRegistry:
 
             if "training_data" in gov_facts:
                 td = gov_facts["training_data"]
-                fact = (f"training_data({model_id_sanitized}, {self._sanitize_prolog_term(td.get('data_source'))}, "
-                        f"{self._sanitize_prolog_term(td.get('data_size'))}, {self._sanitize_prolog_term(td.get('data_date_range'))}, "
-                        f"{self._sanitize_prolog_term(td.get('data_quality_score'))})")
+                fact = f"training_data({self._sanitize_prolog_term(td.get('model_id_sanitized'))}, " \
+                    f"{self._sanitize_prolog_term(td.get('data_source'))}, " \
+                    f"{self._sanitize_prolog_term(td.get('data_size'))}, " \
+                    f"{self._sanitize_prolog_term(td.get('data_date_range'))}, " \
+                    f"{self._sanitize_prolog_term(td.get('data_quality_score'))})"
                 self.engine.assertz(fact)
 
             if "bias_assessment" in gov_facts:
