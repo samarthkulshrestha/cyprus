@@ -43,7 +43,7 @@ class PolicyEngine:
             A dictionary containing all known facts for the model, or None.
         """
         # First, check if the model exists
-        if not list(self.engine.query(f"model({model_id}, _, _, _, _, _, _, _, _, _)")):
+        if not list(self.engine.query(f"model('{model_id}', _, _, _, _, _, _, _, _, _)")):
             return None
 
         report = {'model_id': model_id}
@@ -57,12 +57,42 @@ class PolicyEngine:
                                     for k, v in solutions[0].items()}
                 report[key] = {k: v for k, v in cleaned_solution.items() if k != 'Model'}
 
-        query_and_add('training_data', f"training_data({model_id}, Source, Size, DateRange, Quality)")
-        query_and_add('bias_assessment', f"bias_assessment({model_id}, Date, Metrics, Groups, Status)")
-        query_and_add('performance', f"performance_metrics({model_id}, Acc, Prec, Rec, F1, Date)")
-        query_and_add('security', f"security_measures({model_id}, AtRest, InTransit, Access)")
+        query_and_add('training_data', "training_data('{model_id}', Source, Size, DateRange, Quality)")
+        query_and_add('bias_assessment', "bias_assessment('{model_id}', Date, Metrics, Groups, Status)")
+        query_and_add('performance', "performance_metrics('{model_id}', Acc, Prec, Rec, F1, Date)")
+        query_and_add('security', "security_measures('{model_id}', AtRest, InTransit, Access)")
 
         return report
+
+    def get_model_details(self, model_id: str) -> Optional[Dict]:
+        """
+        Gets comprehensive details for a single model, including organization,
+        risk category, and compliance status, for use in the frontend.
+        """
+        compliance_status = self.get_model_compliance_status(model_id)
+        if not compliance_status:
+            return None
+
+        query = f"model('{model_id}', org(Org), _, _, _, _, _, _, risk_category(RiskCategory), _)"
+        solutions = self.engine.query(query)
+
+        # Fallback if the detailed query fails, but compliance status exists
+        if not solutions:
+            return {
+                **compliance_status,
+                "organization": "unknown",
+                "risk_category": "unknown",
+            }
+
+        details = solutions[0]
+        organization = details['Org'].strip("'") if isinstance(details.get('Org'), str) else details.get('Org', 'unknown')
+        risk_category = details['RiskCategory'].strip("'") if isinstance(details.get('RiskCategory'), str) else details.get('RiskCategory', 'unknown')
+
+        return {
+            **compliance_status,
+            "organization": organization,
+            "risk_category": risk_category,
+        }
 
     def get_potentially_restricted_models(self) -> Dict[str, float]:
         """
@@ -79,7 +109,7 @@ class PolicyEngine:
 
     def get_model_compliance_status(self, model_id: str) -> Optional[Dict]:
         """
-        Checks the compliance status of a single model.
+        Checks the compliance status of a single model efficiently.
 
         Args:
             model_id: The ID of the model to check.
@@ -87,16 +117,16 @@ class PolicyEngine:
         Returns:
             A dictionary with compliance details, or None if the model is not found.
         """
-        all_models = self.get_all_models()
-        if model_id not in all_models:
+        # Check if model exists
+        if not list(self.engine.query(f"model('{model_id}', _, _, _, _, _, _, _, _, _)")):
             return None
 
-        is_restricted = model_id in self.get_restricted_models()
-        is_deployable = model_id in self.get_deployable_models()
+        is_restricted = bool(self.engine.query(f"prohibited_deployment('{model_id}')"))
+        is_deployable = bool(self.engine.query(f"can_deploy('{model_id}')"))
 
         return {
             "model_id": model_id,
-            "is_compliant": is_deployable, # Simple definition of compliance
+            "is_compliant": is_deployable,
             "is_restricted": is_restricted,
             "is_deployable": is_deployable,
         }

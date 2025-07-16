@@ -1,10 +1,10 @@
-from fastapi import APIRouter, HTTPException, Path
+from fastapi import APIRouter, HTTPException, Path, Query
 from typing import List, Dict, Optional
 from cyprus.core.policy_engine import PolicyEngine
 
 # --- Configuration ---
 # In a real app, these would come from a config file
-POLICY_FILES = ["cyprus/policies/eu_ai_act.pl"]
+POLICY_FILES = ["cyprus/policies/eu_ai_act.pl", "cyprus/policies/governance_rules.pl"]
 REGISTRY_PATH = "data/models/registry.json"
 
 # --- Engine Initialization ---
@@ -20,12 +20,21 @@ def read_root():
     return {"status": "ok", "message": "Cyprus Policy Engine API is running."}
 
 @router.get("/models", summary="Get All Models and Their Compliance")
-def get_all_models():
+def get_all_models(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
     """
-    Retrieves a list of all models in the registry and their compliance status.
+    Retrieves a paginated list of all models in the registry and their compliance status.
     """
-    all_models = policy_engine.get_all_models()
-    return [policy_engine.get_model_compliance_status(m) for m in sorted(list(all_models))]
+    all_model_ids = sorted(list(policy_engine.get_all_models()))
+    total_models = len(all_model_ids)
+    
+    paginated_ids = all_model_ids[skip : skip + limit]
+    
+    models_details = [policy_engine.get_model_details(m) for m in paginated_ids]
+    
+    return {
+        "total_models": total_models,
+        "models": models_details
+    }
 
 @router.get("/models/prohibited", summary="Get Prohibited Models", response_model=List[str])
 def get_prohibited_models():
