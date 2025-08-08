@@ -1,4 +1,6 @@
 from pyswip import Prolog
+import tempfile
+import os
 
 class PrologEngine:
     """
@@ -19,6 +21,20 @@ class PrologEngine:
         except Exception as e:
             print(f"Error consulting Prolog file {file_path}: {e}")
             raise
+
+    def consult_string(self, rules: str):
+        """
+        Consults a string of Prolog rules.
+        """
+        with tempfile.NamedTemporaryFile(mode="w", delete=False, suffix=".pl") as f:
+            f.write(rules)
+            temp_path = f.name
+        
+        try:
+            self.load_file(temp_path)
+        finally:
+            os.remove(temp_path)
+
 
     def assertz(self, fact: str):
         """

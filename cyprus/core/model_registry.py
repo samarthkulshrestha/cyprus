@@ -2,28 +2,22 @@ import json
 from typing import List, Dict, Any
 from cyprus.core.prolog_engine import PrologEngine
 
+class ModelRegistryError(Exception):
+    """Custom exception for model registry errors."""
+    pass
+
 class ModelRegistry:
     """
     Manages loading model data from a JSON registry into the Prolog engine.
     """
-    def __init__(self, registry_path: str, engine: PrologEngine):
-        self.registry_path = registry_path
+    def __init__(self, models: List[Dict[str, Any]], engine: PrologEngine):
+        self.models = models
         self.engine = engine
-        self.models = self._load_from_json()
-
-    def _load_from_json(self) -> List[Dict[str, Any]]:
-        """Loads the model registry from a JSON file."""
-        try:
-            with open(self.registry_path, 'r') as f:
-                return json.load(f)
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            print(f"Error loading model registry from {self.registry_path}: {e}")
-            return []
 
     def _sanitize_prolog_term(self, value: Any) -> str:
         """
         Recursively sanitizes a Python value into a valid Prolog term string.
-        - Quotes strings that aren't valid numbers.
+        - Quotes strings that aren't valid numbers and escapes single quotes.
         - Converts Python lists to Prolog lists.
         """
         if isinstance(value, str):
@@ -32,8 +26,10 @@ class ModelRegistry:
                 float(value)
                 return value
             except (ValueError, TypeError):
+                # Escape single quotes for Prolog
+                sanitized_value = value.replace("'", "''")
                 # Otherwise, quote it to make it a valid Prolog atom.
-                return f"'{value}'"
+                return f"'{sanitized_value}'"
         if isinstance(value, list):
             # Recursively sanitize list elements and format as a Prolog list.
             return f"[{', '.join(self._sanitize_prolog_term(v) for v in value)}]"

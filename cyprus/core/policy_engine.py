@@ -1,6 +1,31 @@
-from typing import List, Dict, Set, Optional
+import json
+from typing import List, Dict, Set, Optional, Any
+
 from cyprus.core.prolog_engine import PrologEngine
-from cyprus.core.model_registry import ModelRegistry
+from cyprus.core.model_registry import ModelRegistry, ModelRegistryError
+
+
+def create_policy_engine_from_files(
+    policy_files: List[str], registry_path: str
+) -> "PolicyEngine":
+    """
+    Factory function to create a PolicyEngine from policy and registry files.
+    """
+    policy_rules = []
+    for policy_file in policy_files:
+        with open(policy_file, "r") as f:
+            policy_rules.append(f.read())
+
+    try:
+        with open(registry_path, "r") as f:
+            model_data = json.load(f)
+    except FileNotFoundError:
+        raise ModelRegistryError(f"Model registry not found at {registry_path}")
+    except json.JSONDecodeError as e:
+        raise ModelRegistryError(f"Error decoding JSON from {registry_path}: {e}")
+
+    return PolicyEngine(policy_rules, model_data)
+
 
 class PolicyEngine:
     """
@@ -9,16 +34,16 @@ class PolicyEngine:
     This engine encapsulates the Prolog backend and the model registry,
     providing simple methods to query for compliance status.
     """
-    def __init__(self, policy_files: List[str], registry_path: str):
+
+    def __init__(self, policy_rules: List[str], model_data: List[Dict[str, Any]]):
         self.engine = PrologEngine()
-        self.registry_path = registry_path
 
         # Load policies and rules
-        for policy_file in policy_files:
-            self.engine.load_file(policy_file)
+        for rule in policy_rules:
+            self.engine.consult_string(rule)
 
         # Load model data
-        self.registry = ModelRegistry(self.registry_path, self.engine)
+        self.registry = ModelRegistry(model_data, self.engine)
         self.registry.load_into_engine()
 
     def get_all_models(self) -> Set[str]:
@@ -66,32 +91,38 @@ class PolicyEngine:
 
     def get_model_details(self, model_id: str) -> Optional[Dict]:
         """
-        Gets comprehensive details for a single model, including organization,
-        risk category, and compliance status, for use in the frontend.
+        Returns all available details from the model/10 fact for a given model,
+        mirroring the structure used by get_all_models(), plus compliance flags.
         """
         compliance_status = self.get_model_compliance_status(model_id)
         if not compliance_status:
             return None
 
-        query = f"model('{model_id}', org(Org), _, _, _, _, _, _, risk_category(RiskCategory), _)"
+        query = (
+            f"model('{model_id}', org(Org), compute(Compute), risk_score(Risk), "
+            f"deployment_region(Regions), alignment_methodology(Align), capabilities(Caps), "
+            f"red_teaming_status(RT), risk_category(RiskCategory), use_case(UseCase))"
+        )
         solutions = self.engine.query(query)
 
-        # Fallback if the detailed query fails, but compliance status exists
         if not solutions:
-            return {
-                **compliance_status,
-                "organization": "unknown",
-                "risk_category": "unknown",
-            }
+            return { **compliance_status }
 
-        details = solutions[0]
-        organization = details['Org'].strip("'") if isinstance(details.get('Org'), str) else details.get('Org', 'unknown')
-        risk_category = details['RiskCategory'].strip("'") if isinstance(details.get('RiskCategory'), str) else details.get('RiskCategory', 'unknown')
+        s = solutions[0]
+        def deatom(v):
+            return v.strip("'") if isinstance(v, str) else v
 
         return {
             **compliance_status,
-            "organization": organization,
-            "risk_category": risk_category,
+            "organization": deatom(s.get('Org','unknown')),
+            "compute": deatom(s.get('Compute', 0)),
+            "risk_score": deatom(s.get('Risk', 0)),
+            "deployment_region": deatom(s.get('Regions', [])),
+            "alignment_methodology": deatom(s.get('Align', [])),
+            "capabilities": deatom(s.get('Caps', [])),
+            "red_teaming_status": deatom(s.get('RT', 'unknown')),
+            "risk_category": deatom(s.get('RiskCategory', 'unknown')),
+            "use_case": deatom(s.get('UseCase', 'unknown')),
         }
 
     def get_potentially_restricted_models(self) -> Dict[str, float]:

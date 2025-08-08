@@ -1,18 +1,26 @@
-from fastapi import APIRouter, HTTPException, Path, Query
+from fastapi import APIRouter, Depends, HTTPException, Path, Query
 from typing import List, Dict, Optional
-from cyprus.core.policy_engine import PolicyEngine
 
-# --- Configuration ---
-# In a real app, these would come from a config file
-POLICY_FILES = ["cyprus/policies/eu_ai_act.pl", "cyprus/policies/governance_rules.pl"]
-REGISTRY_PATH = "data/models/registry.json"
+from cyprus.core.policy_engine import create_policy_engine_from_files
+from cyprus.config import DEFAULT_POLICY_FILES, DEFAULT_REGISTRY_PATH
 
 # --- Engine Initialization ---
 # This creates a global engine instance for the API to use.
-policy_engine = PolicyEngine(policy_files=POLICY_FILES, registry_path=REGISTRY_PATH)
+policy_engine = create_policy_engine_from_files(
+    policy_files=DEFAULT_POLICY_FILES, registry_path=DEFAULT_REGISTRY_PATH
+)
 
 # --- API Router ---
 router = APIRouter()
+
+# --- Dependencies ---
+def get_model_or_404(model_id: str = Path(..., description="The ID of the model to check.")):
+    """
+    Dependency to get a model by ID, raising a 404 if it doesn't exist.
+    """
+    if not list(policy_engine.engine.query(f"model('{model_id}', _, _, _, _, _, _, _, _, _)")):
+        raise HTTPException(status_code=404, detail=f"Model '{model_id}' not found in registry.")
+    return model_id
 
 @router.get("/", summary="API Health Check")
 def read_root():
@@ -22,17 +30,14 @@ def read_root():
 @router.get("/models", summary="Get All Models and Their Compliance")
 def get_all_models(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
     """
-    Retrieves a paginated list of all models in the registry and their compliance status.
+    Retrieves a paginated list of models and their compliance status.
+    total_models reflects the number returned in this response.
     """
     all_model_ids = sorted(list(policy_engine.get_all_models()))
-    total_models = len(all_model_ids)
-    
     paginated_ids = all_model_ids[skip : skip + limit]
-    
     models_details = [policy_engine.get_model_details(m) for m in paginated_ids]
-    
     return {
-        "total_models": total_models,
+        "total_models": len(models_details),
         "models": models_details
     }
 
@@ -58,22 +63,30 @@ def get_deployable_models():
     return sorted(list(policy_engine.get_deployable_models()))
 
 @router.get("/models/{model_id}/compliance", summary="Get Compliance Status for a Single Model")
-def get_model_compliance(model_id: str = Path(..., description="The ID of the model to check.")):
+def get_model_compliance(model_id: str = Depends(get_model_or_404)):
     """
     Checks the compliance status of a single, specified model.
     """
-    status = policy_engine.get_model_compliance_status(model_id)
-    if status is None:
-        raise HTTPException(status_code=404, detail=f"Model '{model_id}' not found in registry.")
-    return status
+    return policy_engine.get_model_compliance_status(model_id)
 
 @router.get("/models/{model_id}/governance_report", summary="Get Full Governance Report for a Model")
-def get_governance_report(model_id: str = Path(..., description="The ID of the model to report on.")):
+def get_governance_report(model_id: str = Depends(get_model_or_404)):
     """
     Retrieves a comprehensive governance report containing all known
     facts for a single, specified model.
     """
-    report = policy_engine.get_governance_report(model_id)
-    if report is None:
-        raise HTTPException(status_code=404, detail=f"Model '{model_id}' not found in registry.")
-    return report
+    return policy_engine.get_governance_report(model_id)
+
+@router.post("/reload", summary="Reload Policies and Model Registry")
+def reload_engine():
+    """
+    Reloads the policy engine with the latest policies and model data from disk.
+    """
+    global policy_engine
+    try:
+        policy_engine = create_policy_engine_from_files(
+            policy_files=DEFAULT_POLICY_FILES, registry_path=DEFAULT_REGISTRY_PATH
+        )
+        return {"status": "ok", "message": "Policy engine reloaded successfully."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to reload policy engine: {e}")
