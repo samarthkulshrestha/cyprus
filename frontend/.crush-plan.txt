@@ -1,0 +1,1 @@
+Plan: Replace CRA with Vite + React + TS. Add React Router, React Query, Zustand, TanStack Table, Recharts, d3, clsx. Implement pages: Overview, Models, ModelDetail, Policies, Compare, Analytics. Add gruvbox CSS, monospaced fonts. Integrate backend endpoints under /api/v1/.

@@ -1,0 +1,20 @@
+:root{--bg:#282828;--fg:#ebdbb2;--muted:#bdae93;--accent:#fabd2f;--accent2:#fe8019;--green:#b8bb26;--red:#fb4934;--blue:#83a598;--purple:#d3869b;--cyan:#8ec07c;--line:#3c3836}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+a{color:var(--blue);text-decoration:none}
+button{font-family:inherit}
+.container{max-width:1400px;margin:0 auto;padding:16px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px;border:1px solid var(--line);background:#1d2021}
+.card{border:1px solid var(--line);background:#1d2021;padding:12px;border-radius:4px}
+.grid{display:grid;gap:12px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+.badge{display:inline-block;padding:2px 6px;border:1px solid var(--line);border-radius:3px}
+.badge.ok{color:var(--green)}
+.badge.warn{color:var(--accent)}
+.badge.err{color:var(--red)}
+input,select{background:#1d2021;color:var(--fg);border:1px solid var(--line);padding:6px;border-radius:3px}
+::-webkit-scrollbar{height:8px;width:8px}
+::-webkit-scrollbar-thumb{background:var(--line)}
