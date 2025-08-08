@@ -1,46 +1,37 @@
 import argparse
-from cyprus.core.prolog_engine import PrologEngine
-from cyprus.core.model_registry import ModelRegistry
+
+from cyprus.core.policy_engine import create_policy_engine_from_files
+from cyprus.config import DEFAULT_POLICY_FILES, DEFAULT_REGISTRY_PATH
+
 
 def run_check(policy_files: list, registry_path: str):
     """
     Loads policies and the model registry, then runs a comprehensive
     set of compliance and governance queries.
     """
-    engine = PrologEngine()
-    
-    print("Loading policies...")
-    for policy_file in policy_files:
-        try:
-            engine.load_file(policy_file)
-            print(f"  - Loaded {policy_file}")
-        except Exception as e:
-            print(f"  - Failed to load {policy_file}: {e}")
-            return
-
-    # Load models from the JSON registry
-    print(f"\nLoading model registry from '{registry_path}'...")
-    registry = ModelRegistry(registry_path, engine)
-    registry.load_into_engine()
-    print(f"  - Loaded {len(registry.models)} models.")
+    print("Loading policies and model registry...")
+    try:
+        policy_engine = create_policy_engine_from_files(policy_files, registry_path)
+        print(f"  - Loaded {len(policy_files)} policy files.")
+        print(f"  - Loaded {len(policy_engine.registry.models)} models.")
+    except Exception as e:
+        print(f"Error creating policy engine: {e}")
+        return
 
     # --- Run Compliance Queries ---
     print("\n--- Compliance & Governance Report ---")
 
     # Query for all models using the new model/10 predicate
-    all_models_sol = engine.query("model(Model, _, _, _, _, _, _, _, _, _)")
-    all_models = {sol['Model'] for sol in all_models_sol}
+    all_models = policy_engine.get_all_models()
     
     # Query for prohibited models (EU AI Act)
-    prohibited_sol = engine.query("prohibited_deployment(Model)")
-    prohibited_models = {sol['Model'] for sol in prohibited_sol}
+    prohibited_models = policy_engine.get_restricted_models()
 
     # Query for deployable models (EU AI Act)
-    deployable_sol = engine.query("can_deploy(Model)")
-    deployable_models = {sol['Model'] for sol in deployable_sol}
+    deployable_models = policy_engine.get_deployable_models()
     
     # Query for models that are not production ready (Governance Rules)
-    not_ready_sol = engine.query("not_production_ready(Model)")
+    not_ready_sol = policy_engine.engine.query("not_production_ready(Model)")
     not_ready_models = {sol['Model'] for sol in not_ready_sol}
 
 
@@ -70,17 +61,14 @@ def main():
     )
     parser.add_argument(
         "--registry",
-        default="data/models/registry.json",
+        default=DEFAULT_REGISTRY_PATH,
         help="Path to the model registry JSON file.",
     )
     args = parser.parse_args()
 
     # If no policy files are specified, load both default sets of rules.
     if not args.policy_files:
-        args.policy_files = [
-            "cyprus/policies/eu_ai_act.pl",
-            "cyprus/policies/governance_rules.pl"
-        ]
+        args.policy_files = DEFAULT_POLICY_FILES
 
     run_check(args.policy_files, args.registry)
 

@@ -1,8 +1,10 @@
 import argparse
 import json
+
 from cyprus.data.scrapers.huggingface import parse_huggingface_model_card
 from cyprus.data.processors.compute_estimator import estimate_compute
 from cyprus.data.processors.risk_scorer import score_risk
+from cyprus.config import DEFAULT_REGISTRY_PATH
 
 def main():
     """
@@ -11,7 +13,7 @@ def main():
     """
     parser = argparse.ArgumentParser(description="Scrape Hugging Face model data and update the registry.")
     parser.add_argument("model_id", type=str, help="The Hugging Face model ID (e.g., 'meta-llama/Meta-Llama-3-8B').")
-    parser.add_argument("--registry-path", type=str, default="data/models/registry.json", help="Path to the model registry JSON file.")
+    parser.add_argument("--registry-path", type=str, default=DEFAULT_REGISTRY_PATH, help="Path to the model registry JSON file.")
     args = parser.parse_args()
 
     print(f"Fetching and parsing model card for '{args.model_id}'...")
