@@ -21,7 +21,7 @@ Requires Python 3.11+ and a working Clingo installation.
 ```bash
 # Clone
 git clone https://github.com/samarthkulshrestha/cyprus.git
-cd recyp
+cd cyprus
 
 # Install with uv
 uv venv && uv pip install -e ".[dev]"
