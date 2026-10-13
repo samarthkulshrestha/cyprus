@@ -1,6 +1,4 @@
-import pytest
-
-from cyprus.evaluation.benchmark import PredicateMetrics, AccuracyResult
+from cyprus.evaluation.benchmark import PredicateMetrics
 
 
 def test_predicate_metrics_perfect():

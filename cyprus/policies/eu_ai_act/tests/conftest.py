@@ -1,8 +1,6 @@
 """Shared fixtures for EU AI Act policy tests."""
 from pathlib import Path
 
-import pytest
-
 from cyprus.engine.solver import Solver
 from cyprus.registry.compiler import compile_models
 from cyprus.registry.schema import (

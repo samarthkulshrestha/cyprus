@@ -1,10 +1,8 @@
-import json
 import sys
 from pathlib import Path
 
 import click
 from rich.console import Console
-from rich.table import Table
 
 from cyprus.engine.solver import Solver
 from cyprus.registry.loader import load_models

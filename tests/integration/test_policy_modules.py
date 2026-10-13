@@ -1,5 +1,4 @@
 """Test that policy modules are well-formed and load correctly."""
-from pathlib import Path
 
 from cyprus.engine.solver import Solver
 

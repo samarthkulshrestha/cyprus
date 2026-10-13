@@ -1,5 +1,4 @@
 import pytest
-from pathlib import Path
 
 from cyprus.engine.solver import Solver
 from cyprus.engine.result import ComplianceStatus

@@ -1,6 +1,3 @@
-import pytest
-from pathlib import Path
-
 import yaml
 
 from cyprus.evaluation.agreement import compute_agreement, _fleiss_kappa
