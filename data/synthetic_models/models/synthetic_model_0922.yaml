@@ -1,0 +1,30 @@
+model_id: synthetic_model_0922
+organization: org_15
+compute_flops: 2.7752971662036877e+19
+risk_score: 0.22
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- code_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.76
+    size_tokens: 13057443148.817179
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.92
+  performance:
+    f1_score: 0.8
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

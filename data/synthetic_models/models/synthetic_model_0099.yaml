@@ -1,0 +1,31 @@
+model_id: synthetic_model_0099
+organization: org_48
+compute_flops: 2.4254938186606526e+22
+risk_score: 0.28
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- global
+capabilities:
+- code_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.97
+    size_tokens: 55397580755375.734
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.72
+  performance:
+    f1_score: 0.94
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

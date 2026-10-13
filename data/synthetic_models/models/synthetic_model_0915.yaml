@@ -1,0 +1,32 @@
+model_id: synthetic_model_0915
+organization: org_15
+compute_flops: 5.324371169301226e+24
+risk_score: 0.14
+risk_category: minimal_risk
+use_case: biometric_surveillance
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+- eu
+capabilities:
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.54
+    size_tokens: 43004582965.052536
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.89
+  performance:
+    f1_score: 0.67
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0699
+organization: org_12
+compute_flops: 4.5779390732581724e+19
+risk_score: 0.21
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- jp
+- kr
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.79
+    size_tokens: 4854949944192.88
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.52
+  performance:
+    f1_score: 0.73
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

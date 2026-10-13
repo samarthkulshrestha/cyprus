@@ -1,0 +1,32 @@
+model_id: synthetic_model_0666
+organization: org_30
+compute_flops: 3.8187453441454234e+18
+risk_score: 0.39
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- au
+- global
+capabilities:
+- chat
+- code_generation
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.61
+    size_tokens: 271256341725.04077
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.51
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0737
+organization: org_33
+compute_flops: 1.9581559584790383e+25
+risk_score: 0.12
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.75
+    size_tokens: 11004317470.123251
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.62
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

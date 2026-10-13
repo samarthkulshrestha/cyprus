@@ -1,0 +1,32 @@
+model_id: synthetic_model_0029
+organization: org_23
+compute_flops: 4.956723828535428e+20
+risk_score: 0.24
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- uk
+- eu
+- jp
+capabilities:
+- chat
+- code_generation
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.75
+    size_tokens: 823731460682.1199
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.48
+  performance:
+    f1_score: 0.55
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

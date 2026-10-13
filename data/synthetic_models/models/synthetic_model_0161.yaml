@@ -1,0 +1,31 @@
+model_id: synthetic_model_0161
+organization: org_32
+compute_flops: 3.5950305792347483e+25
+risk_score: 0.21
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- multimodal
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.8
+    size_tokens: 14274532310.201355
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.78
+  performance:
+    f1_score: 0.68
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

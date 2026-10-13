@@ -1,0 +1,29 @@
+model_id: synthetic_model_0766
+organization: org_26
+compute_flops: 8.192238522196582e+24
+risk_score: 0.39
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- global
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.51
+    size_tokens: 2154705664.3024487
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.59
+  performance:
+    f1_score: 0.54
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

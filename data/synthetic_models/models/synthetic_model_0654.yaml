@@ -1,0 +1,31 @@
+model_id: synthetic_model_0654
+organization: org_18
+compute_flops: 6.992305292536281e+19
+risk_score: 0.72
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- us
+- global
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 2192262369605.814
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.99
+  performance:
+    f1_score: 0.7
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,15 @@
+# Traceability Mapping
+# For each article, map clauses to their ASP rules and test cases.
+#
+# Example:
+#   article_id:
+#     clause_id:
+#       legal_text: "Quoted text from the regulation"
+#       simplified: "One-sentence summary"
+#       rules:
+#         - file: rule_file.lp
+#           predicate: "predicate_name/arity"
+#       test_cases:
+#         - test_file.py::test_name
+#       coverage: complete | partial | not_encoded
+#       reason: ""  # Only needed if not_encoded or partial

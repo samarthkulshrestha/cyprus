@@ -1,0 +1,32 @@
+model_id: synthetic_model_0341
+organization: org_23
+compute_flops: 3.076175014185745e+20
+risk_score: 0.74
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- au
+capabilities:
+- code_generation
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.83
+    size_tokens: 8342139857.203609
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.52
+  performance:
+    f1_score: 0.73
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0088
+organization: org_50
+compute_flops: 1.6378897879047757e+24
+risk_score: 0.72
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- ca
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.82
+    size_tokens: 2264957245.589213
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.39
+  performance:
+    f1_score: 0.91
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

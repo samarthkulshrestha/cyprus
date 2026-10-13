@@ -1,0 +1,31 @@
+model_id: synthetic_model_0622
+organization: org_42
+compute_flops: 1.3017519874033836e+18
+risk_score: 0.25
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- global
+- us
+- jp
+capabilities:
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.88
+    size_tokens: 9076313342.943403
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.61
+  performance:
+    f1_score: 0.43
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

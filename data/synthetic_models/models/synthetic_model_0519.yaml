@@ -1,0 +1,32 @@
+model_id: synthetic_model_0519
+organization: org_40
+compute_flops: 2.251813326109841e+21
+risk_score: 0.36
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- jp
+- kr
+capabilities:
+- chat
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.74
+    size_tokens: 406382068647.67535
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.82
+  performance:
+    f1_score: 0.8
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

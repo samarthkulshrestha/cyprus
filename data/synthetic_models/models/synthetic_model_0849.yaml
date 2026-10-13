@@ -1,0 +1,31 @@
+model_id: synthetic_model_0849
+organization: org_38
+compute_flops: 2.6867836697863116e+22
+risk_score: 0.3
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- ca
+capabilities:
+- chat
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.94
+    size_tokens: 4900725889.108388
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.99
+  performance:
+    f1_score: 0.87
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

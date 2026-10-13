@@ -1,0 +1,31 @@
+model_id: synthetic_model_0995
+organization: org_20
+compute_flops: 1.3672120020969641e+23
+risk_score: 0.56
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- us
+- uk
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 1.0
+    size_tokens: 8576763970.090673
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.32
+  performance:
+    f1_score: 0.54
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

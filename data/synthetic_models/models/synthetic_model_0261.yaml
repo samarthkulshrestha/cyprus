@@ -1,0 +1,32 @@
+model_id: synthetic_model_0261
+organization: org_31
+compute_flops: 3.927774593145253e+18
+risk_score: 0.67
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+- global
+capabilities:
+- chat
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.63
+    size_tokens: 2976616178.208107
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.95
+  performance:
+    f1_score: 0.86
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

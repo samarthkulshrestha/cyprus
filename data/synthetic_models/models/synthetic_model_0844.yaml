@@ -1,0 +1,34 @@
+model_id: synthetic_model_0844
+organization: org_48
+compute_flops: 9.79628365463687e+20
+risk_score: 0.3
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+- us
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.81
+    size_tokens: 27542089235273.156
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.79
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

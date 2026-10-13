@@ -1,0 +1,32 @@
+model_id: synthetic_model_0055
+organization: org_9
+compute_flops: 3.454593865407243e+23
+risk_score: 0.42
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.75
+    size_tokens: 68144867708348.93
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.34
+  performance:
+    f1_score: 0.69
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

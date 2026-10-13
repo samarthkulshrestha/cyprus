@@ -1,0 +1,33 @@
+model_id: synthetic_model_0741
+organization: org_40
+compute_flops: 2.5002608672430684e+21
+risk_score: 0.62
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.84
+    size_tokens: 78386576789054.42
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.93
+  performance:
+    f1_score: 0.52
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

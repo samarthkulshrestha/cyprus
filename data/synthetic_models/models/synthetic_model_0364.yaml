@@ -1,0 +1,35 @@
+model_id: synthetic_model_0364
+organization: org_25
+compute_flops: 3.4337992581304766e+25
+risk_score: 0.64
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- eu
+- kr
+capabilities:
+- chat
+- code_generation
+- reasoning
+- image_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.59
+    size_tokens: 29830581888.898335
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.36
+  performance:
+    f1_score: 0.61
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

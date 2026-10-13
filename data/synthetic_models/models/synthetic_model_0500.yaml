@@ -1,0 +1,30 @@
+model_id: synthetic_model_0500
+organization: org_50
+compute_flops: 1.9824220602529245e+20
+risk_score: 0.56
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+- eu
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.54
+    size_tokens: 408377767548.7449
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.57
+  performance:
+    f1_score: 0.96
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

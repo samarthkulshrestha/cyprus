@@ -1,0 +1,28 @@
+model_id: synthetic_model_0131
+organization: org_24
+compute_flops: 2.9297084311331895e+25
+risk_score: 0.36
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 27280964320519.145
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.42
+  performance:
+    f1_score: 0.45
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

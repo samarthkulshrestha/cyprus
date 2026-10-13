@@ -1,0 +1,31 @@
+model_id: synthetic_model_0108
+organization: org_26
+compute_flops: 1.375253609415049e+21
+risk_score: 0.2
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- jp
+- eu
+- kr
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.84
+    size_tokens: 256266651407.7221
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.53
+  performance:
+    f1_score: 0.56
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

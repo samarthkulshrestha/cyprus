@@ -1,0 +1,30 @@
+model_id: synthetic_model_0760
+organization: org_12
+compute_flops: 1.779820266732887e+19
+risk_score: 0.2
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- kr
+- us
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.99
+    size_tokens: 1422746578.7192569
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.62
+  performance:
+    f1_score: 0.95
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

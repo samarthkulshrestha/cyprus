@@ -1,0 +1,31 @@
+model_id: synthetic_model_0250
+organization: org_41
+compute_flops: 2.1221002159825876e+21
+risk_score: 0.32
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- eu
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.66
+    size_tokens: 140507925891.03665
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.83
+  performance:
+    f1_score: 0.75
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

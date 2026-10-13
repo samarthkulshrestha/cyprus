@@ -1,0 +1,29 @@
+model_id: synthetic_model_0892
+organization: org_31
+compute_flops: 1.3744819687495068e+23
+risk_score: 0.6
+risk_category: unacceptable_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.76
+    size_tokens: 616140232375.5579
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.44
+  performance:
+    f1_score: 0.89
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

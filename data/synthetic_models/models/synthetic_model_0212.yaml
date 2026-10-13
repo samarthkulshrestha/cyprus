@@ -1,0 +1,34 @@
+model_id: synthetic_model_0212
+organization: org_36
+compute_flops: 4.924275724092203e+21
+risk_score: 0.6
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.73
+    size_tokens: 629687471736.8503
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.93
+  performance:
+    f1_score: 0.52
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

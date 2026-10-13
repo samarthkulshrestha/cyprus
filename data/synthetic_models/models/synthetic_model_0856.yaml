@@ -1,0 +1,32 @@
+model_id: synthetic_model_0856
+organization: org_23
+compute_flops: 1.2980308654164914e+21
+risk_score: 0.7
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- au
+- kr
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.75
+    size_tokens: 1739358463.8454466
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.95
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

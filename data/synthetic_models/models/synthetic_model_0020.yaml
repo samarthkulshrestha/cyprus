@@ -1,0 +1,31 @@
+model_id: synthetic_model_0020
+organization: org_48
+compute_flops: 1.234127500468746e+18
+risk_score: 0.41
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- uk
+- eu
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.78
+    size_tokens: 52334366411.76852
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.79
+  performance:
+    f1_score: 0.56
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

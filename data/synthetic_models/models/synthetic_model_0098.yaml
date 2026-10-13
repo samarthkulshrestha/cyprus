@@ -1,0 +1,31 @@
+model_id: synthetic_model_0098
+organization: org_11
+compute_flops: 3.202667046716302e+18
+risk_score: 0.47
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+- us
+capabilities:
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.89
+    size_tokens: 17076719227963.963
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.79
+  performance:
+    f1_score: 0.79
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

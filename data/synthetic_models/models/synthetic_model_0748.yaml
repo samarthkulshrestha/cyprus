@@ -1,0 +1,34 @@
+model_id: synthetic_model_0748
+organization: org_40
+compute_flops: 7.251905112081126e+18
+risk_score: 0.37
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- uk
+- global
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.58
+    size_tokens: 4620479390015.841
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.78
+  performance:
+    f1_score: 0.6
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

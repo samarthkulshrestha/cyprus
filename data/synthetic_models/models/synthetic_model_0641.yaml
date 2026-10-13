@@ -1,0 +1,32 @@
+model_id: synthetic_model_0641
+organization: org_26
+compute_flops: 1.3837521403158267e+25
+risk_score: 0.55
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: not_started
+deployment_regions:
+- au
+- ca
+- us
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.74
+    size_tokens: 5578872617.518395
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.76
+  performance:
+    f1_score: 0.43
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

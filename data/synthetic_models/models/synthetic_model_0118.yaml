@@ -1,0 +1,33 @@
+model_id: synthetic_model_0118
+organization: org_26
+compute_flops: 2.677928119476481e+25
+risk_score: 0.68
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- jp
+- us
+- eu
+capabilities:
+- chat
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.77
+    size_tokens: 74037509658.0713
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.64
+  performance:
+    f1_score: 0.88
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

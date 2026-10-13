@@ -1,0 +1,32 @@
+model_id: synthetic_model_0568
+organization: org_14
+compute_flops: 1.6373331972246607e+18
+risk_score: 0.66
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- multimodal
+- reasoning
+- image_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.89
+    size_tokens: 31658405134585.824
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.41
+  performance:
+    f1_score: 0.65
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

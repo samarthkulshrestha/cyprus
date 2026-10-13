@@ -1,0 +1,30 @@
+model_id: synthetic_model_0381
+organization: org_14
+compute_flops: 4.552734899075633e+25
+risk_score: 0.85
+risk_category: unacceptable_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.76
+    size_tokens: 77605715191.81894
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.64
+  performance:
+    f1_score: 0.69
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0644
+organization: org_42
+compute_flops: 1.2047334410686565e+21
+risk_score: 0.16
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- eu
+capabilities:
+- general
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.69
+    size_tokens: 1297238195.6474547
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.75
+  performance:
+    f1_score: 0.61
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

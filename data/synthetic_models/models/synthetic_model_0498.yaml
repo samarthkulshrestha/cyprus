@@ -1,0 +1,32 @@
+model_id: synthetic_model_0498
+organization: org_19
+compute_flops: 9.213740859130476e+25
+risk_score: 0.28
+risk_category: unacceptable_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- jp
+- kr
+- uk
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.95
+    size_tokens: 60114147926.97029
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.7
+  performance:
+    f1_score: 0.69
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

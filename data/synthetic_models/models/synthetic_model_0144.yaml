@@ -1,0 +1,30 @@
+model_id: synthetic_model_0144
+organization: org_29
+compute_flops: 4.894792606855915e+26
+risk_score: 0.74
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.51
+    size_tokens: 96619014582.04274
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.73
+  performance:
+    f1_score: 0.45
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0246
+organization: org_22
+compute_flops: 1.025070248575985e+26
+risk_score: 0.78
+risk_category: unacceptable_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- eu
+- jp
+- kr
+capabilities:
+- chat
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.62
+    size_tokens: 995128733423.2034
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.57
+  performance:
+    f1_score: 0.87
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

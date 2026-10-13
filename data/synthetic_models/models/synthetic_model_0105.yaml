@@ -1,0 +1,32 @@
+model_id: synthetic_model_0105
+organization: org_6
+compute_flops: 4.2341440187810563e+21
+risk_score: 0.51
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- ca
+- kr
+- au
+capabilities:
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.64
+    size_tokens: 287141567459.49115
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.39
+  performance:
+    f1_score: 0.97
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

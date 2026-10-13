@@ -1,0 +1,29 @@
+model_id: facebook_detr_resnet_50
+organization: facebook
+compute_flops: 2.0797689925152768e+17
+risk_score: 0.32
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- general
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.5
+    size_tokens: 1000000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.5
+  performance:
+    f1_score: 0.5
+    benchmark: unknown
+    task: general
+  security:
+    access_control: none
+    audit_logging: false
+_needs_review: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0019
+organization: org_18
+compute_flops: 2.3215486727285225e+24
+risk_score: 0.23
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- uk
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.88
+    size_tokens: 706721369322.9724
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.32
+  performance:
+    f1_score: 0.9
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

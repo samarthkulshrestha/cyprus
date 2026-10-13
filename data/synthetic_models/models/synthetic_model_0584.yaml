@@ -1,0 +1,30 @@
+model_id: synthetic_model_0584
+organization: org_14
+compute_flops: 1.518620376343445e+23
+risk_score: 0.51
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- au
+- uk
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.56
+    size_tokens: 11700074865820.75
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.52
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

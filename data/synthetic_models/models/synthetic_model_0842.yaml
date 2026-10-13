@@ -1,0 +1,31 @@
+model_id: synthetic_model_0842
+organization: org_49
+compute_flops: 3.3187353327612836e+18
+risk_score: 0.24
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- us
+- kr
+- au
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 53187452867.98772
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.68
+  performance:
+    f1_score: 0.96
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0363
+organization: org_30
+compute_flops: 2.9975140524126363e+23
+risk_score: 0.45
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.56
+    size_tokens: 2836668562.0064855
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.52
+  performance:
+    f1_score: 0.77
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

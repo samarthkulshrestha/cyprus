@@ -1,0 +1,34 @@
+model_id: synthetic_model_0442
+organization: org_20
+compute_flops: 9.337009621947673e+18
+risk_score: 0.22
+risk_category: high_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+- image_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.53
+    size_tokens: 183230094619.30026
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.76
+  performance:
+    f1_score: 0.41
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0703
+organization: org_30
+compute_flops: 4.778442103156674e+26
+risk_score: 0.44
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- us
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.54
+    size_tokens: 755081250800.8029
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.4
+  performance:
+    f1_score: 0.6
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0871
+organization: org_18
+compute_flops: 1.508110067785246e+25
+risk_score: 0.06
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+- code_generation
+- image_generation
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 73929617690.90585
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.72
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

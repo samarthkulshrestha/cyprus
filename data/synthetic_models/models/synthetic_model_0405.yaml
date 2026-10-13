@@ -1,0 +1,29 @@
+model_id: synthetic_model_0405
+organization: org_3
+compute_flops: 4.303036347476314e+26
+risk_score: 0.27
+risk_category: minimal_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.93
+    size_tokens: 5355835382.777315
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.39
+  performance:
+    f1_score: 0.63
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0553
+organization: org_37
+compute_flops: 7.944877206977235e+26
+risk_score: 0.22
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+- global
+- kr
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.85
+    size_tokens: 578569218368.7069
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.75
+  performance:
+    f1_score: 0.47
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,33 @@
+model_id: meta_feed_ranking
+organization: meta_platforms
+compute_flops: 1.0e+26
+risk_score: 0.88
+risk_category: unacceptable_risk
+use_case: cognitive_manipulation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- content_ranking
+- recommendation
+- engagement_optimization
+- behavioral_prediction
+- content_moderation
+- ad_targeting
+governance:
+  training_data:
+    source: user_generated_content
+    quality_score: 0.6
+    size_tokens: 100000000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: civil_rights_audit
+    status: in_progress
+    score: 0.4
+  performance:
+    f1_score: 0.75
+    benchmark: internal
+    task: content_ranking
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0714
+organization: org_30
+compute_flops: 1.1846639749111472e+20
+risk_score: 0.57
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- uk
+- au
+capabilities:
+- chat
+- code_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.65
+    size_tokens: 685232785642.5298
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.81
+  performance:
+    f1_score: 0.62
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

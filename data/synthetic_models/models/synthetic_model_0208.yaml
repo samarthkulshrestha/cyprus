@@ -1,0 +1,31 @@
+model_id: synthetic_model_0208
+organization: org_23
+compute_flops: 3.174858817169791e+21
+risk_score: 0.57
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- us
+- jp
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.88
+    size_tokens: 26435510278.384182
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.33
+  performance:
+    f1_score: 0.89
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

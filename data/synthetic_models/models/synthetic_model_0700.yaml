@@ -1,0 +1,32 @@
+model_id: synthetic_model_0700
+organization: org_48
+compute_flops: 1.2381190685233717e+19
+risk_score: 0.26
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+- ca
+- uk
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 1.0
+    size_tokens: 102861930448.44096
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.5
+  performance:
+    f1_score: 0.43
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

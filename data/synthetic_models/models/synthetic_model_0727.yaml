@@ -1,0 +1,32 @@
+model_id: synthetic_model_0727
+organization: org_46
+compute_flops: 8.133804522480732e+26
+risk_score: 0.49
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+- eu
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.79
+    size_tokens: 309975095858.49146
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.48
+  performance:
+    f1_score: 0.41
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

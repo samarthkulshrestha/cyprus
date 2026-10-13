@@ -1,0 +1,30 @@
+model_id: synthetic_model_0194
+organization: org_23
+compute_flops: 1.272842381007864e+24
+risk_score: 0.37
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- jp
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.98
+    size_tokens: 2425138517.828561
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.79
+  performance:
+    f1_score: 0.69
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

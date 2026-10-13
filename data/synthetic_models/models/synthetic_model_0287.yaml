@@ -1,0 +1,30 @@
+model_id: synthetic_model_0287
+organization: org_13
+compute_flops: 2.3575533228088435e+19
+risk_score: 0.29
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- eu
+- kr
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.59
+    size_tokens: 18808735144993.246
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.38
+  performance:
+    f1_score: 0.64
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

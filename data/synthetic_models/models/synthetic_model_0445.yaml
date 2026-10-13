@@ -1,0 +1,31 @@
+model_id: synthetic_model_0445
+organization: org_48
+compute_flops: 2.2821723600484982e+18
+risk_score: 0.37
+risk_category: high_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- uk
+capabilities:
+- chat
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.59
+    size_tokens: 50159367652.38871
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.88
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

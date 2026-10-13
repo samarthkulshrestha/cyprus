@@ -1,0 +1,30 @@
+model_id: synthetic_model_0455
+organization: org_18
+compute_flops: 4.325704039949588e+21
+risk_score: 0.33
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- au
+- us
+capabilities:
+- code_generation
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 53201116930.43621
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.61
+  performance:
+    f1_score: 0.66
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

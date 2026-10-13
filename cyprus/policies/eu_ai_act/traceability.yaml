@@ -1,0 +1,202 @@
+article5:
+  clause_1a:
+    legal_text: >
+      The placing on the market, the putting into service, or the use of an AI
+      system that deploys subliminal techniques beyond a person's consciousness
+      or purposefully manipulative or deceptive techniques, with the objective
+      or the effect of materially distorting the behaviour of a person or a group
+      of persons by appreciably impairing their ability to make an informed decision.
+    simplified: "Social scoring by public authorities is prohibited."
+    rules:
+      - file: article5.lp
+        predicate: "prohibited(M, art5_1a, ...)"
+        line_range: [20, 23]
+    test_cases:
+      - test_article5.py::test_social_scoring_prohibited
+      - test_article5.py::test_non_social_scoring_not_prohibited
+    coverage: complete
+
+  clause_1b:
+    legal_text: >
+      AI systems that exploit any of the vulnerabilities of a natural person or a
+      specific group of persons due to their age, disability or a specific social
+      or economic situation, with the objective or the effect of materially distorting
+      the behaviour of that person or a person belonging to that group.
+    simplified: "Cognitive manipulation / exploitation of vulnerabilities is prohibited."
+    rules:
+      - file: article5.lp
+        predicate: "prohibited(M, art5_1b, ...)"
+        line_range: [25, 30]
+    test_cases:
+      - test_article5.py::test_cognitive_manipulation_prohibited
+    coverage: complete
+
+  clause_1c:
+    legal_text: >
+      The use of real-time remote biometric identification systems in publicly
+      accessible spaces for the purposes of law enforcement.
+    simplified: "Real-time biometric surveillance for law enforcement is prohibited."
+    rules:
+      - file: article5.lp
+        predicate: "prohibited(M, art5_1c, ...)"
+        line_range: [32, 36]
+    test_cases:
+      - test_article5.py::test_biometric_surveillance_prohibited
+    coverage: complete
+
+  clause_1d:
+    coverage: not_encoded
+    reason: "Requires facial image provenance data not in current model schema"
+
+  clause_1e:
+    coverage: not_encoded
+    reason: "Requires deployment context (workplace vs education) not in current model schema"
+
+  clause_1f:
+    coverage: not_encoded
+    reason: "Requires biometric categorization capability detail not in current model schema"
+
+  clause_1g:
+    coverage: not_encoded
+    reason: "Requires law enforcement deployment context not in current model schema"
+
+  clause_1h:
+    coverage: not_encoded
+    reason: "Requires predictive policing profiling detail not in current model schema"
+
+article6:
+  clause_1:
+    simplified: "Models with risk_category=high_risk require high-risk compliance."
+    rules:
+      - file: article6.lp
+        predicate: "requires_high_risk_compliance(M, art6_1)"
+    test_cases:
+      - test_article6.py::test_high_risk_category_classified
+      - test_article6.py::test_non_high_risk_not_classified
+    coverage: complete
+
+  clause_2:
+    simplified: "Safety-critical use cases (healthcare, law enforcement, etc.) are high-risk."
+    rules:
+      - file: article6.lp
+        predicate: "requires_high_risk_compliance(M, art6_2)"
+    test_cases:
+      - test_article6.py::test_healthcare_is_high_risk
+      - test_article6.py::test_law_enforcement_is_high_risk
+      - test_article6.py::test_general_purpose_not_auto_high_risk
+    coverage: complete
+
+  clause_3:
+    coverage: not_encoded
+    reason: "Exception for systems that do not pose significant risk — requires runtime context"
+
+article9:
+  clause_1:
+    simplified: "High-risk models must have completed risk management (red teaming)."
+    rules:
+      - file: article9.lp
+        predicate: "unmet_requirement(M, ...art9_1...)"
+    test_cases:
+      - test_article9.py::test_incomplete_red_teaming_flagged
+      - test_article9.py::test_completed_red_teaming_passes
+    coverage: complete
+
+  clause_2a:
+    simplified: "Known risks must be identified (modeled via risk score threshold)."
+    rules:
+      - file: article9.lp
+        predicate: "unmet_requirement(M, ...art9_2a...)"
+    test_cases:
+      - test_article9.py::test_suspiciously_low_risk_score_flagged
+    coverage: complete
+
+  clause_2b:
+    simplified: "Misuse risks must be evaluated (modeled via bias assessment)."
+    rules:
+      - file: article9.lp
+        predicate: "unmet_requirement(M, ...art9_2b...)"
+    test_cases:
+      - test_article9.py::test_missing_bias_assessment_flagged
+    coverage: complete
+
+article10:
+  clause_1:
+    simplified: "Training data quality must meet threshold (>= 0.85) for high-risk models."
+    rules:
+      - file: article10.lp
+        predicate: "unmet_requirement(M, ...art10_1...)"
+    test_cases:
+      - test_article10.py::test_low_training_quality_flagged
+      - test_article10.py::test_adequate_training_quality_passes
+    coverage: complete
+
+  clause_2a:
+    simplified: "Training data documentation must be complete for high-risk models."
+    rules:
+      - file: article10.lp
+        predicate: "unmet_requirement(M, ...art10_2a...)"
+    test_cases:
+      - test_article10.py::test_incomplete_documentation_flagged
+    coverage: complete
+
+  clause_2b:
+    simplified: "Training data source must be documented for high-risk models."
+    rules:
+      - file: article10.lp
+        predicate: "unmet_requirement(M, ...art10_2b...)"
+    test_cases:
+      - test_article10.py::test_undocumented_source_flagged
+    coverage: complete
+
+  clause_2f:
+    simplified: "Bias examination must be completed for high-risk models."
+    rules:
+      - file: article10.lp
+        predicate: "unmet_requirement(M, ...art10_2f...)"
+    test_cases:
+      - test_article10.py::test_missing_bias_exam_flagged
+    coverage: complete
+
+article13:
+  clause_1:
+    simplified: "High-risk models must have complete training documentation for transparency."
+    rules:
+      - file: article13.lp
+        predicate: "unmet_requirement(M, ...art13_1...)"
+    test_cases:
+      - test_article13.py::test_incomplete_docs_flagged
+    coverage: complete
+
+article51:
+  clause_1:
+    simplified: "Models with compute > 10^25 FLOPs are systemic risk."
+    rules:
+      - file: article51.lp
+        predicate: "systemic_risk(M, art51_1)"
+    test_cases:
+      - test_article51.py::test_high_compute_systemic
+      - test_article51.py::test_low_compute_not_systemic
+      - test_article51.py::test_boundary_compute
+    coverage: complete
+
+  clause_2:
+    simplified: "Models with 5+ capabilities are potentially systemic risk."
+    rules:
+      - file: article51.lp
+        predicate: "systemic_risk(M, art51_2)"
+    test_cases:
+      - test_article51.py::test_many_capabilities_systemic
+      - test_article51.py::test_few_capabilities_not_systemic
+    coverage: complete
+
+article52:
+  clause_1:
+    simplified: "Chat-capable and content-generation models require transparency disclosure."
+    rules:
+      - file: article52.lp
+        predicate: "requires_transparency(M, art52_1)"
+    test_cases:
+      - test_article52.py::test_chat_requires_transparency
+      - test_article52.py::test_content_gen_requires_transparency
+      - test_article52.py::test_non_interactive_no_transparency
+    coverage: complete

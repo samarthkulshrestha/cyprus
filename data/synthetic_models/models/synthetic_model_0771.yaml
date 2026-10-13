@@ -1,0 +1,30 @@
+model_id: synthetic_model_0771
+organization: org_42
+compute_flops: 6.533544287729087e+23
+risk_score: 0.27
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- eu
+- global
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.5
+    size_tokens: 176801228863.8416
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.3
+  performance:
+    f1_score: 0.87
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

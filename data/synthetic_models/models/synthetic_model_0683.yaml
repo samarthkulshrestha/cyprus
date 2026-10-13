@@ -1,0 +1,33 @@
+model_id: synthetic_model_0683
+organization: org_37
+compute_flops: 4.796314617048378e+20
+risk_score: 0.34
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- au
+- eu
+- ca
+capabilities:
+- chat
+- code_generation
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.56
+    size_tokens: 2663401980370.0317
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.98
+  performance:
+    f1_score: 0.91
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0181
+organization: org_47
+compute_flops: 3.9641816384502646e+25
+risk_score: 0.57
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- uk
+- us
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.84
+    size_tokens: 92485624830696.97
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.44
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

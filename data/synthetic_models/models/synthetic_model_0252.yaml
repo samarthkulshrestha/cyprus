@@ -1,0 +1,29 @@
+model_id: synthetic_model_0252
+organization: org_8
+compute_flops: 1.3878210832042787e+23
+risk_score: 0.69
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- eu
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.64
+    size_tokens: 1329201989.641466
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.75
+  performance:
+    f1_score: 0.61
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0710
+organization: org_47
+compute_flops: 2.0213513103694033e+26
+risk_score: 0.52
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.52
+    size_tokens: 43715130630825.89
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.33
+  performance:
+    f1_score: 0.63
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

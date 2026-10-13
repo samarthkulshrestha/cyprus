@@ -1,0 +1,29 @@
+model_id: synthetic_model_0723
+organization: org_10
+compute_flops: 8.229630629252834e+23
+risk_score: 0.26
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.7
+    size_tokens: 5823602474461.631
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.61
+  performance:
+    f1_score: 0.56
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

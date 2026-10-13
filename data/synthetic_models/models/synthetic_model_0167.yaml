@@ -1,0 +1,28 @@
+model_id: synthetic_model_0167
+organization: org_41
+compute_flops: 5.761288296591716e+22
+risk_score: 0.12
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.76
+    size_tokens: 1443072124113.5615
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.46
+  performance:
+    f1_score: 0.57
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

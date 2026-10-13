@@ -1,0 +1,32 @@
+model_id: synthetic_model_0170
+organization: org_39
+compute_flops: 6.041990873458262e+18
+risk_score: 0.47
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+capabilities:
+- chat
+- code_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.89
+    size_tokens: 5205653291.808642
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.81
+  performance:
+    f1_score: 0.67
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

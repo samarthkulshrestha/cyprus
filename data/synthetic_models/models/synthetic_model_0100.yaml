@@ -1,0 +1,31 @@
+model_id: synthetic_model_0100
+organization: org_5
+compute_flops: 5.3171747309069676e+23
+risk_score: 0.64
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- kr
+- eu
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.68
+    size_tokens: 75290096139.84776
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.62
+  performance:
+    f1_score: 0.87
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

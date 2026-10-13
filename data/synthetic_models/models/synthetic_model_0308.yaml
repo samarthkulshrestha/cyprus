@@ -1,0 +1,31 @@
+model_id: synthetic_model_0308
+organization: org_3
+compute_flops: 1.4787712106478397e+21
+risk_score: 0.59
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- global
+- kr
+- ca
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 1.0
+    size_tokens: 10707764545486.791
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.95
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

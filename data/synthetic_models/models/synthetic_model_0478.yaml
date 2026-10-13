@@ -1,0 +1,32 @@
+model_id: synthetic_model_0478
+organization: org_38
+compute_flops: 8.473716622573863e+22
+risk_score: 0.09
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- uk
+- ca
+- au
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.85
+    size_tokens: 18836335796.42037
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.98
+  performance:
+    f1_score: 0.64
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

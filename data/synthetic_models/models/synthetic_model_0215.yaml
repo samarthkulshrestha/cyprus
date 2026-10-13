@@ -1,0 +1,29 @@
+model_id: synthetic_model_0215
+organization: org_6
+compute_flops: 3.10492481947316e+18
+risk_score: 0.22
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.65
+    size_tokens: 48040998248034.11
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.9
+  performance:
+    f1_score: 0.49
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

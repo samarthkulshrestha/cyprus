@@ -1,0 +1,32 @@
+model_id: synthetic_model_0770
+organization: org_39
+compute_flops: 2.7672450648199424e+21
+risk_score: 0.13
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- global
+capabilities:
+- image_generation
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.5
+    size_tokens: 5703202387.931543
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.71
+  performance:
+    f1_score: 0.46
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

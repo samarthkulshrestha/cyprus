@@ -1,0 +1,30 @@
+model_id: synthetic_model_0502
+organization: org_37
+compute_flops: 2.88788346009681e+23
+risk_score: 0.25
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.67
+    size_tokens: 557520676453.5167
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.83
+  performance:
+    f1_score: 0.72
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

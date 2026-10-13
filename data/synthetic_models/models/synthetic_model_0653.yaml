@@ -1,0 +1,29 @@
+model_id: synthetic_model_0653
+organization: org_24
+compute_flops: 2.3353465766208786e+21
+risk_score: 0.29
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- eu
+capabilities:
+- general
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.95
+    size_tokens: 78045348525139.2
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.51
+  performance:
+    f1_score: 0.89
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

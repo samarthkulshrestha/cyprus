@@ -1,0 +1,31 @@
+model_id: synthetic_model_0617
+organization: org_18
+compute_flops: 1.260725092151905e+26
+risk_score: 0.45
+risk_category: high_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- us
+- ca
+- au
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.7
+    size_tokens: 30079128657057.566
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.76
+  performance:
+    f1_score: 0.65
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

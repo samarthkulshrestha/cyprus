@@ -1,0 +1,31 @@
+model_id: synthetic_model_0887
+organization: org_49
+compute_flops: 1.6921617572210846e+22
+risk_score: 0.31
+risk_category: limited_risk
+use_case: cognitive_manipulation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.76
+    size_tokens: 6667370509.7489195
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.38
+  performance:
+    f1_score: 0.93
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

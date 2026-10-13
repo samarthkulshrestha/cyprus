@@ -1,0 +1,28 @@
+model_id: synthetic_model_0298
+organization: org_31
+compute_flops: 4.78420579925871e+25
+risk_score: 0.55
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.74
+    size_tokens: 932455752110.8989
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.56
+  performance:
+    f1_score: 0.45
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

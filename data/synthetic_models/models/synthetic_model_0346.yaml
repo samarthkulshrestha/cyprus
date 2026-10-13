@@ -1,0 +1,32 @@
+model_id: synthetic_model_0346
+organization: org_20
+compute_flops: 2.5535201184943877e+18
+risk_score: 0.57
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.58
+    size_tokens: 1093751661.8668118
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.75
+  performance:
+    f1_score: 0.62
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

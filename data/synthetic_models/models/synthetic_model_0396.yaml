@@ -1,0 +1,28 @@
+model_id: synthetic_model_0396
+organization: org_41
+compute_flops: 5.491624816951848e+18
+risk_score: 0.24
+risk_category: high_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.66
+    size_tokens: 74791715030.24352
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.93
+  performance:
+    f1_score: 0.63
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

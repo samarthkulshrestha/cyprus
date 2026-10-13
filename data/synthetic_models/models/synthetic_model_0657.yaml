@@ -1,0 +1,31 @@
+model_id: synthetic_model_0657
+organization: org_16
+compute_flops: 1.9091243357042778e+23
+risk_score: 0.28
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.92
+    size_tokens: 12100222984966.074
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.41
+  performance:
+    f1_score: 0.92
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0763
+organization: org_45
+compute_flops: 1.027068553585669e+18
+risk_score: 0.14
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- au
+capabilities:
+- code_generation
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.6
+    size_tokens: 68534690149660.96
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.84
+  performance:
+    f1_score: 0.71
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

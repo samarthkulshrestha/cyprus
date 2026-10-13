@@ -1,0 +1,33 @@
+model_id: synthetic_model_0828
+organization: org_39
+compute_flops: 1.7450355984087063e+20
+risk_score: 0.38
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.8
+    size_tokens: 24870797014724.688
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.7
+  performance:
+    f1_score: 0.88
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0589
+organization: org_42
+compute_flops: 9.966340375131623e+19
+risk_score: 0.35
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- uk
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.89
+    size_tokens: 4017592155.205488
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.57
+  performance:
+    f1_score: 0.46
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

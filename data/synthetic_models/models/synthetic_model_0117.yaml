@@ -1,0 +1,32 @@
+model_id: synthetic_model_0117
+organization: org_14
+compute_flops: 3.080596797308107e+19
+risk_score: 0.63
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- kr
+- global
+- ca
+capabilities:
+- chat
+- image_generation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.72
+    size_tokens: 3922240865.654388
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.42
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

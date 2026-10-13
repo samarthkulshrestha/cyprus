@@ -1,0 +1,34 @@
+model_id: synthetic_model_0604
+organization: org_31
+compute_flops: 2.724880672329001e+19
+risk_score: 0.39
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- ca
+capabilities:
+- chat
+- code_generation
+- image_generation
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.63
+    size_tokens: 219902484048.6861
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.93
+  performance:
+    f1_score: 0.86
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

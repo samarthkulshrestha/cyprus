@@ -1,0 +1,34 @@
+model_id: synthetic_model_0354
+organization: org_2
+compute_flops: 4.196242546716681e+24
+risk_score: 0.54
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.78
+    size_tokens: 261064365232.89307
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.69
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

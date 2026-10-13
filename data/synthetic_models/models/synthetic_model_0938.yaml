@@ -1,0 +1,32 @@
+model_id: synthetic_model_0938
+organization: org_4
+compute_flops: 1.2305130098321114e+23
+risk_score: 0.36
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+- eu
+capabilities:
+- chat
+- multimodal
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.7
+    size_tokens: 194786019962.214
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.75
+  performance:
+    f1_score: 0.94
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

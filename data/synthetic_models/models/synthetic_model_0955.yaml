@@ -1,0 +1,31 @@
+model_id: synthetic_model_0955
+organization: org_11
+compute_flops: 7.854554167104597e+21
+risk_score: 0.05
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- us
+- au
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.72
+    size_tokens: 1513619558.954055
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.53
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

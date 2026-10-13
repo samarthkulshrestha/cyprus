@@ -1,0 +1,31 @@
+model_id: synthetic_model_0159
+organization: org_18
+compute_flops: 6.578633005465401e+26
+risk_score: 0.36
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- eu
+- kr
+capabilities:
+- chat
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.51
+    size_tokens: 2639713396489.4565
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 1.0
+  performance:
+    f1_score: 0.98
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

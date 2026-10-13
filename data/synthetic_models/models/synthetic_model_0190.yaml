@@ -1,0 +1,31 @@
+model_id: synthetic_model_0190
+organization: org_34
+compute_flops: 9.681994346663166e+19
+risk_score: 0.43
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- reasoning
+- image_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.73
+    size_tokens: 7178051725.859721
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.72
+  performance:
+    f1_score: 0.87
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

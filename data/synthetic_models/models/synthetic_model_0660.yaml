@@ -1,0 +1,32 @@
+model_id: synthetic_model_0660
+organization: org_50
+compute_flops: 1.186912497541132e+19
+risk_score: 0.37
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- global
+- jp
+capabilities:
+- chat
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.55
+    size_tokens: 1372308870.0738344
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.63
+  performance:
+    f1_score: 0.89
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

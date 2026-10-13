@@ -1,0 +1,29 @@
+model_id: synthetic_model_0740
+organization: org_27
+compute_flops: 1.9563848917855315e+24
+risk_score: 0.12
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- chat
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.89
+    size_tokens: 1391102075.0787523
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.54
+  performance:
+    f1_score: 0.95
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

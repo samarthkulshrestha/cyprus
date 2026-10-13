@@ -1,0 +1,29 @@
+model_id: synthetic_model_0428
+organization: org_20
+compute_flops: 1.4664419685228833e+25
+risk_score: 0.23
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- ca
+- us
+capabilities:
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.58
+    size_tokens: 53729731425494.03
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.57
+  performance:
+    f1_score: 0.49
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,28 @@
+model_id: synthetic_model_0831
+organization: org_45
+compute_flops: 3.22730904064152e+24
+risk_score: 0.34
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.82
+    size_tokens: 8085356812998.68
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.54
+  performance:
+    f1_score: 0.43
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

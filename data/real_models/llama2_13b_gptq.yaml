@@ -1,0 +1,29 @@
+model_id: thebloke_llama_2_13b_gptq
+organization: TheBloke
+compute_flops: 2.033618888217723e+22
+risk_score: 0.45
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- chat
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.5
+    size_tokens: 1000000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.5
+  performance:
+    f1_score: 0.5
+    benchmark: unknown
+    task: general
+  security:
+    access_control: none
+    audit_logging: false
+_needs_review: true

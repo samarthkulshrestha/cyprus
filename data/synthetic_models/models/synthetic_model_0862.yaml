@@ -1,0 +1,32 @@
+model_id: synthetic_model_0862
+organization: org_32
+compute_flops: 4.18858688879452e+21
+risk_score: 0.19
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- au
+- kr
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.5
+    size_tokens: 1233713900.619537
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.86
+  performance:
+    f1_score: 0.99
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

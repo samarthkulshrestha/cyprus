@@ -1,0 +1,33 @@
+model_id: synthetic_model_0711
+organization: org_26
+compute_flops: 7.251256431817829e+21
+risk_score: 0.59
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.8
+    size_tokens: 49525865918.12931
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.83
+  performance:
+    f1_score: 0.74
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

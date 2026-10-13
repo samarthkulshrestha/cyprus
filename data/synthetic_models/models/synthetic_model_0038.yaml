@@ -1,0 +1,30 @@
+model_id: synthetic_model_0038
+organization: org_49
+compute_flops: 1.1348856499968827e+18
+risk_score: 0.29
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- kr
+- us
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.94
+    size_tokens: 5996523182.834655
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.36
+  performance:
+    f1_score: 0.66
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

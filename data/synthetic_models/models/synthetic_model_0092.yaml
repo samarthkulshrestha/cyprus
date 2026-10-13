@@ -1,0 +1,30 @@
+model_id: synthetic_model_0092
+organization: org_47
+compute_flops: 5.990591444189292e+18
+risk_score: 0.47
+risk_category: unacceptable_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- ca
+- global
+- au
+capabilities:
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.58
+    size_tokens: 45918496825916.38
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.54
+  performance:
+    f1_score: 0.9
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

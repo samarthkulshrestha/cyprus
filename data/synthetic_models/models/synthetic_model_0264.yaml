@@ -1,0 +1,31 @@
+model_id: synthetic_model_0264
+organization: org_25
+compute_flops: 6.908121777014596e+19
+risk_score: 0.42
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- ca
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.54
+    size_tokens: 72908137217106.83
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.63
+  performance:
+    f1_score: 0.65
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

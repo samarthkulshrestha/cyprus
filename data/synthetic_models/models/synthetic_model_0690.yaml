@@ -1,0 +1,32 @@
+model_id: synthetic_model_0690
+organization: org_45
+compute_flops: 6.104741558876179e+21
+risk_score: 0.44
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- us
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 2504301225021.406
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.32
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

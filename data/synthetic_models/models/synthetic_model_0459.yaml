@@ -1,0 +1,28 @@
+model_id: synthetic_model_0459
+organization: org_50
+compute_flops: 3.0872235756206497e+26
+risk_score: 0.24
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- ca
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.92
+    size_tokens: 3781646899.236694
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.51
+  performance:
+    f1_score: 0.41
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

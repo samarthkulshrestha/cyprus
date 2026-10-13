@@ -1,0 +1,30 @@
+model_id: synthetic_model_0981
+organization: org_35
+compute_flops: 3.5403097557336105e+25
+risk_score: 0.81
+risk_category: minimal_risk
+use_case: cognitive_manipulation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- us
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.78
+    size_tokens: 6563304628.809336
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.7
+  performance:
+    f1_score: 0.75
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

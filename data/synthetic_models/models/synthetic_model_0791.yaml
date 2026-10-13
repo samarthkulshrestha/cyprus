@@ -1,0 +1,28 @@
+model_id: synthetic_model_0791
+organization: org_34
+compute_flops: 7.520442855343063e+19
+risk_score: 0.22
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.8
+    size_tokens: 6503330735838.877
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.93
+  performance:
+    f1_score: 0.43
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

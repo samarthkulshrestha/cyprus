@@ -1,0 +1,31 @@
+model_id: synthetic_model_0393
+organization: org_4
+compute_flops: 5.217202112332899e+25
+risk_score: 0.19
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- global
+- ca
+- eu
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.86
+    size_tokens: 30665918525613.613
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.42
+  performance:
+    f1_score: 0.41
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

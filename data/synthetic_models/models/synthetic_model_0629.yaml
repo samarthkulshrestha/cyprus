@@ -1,0 +1,32 @@
+model_id: synthetic_model_0629
+organization: org_19
+compute_flops: 2.053869176441203e+20
+risk_score: 0.44
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- au
+capabilities:
+- chat
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.79
+    size_tokens: 453376051149.94714
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.37
+  performance:
+    f1_score: 0.45
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0413
+organization: org_30
+compute_flops: 8.661330780946202e+24
+risk_score: 0.82
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- us
+- global
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.69
+    size_tokens: 57388919762.45222
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.91
+  performance:
+    f1_score: 0.84
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

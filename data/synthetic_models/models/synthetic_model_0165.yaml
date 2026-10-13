@@ -1,0 +1,30 @@
+model_id: synthetic_model_0165
+organization: org_22
+compute_flops: 4.009063654555955e+23
+risk_score: 0.14
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- kr
+capabilities:
+- chat
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.94
+    size_tokens: 24579027092.571945
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.43
+  performance:
+    f1_score: 0.43
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

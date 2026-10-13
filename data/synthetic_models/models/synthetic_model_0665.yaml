@@ -1,0 +1,32 @@
+model_id: synthetic_model_0665
+organization: org_28
+compute_flops: 1.0011607213184965e+19
+risk_score: 0.45
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- au
+- ca
+- uk
+capabilities:
+- code_generation
+- translation
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.88
+    size_tokens: 11494521547436.574
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.81
+  performance:
+    f1_score: 0.41
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

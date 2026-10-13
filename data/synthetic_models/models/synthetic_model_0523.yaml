@@ -1,0 +1,32 @@
+model_id: synthetic_model_0523
+organization: org_32
+compute_flops: 4.666069265335353e+24
+risk_score: 0.57
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- au
+- ca
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.89
+    size_tokens: 18988685345757.695
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.69
+  performance:
+    f1_score: 0.58
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

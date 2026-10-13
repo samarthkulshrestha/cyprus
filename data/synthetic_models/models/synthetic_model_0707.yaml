@@ -1,0 +1,31 @@
+model_id: synthetic_model_0707
+organization: org_46
+compute_flops: 1.29318157352778e+26
+risk_score: 0.24
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- eu
+- au
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.75
+    size_tokens: 343671786377.4253
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.33
+  performance:
+    f1_score: 0.82
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

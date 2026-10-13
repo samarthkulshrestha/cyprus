@@ -1,0 +1,31 @@
+model_id: synthetic_model_0585
+organization: org_8
+compute_flops: 9.552047178048519e+19
+risk_score: 0.04
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- eu
+capabilities:
+- reasoning
+- image_generation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.66
+    size_tokens: 11106476710.551336
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.93
+  performance:
+    f1_score: 0.66
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

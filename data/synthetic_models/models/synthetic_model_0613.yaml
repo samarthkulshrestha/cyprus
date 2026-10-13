@@ -1,0 +1,33 @@
+model_id: synthetic_model_0613
+organization: org_48
+compute_flops: 7.450462665278272e+24
+risk_score: 0.15
+risk_category: unacceptable_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- kr
+- ca
+capabilities:
+- chat
+- code_generation
+- multimodal
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.72
+    size_tokens: 418877487301.04175
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.53
+  performance:
+    f1_score: 0.83
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

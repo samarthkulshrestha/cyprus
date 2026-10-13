@@ -1,0 +1,32 @@
+model_id: synthetic_model_0355
+organization: org_36
+compute_flops: 1.1705215385169228e+23
+risk_score: 0.33
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.53
+    size_tokens: 293149196888.566
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.54
+  performance:
+    f1_score: 0.49
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

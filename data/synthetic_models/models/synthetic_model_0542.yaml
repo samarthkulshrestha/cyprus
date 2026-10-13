@@ -1,0 +1,30 @@
+model_id: synthetic_model_0542
+organization: org_12
+compute_flops: 8.229184353499248e+26
+risk_score: 0.53
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 86234073026517.62
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.46
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

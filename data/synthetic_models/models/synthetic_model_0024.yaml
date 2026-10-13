@@ -1,0 +1,30 @@
+model_id: synthetic_model_0024
+organization: org_23
+compute_flops: 7.241592181502841e+22
+risk_score: 0.19
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- code_generation
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.79
+    size_tokens: 6539507178722.366
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.76
+  performance:
+    f1_score: 0.94
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

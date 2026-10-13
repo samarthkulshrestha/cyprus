@@ -1,0 +1,32 @@
+model_id: synthetic_model_0739
+organization: org_49
+compute_flops: 3.154901911150188e+21
+risk_score: 0.48
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.67
+    size_tokens: 55147132670487.9
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.77
+  performance:
+    f1_score: 0.64
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

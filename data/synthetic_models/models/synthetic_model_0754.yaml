@@ -1,0 +1,31 @@
+model_id: synthetic_model_0754
+organization: org_37
+compute_flops: 3.034790908420315e+25
+risk_score: 0.28
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- au
+- uk
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.51
+    size_tokens: 94854523418.56631
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.89
+  performance:
+    f1_score: 0.45
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

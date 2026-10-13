@@ -1,0 +1,29 @@
+model_id: synthetic_model_0749
+organization: org_26
+compute_flops: 1.7899813069623685e+23
+risk_score: 0.53
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- uk
+- jp
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 563290369721.3881
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.74
+  performance:
+    f1_score: 0.89
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

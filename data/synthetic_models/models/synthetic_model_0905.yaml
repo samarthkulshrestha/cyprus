@@ -1,0 +1,31 @@
+model_id: synthetic_model_0905
+organization: org_17
+compute_flops: 9.95159214374664e+22
+risk_score: 0.3
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.85
+    size_tokens: 79670065301.06137
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.85
+  performance:
+    f1_score: 0.76
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

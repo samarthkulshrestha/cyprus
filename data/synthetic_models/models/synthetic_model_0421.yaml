@@ -1,0 +1,30 @@
+model_id: synthetic_model_0421
+organization: org_9
+compute_flops: 2.983831902900607e+18
+risk_score: 0.11
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- eu
+capabilities:
+- code_generation
+- multimodal
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.58
+    size_tokens: 577571877236.8872
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.89
+  performance:
+    f1_score: 0.55
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

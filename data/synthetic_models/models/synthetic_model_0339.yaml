@@ -1,0 +1,30 @@
+model_id: synthetic_model_0339
+organization: org_30
+compute_flops: 2.9534992267254057e+18
+risk_score: 0.35
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- kr
+- us
+- jp
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.93
+    size_tokens: 8185842736102.842
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.69
+  performance:
+    f1_score: 0.96
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0713
+organization: org_24
+compute_flops: 2.1824893175967218e+21
+risk_score: 0.44
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.65
+    size_tokens: 20819184524091.05
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.52
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

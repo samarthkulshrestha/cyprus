@@ -1,0 +1,28 @@
+model_id: synthetic_model_0554
+organization: org_16
+compute_flops: 9.720775812172773e+24
+risk_score: 0.64
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.52
+    size_tokens: 2803551812.2295766
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.48
+  performance:
+    f1_score: 0.56
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

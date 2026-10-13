@@ -1,0 +1,32 @@
+model_id: synthetic_model_0222
+organization: org_42
+compute_flops: 1.1728068759874453e+23
+risk_score: 0.37
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- uk
+- global
+capabilities:
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.8
+    size_tokens: 57029458822437.734
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.89
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

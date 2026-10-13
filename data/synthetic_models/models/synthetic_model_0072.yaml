@@ -1,0 +1,30 @@
+model_id: synthetic_model_0072
+organization: org_44
+compute_flops: 1.8841993293941996e+24
+risk_score: 0.55
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.82
+    size_tokens: 45326593905.465866
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.45
+  performance:
+    f1_score: 0.91
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

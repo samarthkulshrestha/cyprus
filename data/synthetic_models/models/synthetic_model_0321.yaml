@@ -1,0 +1,30 @@
+model_id: synthetic_model_0321
+organization: org_44
+compute_flops: 1.136386713068606e+26
+risk_score: 0.43
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- us
+- uk
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.89
+    size_tokens: 54722454170.186806
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.3
+  performance:
+    f1_score: 0.51
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

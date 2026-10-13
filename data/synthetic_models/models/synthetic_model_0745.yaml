@@ -1,0 +1,34 @@
+model_id: synthetic_model_0745
+organization: org_40
+compute_flops: 7.12569506372746e+18
+risk_score: 0.13
+risk_category: high_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- global
+- eu
+- ca
+capabilities:
+- chat
+- image_generation
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 146443731111.6136
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.74
+  performance:
+    f1_score: 0.96
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

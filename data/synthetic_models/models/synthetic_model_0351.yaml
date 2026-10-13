@@ -1,0 +1,30 @@
+model_id: synthetic_model_0351
+organization: org_15
+compute_flops: 4.044266306715335e+26
+risk_score: 0.54
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- global
+- au
+capabilities:
+- translation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.53
+    size_tokens: 7227586349699.451
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.57
+  performance:
+    f1_score: 0.66
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0009
+organization: org_22
+compute_flops: 3.1893677008657483e+25
+risk_score: 0.91
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- eu
+- global
+capabilities:
+- chat
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.86
+    size_tokens: 10422851774.914791
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.64
+  performance:
+    f1_score: 0.93
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

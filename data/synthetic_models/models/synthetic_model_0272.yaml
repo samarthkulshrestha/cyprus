@@ -1,0 +1,30 @@
+model_id: synthetic_model_0272
+organization: org_25
+compute_flops: 1.9351777464667727e+22
+risk_score: 0.14
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+- us
+- uk
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 13114573712.194668
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.38
+  performance:
+    f1_score: 0.6
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0336
+organization: org_5
+compute_flops: 2.0057117822219367e+25
+risk_score: 0.34
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- ca
+- eu
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 51955100080.90778
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.41
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

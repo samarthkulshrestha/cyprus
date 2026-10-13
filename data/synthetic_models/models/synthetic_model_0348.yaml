@@ -1,0 +1,31 @@
+model_id: synthetic_model_0348
+organization: org_33
+compute_flops: 6.219889193277628e+24
+risk_score: 0.14
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- us
+- uk
+- global
+capabilities:
+- chat
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.94
+    size_tokens: 292602310187.9486
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.81
+  performance:
+    f1_score: 0.47
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

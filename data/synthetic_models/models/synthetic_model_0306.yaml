@@ -1,0 +1,32 @@
+model_id: synthetic_model_0306
+organization: org_30
+compute_flops: 1.1555490595383961e+22
+risk_score: 0.67
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- au
+- eu
+- us
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.68
+    size_tokens: 2914118337822.7266
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.75
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

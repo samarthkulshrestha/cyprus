@@ -1,0 +1,30 @@
+model_id: synthetic_model_0155
+organization: org_35
+compute_flops: 1.36816270844069e+25
+risk_score: 0.16
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- uk
+capabilities:
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.94
+    size_tokens: 148430101576.85535
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.76
+  performance:
+    f1_score: 0.76
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

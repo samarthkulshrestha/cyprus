@@ -1,0 +1,32 @@
+model_id: synthetic_model_0591
+organization: org_7
+compute_flops: 2.4465100223005626e+19
+risk_score: 0.55
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- uk
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.95
+    size_tokens: 16263568659.493841
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.35
+  performance:
+    f1_score: 0.78
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0990
+organization: org_39
+compute_flops: 2.8810024747272642e+25
+risk_score: 0.57
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- global
+- uk
+capabilities:
+- chat
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.58
+    size_tokens: 42293322585.335815
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.66
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

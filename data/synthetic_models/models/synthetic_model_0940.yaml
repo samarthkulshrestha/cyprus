@@ -1,0 +1,31 @@
+model_id: synthetic_model_0940
+organization: org_27
+compute_flops: 9.123153697804948e+25
+risk_score: 0.43
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.53
+    size_tokens: 9280650315.836498
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.99
+  performance:
+    f1_score: 0.5
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

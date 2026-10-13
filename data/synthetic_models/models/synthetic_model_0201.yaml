@@ -1,0 +1,31 @@
+model_id: synthetic_model_0201
+organization: org_9
+compute_flops: 5.938223759004704e+24
+risk_score: 0.27
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.89
+    size_tokens: 114808098072.67451
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.41
+  performance:
+    f1_score: 0.53
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

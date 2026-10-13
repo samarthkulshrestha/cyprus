@@ -1,0 +1,30 @@
+model_id: synthetic_model_0292
+organization: org_41
+compute_flops: 3.294962272951686e+26
+risk_score: 0.25
+risk_category: minimal_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- kr
+capabilities:
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.86
+    size_tokens: 2757890094620.3784
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.74
+  performance:
+    f1_score: 0.73
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

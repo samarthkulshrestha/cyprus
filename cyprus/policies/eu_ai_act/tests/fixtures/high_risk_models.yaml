@@ -1,0 +1,27 @@
+models:
+  - model_id: healthcare_model_test
+    organization: HealthOrg
+    compute_flops: 1.0e+22
+    risk_score: 0.65
+    risk_category: high_risk
+    use_case: healthcare
+    red_teaming_status: completed
+    deployment_regions: [eu]
+    capabilities: [chat, reasoning]
+    governance:
+      training_data:
+        source: publicly_available
+        quality_score: 0.95
+        size_tokens: 1.0e+12
+        documentation_status: complete
+      bias_assessment:
+        methodology: red_teaming
+        status: completed
+        score: 0.90
+      performance:
+        f1_score: 0.92
+        benchmark: mmlu
+        task: general
+      security:
+        access_control: rbac
+        audit_logging: true

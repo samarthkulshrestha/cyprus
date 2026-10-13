@@ -1,0 +1,32 @@
+model_id: synthetic_model_0729
+organization: org_34
+compute_flops: 3.1239977282067314e+24
+risk_score: 0.2
+risk_category: minimal_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- uk
+capabilities:
+- chat
+- code_generation
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.99
+    size_tokens: 140221466204.9078
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.82
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

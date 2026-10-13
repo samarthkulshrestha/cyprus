@@ -1,0 +1,29 @@
+model_id: synthetic_model_0273
+organization: org_46
+compute_flops: 6.613439172192358e+22
+risk_score: 0.72
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+capabilities:
+- general
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 30487215643.261276
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.62
+  performance:
+    f1_score: 0.75
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

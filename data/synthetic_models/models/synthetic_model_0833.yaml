@@ -1,0 +1,30 @@
+model_id: synthetic_model_0833
+organization: org_4
+compute_flops: 1.5689929718216097e+18
+risk_score: 0.15
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- us
+capabilities:
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.95
+    size_tokens: 32999778412142.16
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.67
+  performance:
+    f1_score: 0.85
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0779
+organization: org_29
+compute_flops: 3.7694811278006175e+18
+risk_score: 0.62
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- code_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.51
+    size_tokens: 55685451000930.516
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.94
+  performance:
+    f1_score: 0.47
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

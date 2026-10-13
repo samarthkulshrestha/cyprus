@@ -1,0 +1,30 @@
+model_id: synthetic_model_0507
+organization: org_29
+compute_flops: 6.544823092231511e+26
+risk_score: 0.28
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- us
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.93
+    size_tokens: 41220506105.66213
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.66
+  performance:
+    f1_score: 0.97
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

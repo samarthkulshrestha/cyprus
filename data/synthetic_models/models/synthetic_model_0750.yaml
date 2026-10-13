@@ -1,0 +1,30 @@
+model_id: synthetic_model_0750
+organization: org_22
+compute_flops: 2.5562284299532508e+20
+risk_score: 0.74
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- au
+- global
+- us
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.7
+    size_tokens: 809141643258.3676
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.91
+  performance:
+    f1_score: 0.86
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

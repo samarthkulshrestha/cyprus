@@ -1,0 +1,32 @@
+model_id: synthetic_model_0809
+organization: org_48
+compute_flops: 3.384178664826482e+23
+risk_score: 0.56
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- kr
+- uk
+- global
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.89
+    size_tokens: 3711434016.4796534
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.7
+  performance:
+    f1_score: 0.8
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0884
+organization: org_7
+compute_flops: 1.5028955898826505e+26
+risk_score: 0.46
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- au
+- kr
+- global
+capabilities:
+- chat
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.9
+    size_tokens: 20996315738087.06
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.41
+  performance:
+    f1_score: 0.48
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

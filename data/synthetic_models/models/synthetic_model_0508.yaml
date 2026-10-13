@@ -1,0 +1,32 @@
+model_id: synthetic_model_0508
+organization: org_35
+compute_flops: 1.712309433612519e+22
+risk_score: 0.17
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.55
+    size_tokens: 9266739868.05497
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.7
+  performance:
+    f1_score: 0.6
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

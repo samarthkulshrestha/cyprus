@@ -1,0 +1,30 @@
+model_id: synthetic_model_0732
+organization: org_26
+compute_flops: 5.290319014691779e+22
+risk_score: 0.75
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.58
+    size_tokens: 13610407981555.314
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.66
+  performance:
+    f1_score: 0.64
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

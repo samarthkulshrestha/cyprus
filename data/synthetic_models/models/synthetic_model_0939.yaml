@@ -1,0 +1,30 @@
+model_id: synthetic_model_0939
+organization: org_27
+compute_flops: 3.1945717427516785e+23
+risk_score: 0.19
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 6134179804.168099
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.3
+  performance:
+    f1_score: 0.6
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

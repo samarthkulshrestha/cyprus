@@ -1,0 +1,31 @@
+model_id: synthetic_model_0237
+organization: org_35
+compute_flops: 2.8274009002929968e+23
+risk_score: 0.58
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- global
+- kr
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.98
+    size_tokens: 28197838936336.418
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.36
+  performance:
+    f1_score: 0.5
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0999
+organization: org_7
+compute_flops: 2.0654931876545878e+25
+risk_score: 0.12
+risk_category: high_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- jp
+- ca
+capabilities:
+- chat
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.94
+    size_tokens: 2318509245.2016873
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.67
+  performance:
+    f1_score: 0.61
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

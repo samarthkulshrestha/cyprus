@@ -1,0 +1,32 @@
+model_id: synthetic_model_0071
+organization: org_24
+compute_flops: 2.2845792828419534e+21
+risk_score: 0.42
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 35388880965343.67
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.4
+  performance:
+    f1_score: 0.51
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

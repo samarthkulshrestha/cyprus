@@ -1,0 +1,28 @@
+model_id: synthetic_model_0843
+organization: org_19
+compute_flops: 6.2492159201649466e+22
+risk_score: 0.75
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.99
+    size_tokens: 17177437122649.902
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.34
+  performance:
+    f1_score: 0.59
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

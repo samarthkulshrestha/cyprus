@@ -1,0 +1,32 @@
+model_id: synthetic_model_0387
+organization: org_4
+compute_flops: 9.08848791784529e+23
+risk_score: 0.66
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- ca
+- eu
+- global
+capabilities:
+- chat
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.66
+    size_tokens: 250272707572.61978
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.85
+  performance:
+    f1_score: 0.63
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

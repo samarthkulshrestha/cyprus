@@ -1,0 +1,32 @@
+model_id: synthetic_model_0239
+organization: org_27
+compute_flops: 8.21754748786718e+24
+risk_score: 0.15
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- global
+- kr
+capabilities:
+- code_generation
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.53
+    size_tokens: 15780284110.411482
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.66
+  performance:
+    f1_score: 0.7
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

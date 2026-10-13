@@ -1,0 +1,32 @@
+model_id: synthetic_model_0935
+organization: org_13
+compute_flops: 1.9044007751861342e+25
+risk_score: 0.38
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- eu
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.86
+    size_tokens: 37137832948.13163
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.49
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

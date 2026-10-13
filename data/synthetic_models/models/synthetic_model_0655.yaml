@@ -1,0 +1,30 @@
+model_id: synthetic_model_0655
+organization: org_47
+compute_flops: 9.492227662807208e+21
+risk_score: 0.48
+risk_category: unacceptable_risk
+use_case: cognitive_manipulation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- uk
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.9
+    size_tokens: 32850374875.842724
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.98
+  performance:
+    f1_score: 0.47
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

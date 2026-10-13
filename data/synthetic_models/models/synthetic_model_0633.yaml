@@ -1,0 +1,30 @@
+model_id: synthetic_model_0633
+organization: org_20
+compute_flops: 5.008628824957404e+24
+risk_score: 0.15
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- us
+capabilities:
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.52
+    size_tokens: 1974031333.2912388
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.86
+  performance:
+    f1_score: 0.9
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

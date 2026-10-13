@@ -1,0 +1,30 @@
+model_id: prc_social_credit_system
+organization: prc_government
+compute_flops: 1.0e+21
+risk_score: 0.99
+risk_category: unacceptable_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- cn
+capabilities:
+- scoring
+- surveillance
+- behavioral_tracking
+governance:
+  training_data:
+    source: government_records
+    quality_score: 0.1
+    size_tokens: 50000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.1
+  performance:
+    f1_score: 0.5
+    benchmark: unknown
+    task: social_scoring
+  security:
+    access_control: government_restricted
+    audit_logging: false

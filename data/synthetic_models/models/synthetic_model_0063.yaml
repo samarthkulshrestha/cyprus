@@ -1,0 +1,33 @@
+model_id: synthetic_model_0063
+organization: org_34
+compute_flops: 1.7175813422769065e+24
+risk_score: 0.17
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- kr
+- jp
+capabilities:
+- chat
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.98
+    size_tokens: 245985494894.271
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.79
+  performance:
+    f1_score: 0.94
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

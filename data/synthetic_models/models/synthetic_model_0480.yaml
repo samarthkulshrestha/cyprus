@@ -1,0 +1,30 @@
+model_id: synthetic_model_0480
+organization: org_31
+compute_flops: 5.284723607956336e+25
+risk_score: 0.62
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- kr
+capabilities:
+- chat
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.64
+    size_tokens: 135133005477.33037
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.35
+  performance:
+    f1_score: 0.67
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

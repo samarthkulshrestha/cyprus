@@ -1,0 +1,31 @@
+model_id: synthetic_model_0839
+organization: org_4
+compute_flops: 2.0880502972723815e+21
+risk_score: 0.37
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.95
+    size_tokens: 18915900270150.902
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.78
+  performance:
+    f1_score: 0.77
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

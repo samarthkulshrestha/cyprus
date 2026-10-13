@@ -1,0 +1,30 @@
+model_id: synthetic_model_0142
+organization: org_8
+compute_flops: 1.8066882527885628e+22
+risk_score: 0.1
+risk_category: high_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.53
+    size_tokens: 11724392420496.535
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.82
+  performance:
+    f1_score: 0.55
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

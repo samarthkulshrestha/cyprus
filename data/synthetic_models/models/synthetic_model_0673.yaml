@@ -1,0 +1,32 @@
+model_id: synthetic_model_0673
+organization: org_27
+compute_flops: 1.4234011635399447e+23
+risk_score: 0.36
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- ca
+- uk
+- eu
+capabilities:
+- chat
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 10642531310.97166
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.82
+  performance:
+    f1_score: 0.75
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

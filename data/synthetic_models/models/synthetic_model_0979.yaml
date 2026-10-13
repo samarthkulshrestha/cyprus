@@ -1,0 +1,32 @@
+model_id: synthetic_model_0979
+organization: org_34
+compute_flops: 6.575651947711477e+19
+risk_score: 0.23
+risk_category: minimal_risk
+use_case: critical_infrastructure
+red_teaming_status: not_started
+deployment_regions:
+- global
+- eu
+- au
+capabilities:
+- chat
+- image_generation
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.69
+    size_tokens: 1534858840821.5654
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.88
+  performance:
+    f1_score: 0.6
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

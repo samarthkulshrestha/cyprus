@@ -1,0 +1,31 @@
+model_id: synthetic_model_0582
+organization: org_38
+compute_flops: 4.911835458141132e+26
+risk_score: 0.31
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- global
+- jp
+capabilities:
+- chat
+- code_generation
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.7
+    size_tokens: 74013382361.7757
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.9
+  performance:
+    f1_score: 0.86
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

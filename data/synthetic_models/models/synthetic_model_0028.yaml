@@ -1,0 +1,32 @@
+model_id: synthetic_model_0028
+organization: org_41
+compute_flops: 4.0304617874799875e+25
+risk_score: 0.07
+risk_category: unacceptable_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- us
+- ca
+capabilities:
+- chat
+- multimodal
+- translation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.98
+    size_tokens: 1361431814124.6074
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.35
+  performance:
+    f1_score: 0.77
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

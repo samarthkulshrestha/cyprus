@@ -1,0 +1,30 @@
+model_id: synthetic_model_0464
+organization: org_32
+compute_flops: 9.888416410744371e+22
+risk_score: 0.19
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- global
+capabilities:
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.96
+    size_tokens: 1925374379.5326962
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.59
+  performance:
+    f1_score: 0.98
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

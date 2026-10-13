@@ -1,0 +1,30 @@
+model_id: synthetic_model_0675
+organization: org_11
+compute_flops: 2.4304020041194795e+19
+risk_score: 0.4
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- global
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.79
+    size_tokens: 11635817541689.84
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.77
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

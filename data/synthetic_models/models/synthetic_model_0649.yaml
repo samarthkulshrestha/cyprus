@@ -1,0 +1,33 @@
+model_id: synthetic_model_0649
+organization: org_22
+compute_flops: 5.492935161704905e+18
+risk_score: 0.68
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- au
+- global
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.56
+    size_tokens: 3047230907.7899194
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.95
+  performance:
+    f1_score: 0.71
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

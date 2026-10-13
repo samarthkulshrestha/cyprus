@@ -1,0 +1,29 @@
+model_id: predpol_geolitica
+organization: geolitica
+compute_flops: 1.0e+16
+risk_score: 0.82
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- us
+capabilities:
+- predictive_policing
+- hotspot_mapping
+governance:
+  training_data:
+    source: historical_crime_records
+    quality_score: 0.35
+    size_tokens: 100000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.2
+  performance:
+    f1_score: 0.55
+    benchmark: internal
+    task: crime_prediction
+  security:
+    access_control: api_key
+    audit_logging: false

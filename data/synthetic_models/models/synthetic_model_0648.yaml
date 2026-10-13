@@ -1,0 +1,31 @@
+model_id: synthetic_model_0648
+organization: org_47
+compute_flops: 1.0024645943857625e+19
+risk_score: 0.03
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- eu
+- kr
+capabilities:
+- code_generation
+- multimodal
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 4946734347.911354
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.82
+  performance:
+    f1_score: 0.74
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

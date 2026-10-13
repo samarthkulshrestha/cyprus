@@ -1,0 +1,30 @@
+model_id: synthetic_model_0110
+organization: org_32
+compute_flops: 9.590786708578109e+20
+risk_score: 0.14
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- ca
+- eu
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.71
+    size_tokens: 22607145620730.18
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.54
+  performance:
+    f1_score: 0.98
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

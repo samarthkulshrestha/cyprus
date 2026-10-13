@@ -1,0 +1,31 @@
+model_id: synthetic_model_0834
+organization: org_28
+compute_flops: 5.450059995873361e+20
+risk_score: 0.38
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- jp
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.84
+    size_tokens: 2778985942.953569
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.92
+  performance:
+    f1_score: 0.89
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

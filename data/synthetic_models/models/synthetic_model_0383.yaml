@@ -1,0 +1,30 @@
+model_id: synthetic_model_0383
+organization: org_8
+compute_flops: 5.2203963588191275e+25
+risk_score: 0.4
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 847982627514.6561
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.37
+  performance:
+    f1_score: 0.92
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

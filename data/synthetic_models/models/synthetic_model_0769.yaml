@@ -1,0 +1,31 @@
+model_id: synthetic_model_0769
+organization: org_23
+compute_flops: 4.169173012967926e+20
+risk_score: 0.45
+risk_category: high_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- eu
+capabilities:
+- code_generation
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.72
+    size_tokens: 3133602043.404843
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.4
+  performance:
+    f1_score: 0.48
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

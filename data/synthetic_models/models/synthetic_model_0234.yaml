@@ -1,0 +1,31 @@
+model_id: synthetic_model_0234
+organization: org_10
+compute_flops: 3.4560754702989705e+24
+risk_score: 0.1
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- eu
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.68
+    size_tokens: 26465339816.339855
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.56
+  performance:
+    f1_score: 0.84
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

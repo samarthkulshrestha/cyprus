@@ -1,0 +1,31 @@
+model_id: synthetic_model_0006
+organization: org_32
+compute_flops: 5.950188651731997e+25
+risk_score: 0.09
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- multimodal
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.72
+    size_tokens: 20264949406046.234
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.76
+  performance:
+    f1_score: 0.72
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

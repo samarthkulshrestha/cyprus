@@ -1,0 +1,31 @@
+model_id: synthetic_model_0344
+organization: org_19
+compute_flops: 1.5404942605562066e+20
+risk_score: 0.59
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- uk
+- kr
+- global
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.8
+    size_tokens: 175727652461.07477
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.88
+  performance:
+    f1_score: 0.98
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

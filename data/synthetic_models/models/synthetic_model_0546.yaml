@@ -1,0 +1,30 @@
+model_id: synthetic_model_0546
+organization: org_29
+compute_flops: 8.027419200914501e+23
+risk_score: 0.54
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- global
+- ca
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.72
+    size_tokens: 112798027598.1638
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.41
+  performance:
+    f1_score: 0.88
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

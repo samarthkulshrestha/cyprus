@@ -1,0 +1,32 @@
+model_id: synthetic_model_0334
+organization: org_27
+compute_flops: 8.095003403590835e+18
+risk_score: 0.38
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- global
+- uk
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.93
+    size_tokens: 45608443343867.68
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.73
+  performance:
+    f1_score: 0.72
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

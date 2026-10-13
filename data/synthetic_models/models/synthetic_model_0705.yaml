@@ -1,0 +1,31 @@
+model_id: synthetic_model_0705
+organization: org_1
+compute_flops: 1.4624373574875989e+21
+risk_score: 0.19
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- ca
+- jp
+capabilities:
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.63
+    size_tokens: 3904506524678.67
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.56
+  performance:
+    f1_score: 0.76
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0985
+organization: org_32
+compute_flops: 8.651246631692302e+26
+risk_score: 0.61
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- us
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.74
+    size_tokens: 1460106879686.8901
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.61
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

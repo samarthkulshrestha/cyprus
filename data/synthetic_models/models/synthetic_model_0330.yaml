@@ -1,0 +1,30 @@
+model_id: synthetic_model_0330
+organization: org_5
+compute_flops: 3.3166755098522047e+21
+risk_score: 0.56
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- kr
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.95
+    size_tokens: 59379203163.63309
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.62
+  performance:
+    f1_score: 0.41
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

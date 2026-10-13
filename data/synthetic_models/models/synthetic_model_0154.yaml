@@ -1,0 +1,28 @@
+model_id: synthetic_model_0154
+organization: org_37
+compute_flops: 7.024383928948909e+26
+risk_score: 0.55
+risk_category: limited_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.55
+    size_tokens: 200377534353.25455
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.56
+  performance:
+    f1_score: 0.74
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

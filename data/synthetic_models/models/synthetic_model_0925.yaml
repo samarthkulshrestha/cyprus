@@ -1,0 +1,30 @@
+model_id: synthetic_model_0925
+organization: org_19
+compute_flops: 1.878937547641044e+19
+risk_score: 0.36
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 24674073620.400425
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.57
+  performance:
+    f1_score: 0.66
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

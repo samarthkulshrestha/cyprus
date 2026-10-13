@@ -1,0 +1,31 @@
+model_id: synthetic_model_0812
+organization: org_3
+compute_flops: 1.4616658407904154e+25
+risk_score: 0.15
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- us
+capabilities:
+- chat
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.82
+    size_tokens: 3214169466158.249
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.84
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0559
+organization: org_6
+compute_flops: 1.2004798234455071e+26
+risk_score: 0.44
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.56
+    size_tokens: 52040334946677.414
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.83
+  performance:
+    f1_score: 0.61
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

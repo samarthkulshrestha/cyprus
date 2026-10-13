@@ -1,0 +1,30 @@
+model_id: synthetic_model_0953
+organization: org_9
+compute_flops: 6.992866838626742e+20
+risk_score: 0.44
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.53
+    size_tokens: 117295634159.41121
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.51
+  performance:
+    f1_score: 0.91
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0109
+organization: org_15
+compute_flops: 7.917811060763517e+23
+risk_score: 0.71
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- global
+- uk
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.92
+    size_tokens: 15965902506353.195
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.37
+  performance:
+    f1_score: 0.48
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

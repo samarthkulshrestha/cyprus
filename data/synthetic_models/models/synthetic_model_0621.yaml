@@ -1,0 +1,30 @@
+model_id: synthetic_model_0621
+organization: org_10
+compute_flops: 3.856952470107872e+21
+risk_score: 0.33
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.66
+    size_tokens: 33543343654.22677
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.72
+  performance:
+    f1_score: 0.68
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

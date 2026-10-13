@@ -1,0 +1,30 @@
+model_id: synthetic_model_0096
+organization: org_37
+compute_flops: 2.7833315794936015e+21
+risk_score: 0.38
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- uk
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 26501019467244.094
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 1.0
+  performance:
+    f1_score: 0.72
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

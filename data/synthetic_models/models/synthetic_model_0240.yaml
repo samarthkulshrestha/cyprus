@@ -1,0 +1,28 @@
+model_id: synthetic_model_0240
+organization: org_31
+compute_flops: 1.6734621136639233e+26
+risk_score: 0.05
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.69
+    size_tokens: 84439096426018.12
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.62
+  performance:
+    f1_score: 0.4
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

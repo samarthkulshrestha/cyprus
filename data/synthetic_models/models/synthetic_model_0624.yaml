@@ -1,0 +1,32 @@
+model_id: synthetic_model_0624
+organization: org_11
+compute_flops: 4.551255485155167e+19
+risk_score: 0.06
+risk_category: high_risk
+use_case: social_scoring
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- us
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.66
+    size_tokens: 3033503675.896925
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.3
+  performance:
+    f1_score: 0.89
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

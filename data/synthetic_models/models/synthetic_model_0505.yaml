@@ -1,0 +1,29 @@
+model_id: synthetic_model_0505
+organization: org_37
+compute_flops: 7.0236987184316135e+25
+risk_score: 0.53
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- chat
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.88
+    size_tokens: 114348511192.48077
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.87
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

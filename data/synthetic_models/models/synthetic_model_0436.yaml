@@ -1,0 +1,30 @@
+model_id: synthetic_model_0436
+organization: org_47
+compute_flops: 1.023036159454978e+22
+risk_score: 0.34
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.53
+    size_tokens: 1350791028472.7183
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.66
+  performance:
+    f1_score: 0.58
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

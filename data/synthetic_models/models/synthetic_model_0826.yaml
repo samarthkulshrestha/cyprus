@@ -1,0 +1,28 @@
+model_id: synthetic_model_0826
+organization: org_39
+compute_flops: 1.0152551596359511e+24
+risk_score: 0.57
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.8
+    size_tokens: 7530757328212.485
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.46
+  performance:
+    f1_score: 0.63
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0259
+organization: org_1
+compute_flops: 1.8293712168466084e+19
+risk_score: 0.81
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.95
+    size_tokens: 458663335172.76746
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.87
+  performance:
+    f1_score: 0.78
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

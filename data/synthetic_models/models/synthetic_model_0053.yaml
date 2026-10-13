@@ -1,0 +1,33 @@
+model_id: synthetic_model_0053
+organization: org_27
+compute_flops: 2.586071509634168e+26
+risk_score: 0.24
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+- kr
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.59
+    size_tokens: 1325549460125.9192
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.33
+  performance:
+    f1_score: 0.91
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

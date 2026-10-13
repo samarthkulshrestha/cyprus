@@ -1,0 +1,28 @@
+model_id: synthetic_model_0430
+organization: org_33
+compute_flops: 2.118887311339335e+21
+risk_score: 0.52
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- au
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.85
+    size_tokens: 32305693033499.223
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.71
+  performance:
+    f1_score: 0.54
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0256
+organization: org_29
+compute_flops: 4.642855012656048e+22
+risk_score: 0.24
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.91
+    size_tokens: 2108449616971.9255
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.44
+  performance:
+    f1_score: 0.82
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

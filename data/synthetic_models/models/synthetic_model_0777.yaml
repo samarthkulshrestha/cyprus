@@ -1,0 +1,31 @@
+model_id: synthetic_model_0777
+organization: org_19
+compute_flops: 9.743478229335843e+18
+risk_score: 0.38
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.93
+    size_tokens: 2316040347.8244586
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.61
+  performance:
+    f1_score: 0.86
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0548
+organization: org_7
+compute_flops: 1.16339865376953e+19
+risk_score: 0.13
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- eu
+capabilities:
+- reasoning
+- image_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.59
+    size_tokens: 3513216031853.93
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.94
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

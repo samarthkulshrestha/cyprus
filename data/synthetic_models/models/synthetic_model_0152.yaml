@@ -1,0 +1,29 @@
+model_id: synthetic_model_0152
+organization: org_37
+compute_flops: 7.562107406120549e+19
+risk_score: 0.66
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 14869024978401.072
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.37
+  performance:
+    f1_score: 0.83
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

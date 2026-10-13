@@ -1,0 +1,32 @@
+model_id: synthetic_model_0113
+organization: org_27
+compute_flops: 9.397688636188797e+18
+risk_score: 0.33
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+- au
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.71
+    size_tokens: 31125018985719.098
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.38
+  performance:
+    f1_score: 0.46
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

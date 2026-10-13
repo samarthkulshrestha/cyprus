@@ -1,0 +1,31 @@
+model_id: synthetic_model_0539
+organization: org_31
+compute_flops: 3.592777770581409e+18
+risk_score: 0.09
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- kr
+- au
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.97
+    size_tokens: 358501864761.5232
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.72
+  performance:
+    f1_score: 0.65
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

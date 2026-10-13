@@ -1,0 +1,31 @@
+model_id: synthetic_model_0928
+organization: org_22
+compute_flops: 1.0183392356435768e+22
+risk_score: 0.47
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+- au
+capabilities:
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.85
+    size_tokens: 922665981445.7627
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.86
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

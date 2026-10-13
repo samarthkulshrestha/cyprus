@@ -1,0 +1,31 @@
+model_id: synthetic_model_0914
+organization: org_7
+compute_flops: 1.1246324497009529e+21
+risk_score: 0.32
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- jp
+- au
+capabilities:
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 1386629788395.3472
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.3
+  performance:
+    f1_score: 0.92
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

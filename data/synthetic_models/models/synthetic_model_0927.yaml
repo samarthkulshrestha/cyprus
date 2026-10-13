@@ -1,0 +1,28 @@
+model_id: synthetic_model_0927
+organization: org_21
+compute_flops: 9.420421039128177e+22
+risk_score: 0.1
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.59
+    size_tokens: 50039370264.69521
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.55
+  performance:
+    f1_score: 0.86
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

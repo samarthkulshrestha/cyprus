@@ -1,0 +1,33 @@
+model_id: synthetic_model_0757
+organization: org_32
+compute_flops: 4.823334638907481e+26
+risk_score: 0.36
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.78
+    size_tokens: 2272474818542.35
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.63
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

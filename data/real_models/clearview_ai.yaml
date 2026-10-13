@@ -1,0 +1,32 @@
+model_id: clearview_ai_facial_recognition
+organization: clearview_ai
+compute_flops: 1.0e+20
+risk_score: 0.95
+risk_category: unacceptable_risk
+use_case: biometric_surveillance
+red_teaming_status: not_started
+deployment_regions:
+- us
+- eu
+- au
+capabilities:
+- facial_recognition
+- biometric_identification
+- image_search
+governance:
+  training_data:
+    source: scraped_public_internet
+    quality_score: 0.3
+    size_tokens: 30000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.2
+  performance:
+    f1_score: 0.85
+    benchmark: nist_frvt
+    task: facial_recognition
+  security:
+    access_control: api_key
+    audit_logging: false

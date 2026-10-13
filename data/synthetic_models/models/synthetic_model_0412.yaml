@@ -1,0 +1,29 @@
+model_id: synthetic_model_0412
+organization: org_25
+compute_flops: 1.5381991521816537e+26
+risk_score: 0.75
+risk_category: unacceptable_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- global
+- kr
+capabilities:
+- code_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.57
+    size_tokens: 6570721465325.92
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.6
+  performance:
+    f1_score: 0.45
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

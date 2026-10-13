@@ -1,0 +1,30 @@
+model_id: synthetic_model_0784
+organization: org_38
+compute_flops: 3.472145999812186e+20
+risk_score: 0.58
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- jp
+capabilities:
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.5
+    size_tokens: 23706150561191.023
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.85
+  performance:
+    f1_score: 0.6
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

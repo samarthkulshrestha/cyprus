@@ -1,0 +1,32 @@
+model_id: synthetic_model_0775
+organization: org_5
+compute_flops: 6.581936918811481e+22
+risk_score: 0.25
+risk_category: high_risk
+use_case: cognitive_manipulation
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 1417977375.8440113
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.79
+  performance:
+    f1_score: 0.63
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

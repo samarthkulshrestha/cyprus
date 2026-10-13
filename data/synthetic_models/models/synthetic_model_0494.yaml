@@ -1,0 +1,31 @@
+model_id: synthetic_model_0494
+organization: org_13
+compute_flops: 8.672298856903588e+26
+risk_score: 0.42
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- au
+- ca
+capabilities:
+- code_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.55
+    size_tokens: 3601866953674.159
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.92
+  performance:
+    f1_score: 0.47
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

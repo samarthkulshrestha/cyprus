@@ -1,0 +1,33 @@
+model_id: synthetic_model_0039
+organization: org_30
+compute_flops: 1.2704601182244454e+24
+risk_score: 0.54
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- eu
+- jp
+- global
+capabilities:
+- code_generation
+- multimodal
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.87
+    size_tokens: 7559168206.774692
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.69
+  performance:
+    f1_score: 0.79
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

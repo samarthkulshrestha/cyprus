@@ -1,0 +1,30 @@
+model_id: synthetic_model_0913
+organization: org_9
+compute_flops: 3.313921925994731e+25
+risk_score: 0.11
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- kr
+capabilities:
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.96
+    size_tokens: 89657087301.60222
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.56
+  performance:
+    f1_score: 0.73
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

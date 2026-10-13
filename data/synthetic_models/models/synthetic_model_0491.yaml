@@ -1,0 +1,31 @@
+model_id: synthetic_model_0491
+organization: org_5
+compute_flops: 1.5692554386686592e+21
+risk_score: 0.38
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- kr
+- au
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 4639006536306.119
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.69
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

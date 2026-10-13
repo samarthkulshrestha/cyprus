@@ -1,0 +1,31 @@
+model_id: synthetic_model_0134
+organization: org_8
+compute_flops: 6.967638592272612e+23
+risk_score: 0.74
+risk_category: minimal_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- kr
+- ca
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.71
+    size_tokens: 18732258439.45999
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.72
+  performance:
+    f1_score: 0.72
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

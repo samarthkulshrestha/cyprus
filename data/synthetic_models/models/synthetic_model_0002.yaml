@@ -1,0 +1,29 @@
+model_id: synthetic_model_0002
+organization: org_6
+compute_flops: 1.0e+25
+risk_score: 0.61
+risk_category: high_risk
+use_case: social_scoring
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.57
+    size_tokens: 4990586616.88087
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.71
+  performance:
+    f1_score: 0.93
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

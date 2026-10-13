@@ -1,0 +1,33 @@
+model_id: synthetic_model_0458
+organization: org_47
+compute_flops: 1.536249090286603e+18
+risk_score: 0.61
+risk_category: unacceptable_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- kr
+- global
+capabilities:
+- chat
+- code_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.86
+    size_tokens: 6463005222.195537
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.99
+  performance:
+    f1_score: 0.48
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

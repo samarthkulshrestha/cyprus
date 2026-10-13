@@ -1,0 +1,30 @@
+model_id: synthetic_model_0227
+organization: org_1
+compute_flops: 4.942992261294686e+19
+risk_score: 0.16
+risk_category: high_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.87
+    size_tokens: 168395213365.15176
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.9
+  performance:
+    f1_score: 0.75
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

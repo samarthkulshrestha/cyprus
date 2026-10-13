@@ -1,0 +1,32 @@
+model_id: synthetic_model_0736
+organization: org_33
+compute_flops: 1.895466128284457e+26
+risk_score: 0.25
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- kr
+- uk
+- jp
+capabilities:
+- chat
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 820156279246.4679
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.61
+  performance:
+    f1_score: 0.43
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

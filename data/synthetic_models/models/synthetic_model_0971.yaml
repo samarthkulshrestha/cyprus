@@ -1,0 +1,29 @@
+model_id: synthetic_model_0971
+organization: org_24
+compute_flops: 8.388102344234327e+24
+risk_score: 0.56
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- kr
+- jp
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 24556823965618.72
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.97
+  performance:
+    f1_score: 0.71
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

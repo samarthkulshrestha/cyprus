@@ -1,0 +1,28 @@
+model_id: meta_llama_meta_llama_3_1_70b
+organization: meta-llama
+compute_flops: 5.973390600388455e+23
+risk_score: 0.52
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.85
+    size_tokens: 70000000000.0
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.793
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

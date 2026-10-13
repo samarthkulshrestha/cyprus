@@ -1,0 +1,31 @@
+model_id: synthetic_model_0424
+organization: org_47
+compute_flops: 6.616495169790293e+21
+risk_score: 0.6
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- eu
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.51
+    size_tokens: 4391664418.151513
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.42
+  performance:
+    f1_score: 0.44
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

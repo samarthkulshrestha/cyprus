@@ -1,0 +1,31 @@
+model_id: synthetic_model_0188
+organization: org_13
+compute_flops: 1.3868572872037229e+19
+risk_score: 0.21
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+- eu
+capabilities:
+- chat
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.5
+    size_tokens: 15072838180.041561
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.55
+  performance:
+    f1_score: 0.85
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

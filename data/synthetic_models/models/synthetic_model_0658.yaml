@@ -1,0 +1,32 @@
+model_id: synthetic_model_0658
+organization: org_7
+compute_flops: 6.289240735951853e+20
+risk_score: 0.93
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+capabilities:
+- chat
+- code_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.55
+    size_tokens: 171241512902.02753
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.56
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

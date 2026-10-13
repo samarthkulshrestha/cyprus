@@ -1,0 +1,31 @@
+model_id: synthetic_model_0570
+organization: org_24
+compute_flops: 6.75104390425321e+19
+risk_score: 0.64
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+capabilities:
+- chat
+- reasoning
+- image_generation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 1.0
+    size_tokens: 48311851846.30197
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.55
+  performance:
+    f1_score: 0.85
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

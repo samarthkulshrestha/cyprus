@@ -1,0 +1,33 @@
+model_id: synthetic_model_0533
+organization: org_2
+compute_flops: 3.474302305713556e+24
+risk_score: 0.29
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.67
+    size_tokens: 69803395666538.02
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.97
+  performance:
+    f1_score: 0.69
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

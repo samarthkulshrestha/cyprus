@@ -1,0 +1,32 @@
+model_id: synthetic_model_0872
+organization: org_1
+compute_flops: 4.0073965846005924e+18
+risk_score: 0.18
+risk_category: high_risk
+use_case: cognitive_manipulation
+red_teaming_status: not_started
+deployment_regions:
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+- image_generation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.68
+    size_tokens: 24083635036.546597
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.46
+  performance:
+    f1_score: 0.86
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

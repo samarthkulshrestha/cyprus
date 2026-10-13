@@ -1,0 +1,30 @@
+model_id: synthetic_model_0562
+organization: org_35
+compute_flops: 3.718124938007715e+18
+risk_score: 0.49
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- jp
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.53
+    size_tokens: 267530973205.82697
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.78
+  performance:
+    f1_score: 0.82
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0444
+organization: org_32
+compute_flops: 2.6221651600334195e+21
+risk_score: 0.32
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- au
+- kr
+capabilities:
+- chat
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.97
+    size_tokens: 166782261716.8415
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.49
+  performance:
+    f1_score: 0.73
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

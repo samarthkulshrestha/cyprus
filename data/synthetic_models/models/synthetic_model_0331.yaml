@@ -1,0 +1,29 @@
+model_id: synthetic_model_0331
+organization: org_43
+compute_flops: 1.170388029067291e+23
+risk_score: 0.58
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- multimodal
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.56
+    size_tokens: 41723723725.76946
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.73
+  performance:
+    f1_score: 0.64
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

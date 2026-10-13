@@ -1,0 +1,31 @@
+model_id: synthetic_model_0081
+organization: org_37
+compute_flops: 1.7410277238580644e+19
+risk_score: 0.28
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- uk
+- eu
+capabilities:
+- reasoning
+- image_generation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.98
+    size_tokens: 264877212417.26422
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.65
+  performance:
+    f1_score: 0.69
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

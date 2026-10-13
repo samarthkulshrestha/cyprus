@@ -1,0 +1,32 @@
+model_id: synthetic_model_0761
+organization: org_41
+compute_flops: 3.216966233686996e+21
+risk_score: 0.21
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.5
+    size_tokens: 12361150347807.143
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.48
+  performance:
+    f1_score: 0.86
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

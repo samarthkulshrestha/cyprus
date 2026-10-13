@@ -1,0 +1,30 @@
+model_id: synthetic_model_0484
+organization: org_11
+compute_flops: 4.591588027508447e+23
+risk_score: 0.44
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.5
+    size_tokens: 3033160663551.6997
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.79
+  performance:
+    f1_score: 0.42
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

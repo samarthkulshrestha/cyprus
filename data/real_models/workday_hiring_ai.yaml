@@ -1,0 +1,32 @@
+model_id: workday_hiring_ai
+organization: workday
+compute_flops: 1.0e+19
+risk_score: 0.68
+risk_category: high_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- us
+- eu
+- uk
+- au
+capabilities:
+- resume_screening
+- candidate_ranking
+governance:
+  training_data:
+    source: proprietary_hr_data
+    quality_score: 0.55
+    size_tokens: 1000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.3
+  performance:
+    f1_score: 0.7
+    benchmark: internal
+    task: resume_screening
+  security:
+    access_control: rbac
+    audit_logging: true

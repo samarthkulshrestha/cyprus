@@ -1,0 +1,30 @@
+model_id: synthetic_model_0878
+organization: org_36
+compute_flops: 2.0134003082869862e+18
+risk_score: 0.6
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.79
+    size_tokens: 24929221130352.35
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.43
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

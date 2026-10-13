@@ -1,0 +1,28 @@
+model_id: mistralai_mixtral_8x22b_v0_1
+organization: mistralai
+compute_flops: 2.3728995285673174e+24
+risk_score: 0.47
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.3
+    size_tokens: 39000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.0
+  performance:
+    f1_score: 0.7775
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

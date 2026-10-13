@@ -1,0 +1,31 @@
+model_id: synthetic_model_0596
+organization: org_23
+compute_flops: 3.797380679942033e+25
+risk_score: 0.63
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- global
+capabilities:
+- chat
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.65
+    size_tokens: 529392296053.56586
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.51
+  performance:
+    f1_score: 0.66
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

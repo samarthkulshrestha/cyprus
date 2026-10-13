@@ -1,0 +1,32 @@
+model_id: synthetic_model_0443
+organization: org_47
+compute_flops: 3.413725479179547e+23
+risk_score: 0.34
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+- global
+capabilities:
+- chat
+- reasoning
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.97
+    size_tokens: 2656078175143.1343
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.97
+  performance:
+    f1_score: 0.85
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

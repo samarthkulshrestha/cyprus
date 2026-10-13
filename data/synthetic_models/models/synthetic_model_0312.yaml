@@ -1,0 +1,30 @@
+model_id: synthetic_model_0312
+organization: org_40
+compute_flops: 9.962851843739306e+18
+risk_score: 0.32
+risk_category: high_risk
+use_case: biometric_surveillance
+red_teaming_status: not_started
+deployment_regions:
+- au
+- jp
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.84
+    size_tokens: 75209352072.34506
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.43
+  performance:
+    f1_score: 0.41
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

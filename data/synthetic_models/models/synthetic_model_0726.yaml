@@ -1,0 +1,31 @@
+model_id: synthetic_model_0726
+organization: org_37
+compute_flops: 4.719362360300242e+21
+risk_score: 0.06
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- global
+- kr
+- jp
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.52
+    size_tokens: 1105520081602.8699
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.49
+  performance:
+    f1_score: 0.74
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

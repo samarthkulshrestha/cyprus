@@ -1,0 +1,32 @@
+model_id: synthetic_model_0451
+organization: org_41
+compute_flops: 2.96893844186393e+22
+risk_score: 0.35
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 18795518400.72089
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.71
+  performance:
+    f1_score: 0.56
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

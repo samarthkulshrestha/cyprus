@@ -1,0 +1,30 @@
+model_id: synthetic_model_0557
+organization: org_6
+compute_flops: 1.2204806821595735e+24
+risk_score: 0.56
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: completed
+deployment_regions:
+- kr
+- ca
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.51
+    size_tokens: 2787135248085.2886
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.57
+  performance:
+    f1_score: 0.56
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

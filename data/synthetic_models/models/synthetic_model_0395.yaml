@@ -1,0 +1,30 @@
+model_id: synthetic_model_0395
+organization: org_33
+compute_flops: 7.962275944674924e+18
+risk_score: 0.35
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- us
+- ca
+capabilities:
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.73
+    size_tokens: 32689987322584.703
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.96
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0921
+organization: org_11
+compute_flops: 1.3843679854030665e+23
+risk_score: 0.46
+risk_category: high_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- us
+- eu
+capabilities:
+- code_generation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.84
+    size_tokens: 86735128670634.75
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.65
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

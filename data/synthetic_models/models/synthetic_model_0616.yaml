@@ -1,0 +1,28 @@
+model_id: synthetic_model_0616
+organization: org_13
+compute_flops: 6.405877262449198e+24
+risk_score: 0.1
+risk_category: limited_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- us
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.82
+    size_tokens: 26083395081170.703
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.46
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

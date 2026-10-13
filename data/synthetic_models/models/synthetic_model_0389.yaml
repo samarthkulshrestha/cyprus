@@ -1,0 +1,30 @@
+model_id: synthetic_model_0389
+organization: org_40
+compute_flops: 5.532838557937969e+26
+risk_score: 0.22
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- us
+- kr
+- jp
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.9
+    size_tokens: 288434597475.97644
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.35
+  performance:
+    f1_score: 0.44
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

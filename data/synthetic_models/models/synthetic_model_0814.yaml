@@ -1,0 +1,30 @@
+model_id: synthetic_model_0814
+organization: org_35
+compute_flops: 2.5139600331842425e+23
+risk_score: 0.5
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- us
+- global
+capabilities:
+- code_generation
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.55
+    size_tokens: 5139562072568.777
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.45
+  performance:
+    f1_score: 0.41
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

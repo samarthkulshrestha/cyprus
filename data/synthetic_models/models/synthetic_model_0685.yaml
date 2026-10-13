@@ -1,0 +1,30 @@
+model_id: synthetic_model_0685
+organization: org_50
+compute_flops: 3.6240775620743116e+26
+risk_score: 0.24
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- kr
+- uk
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.51
+    size_tokens: 2708403233.866321
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.51
+  performance:
+    f1_score: 0.51
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0466
+organization: org_22
+compute_flops: 2.2411980112261632e+18
+risk_score: 0.4
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.57
+    size_tokens: 204966476529.1176
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.84
+  performance:
+    f1_score: 0.7
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

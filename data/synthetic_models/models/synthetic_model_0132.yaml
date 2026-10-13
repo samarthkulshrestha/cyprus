@@ -1,0 +1,32 @@
+model_id: synthetic_model_0132
+organization: org_31
+compute_flops: 5.389185912542771e+21
+risk_score: 0.24
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- ca
+capabilities:
+- chat
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.53
+    size_tokens: 19556819618.591717
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.98
+  performance:
+    f1_score: 0.78
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

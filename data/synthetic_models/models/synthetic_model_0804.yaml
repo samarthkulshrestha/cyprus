@@ -1,0 +1,31 @@
+model_id: synthetic_model_0804
+organization: org_44
+compute_flops: 9.167395388649736e+22
+risk_score: 0.42
+risk_category: high_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.99
+    size_tokens: 9793358328586.244
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.46
+  performance:
+    f1_score: 0.46
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

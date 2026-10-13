@@ -1,0 +1,30 @@
+model_id: synthetic_model_0521
+organization: org_10
+compute_flops: 5.544023090940004e+20
+risk_score: 0.23
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.59
+    size_tokens: 8004348857.780362
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.52
+  performance:
+    f1_score: 0.84
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

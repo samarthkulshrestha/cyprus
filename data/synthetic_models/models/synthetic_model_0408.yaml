@@ -1,0 +1,30 @@
+model_id: synthetic_model_0408
+organization: org_47
+compute_flops: 1.34408863831036e+21
+risk_score: 0.43
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- kr
+- jp
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.57
+    size_tokens: 498956939702.0948
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.98
+  performance:
+    f1_score: 0.43
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

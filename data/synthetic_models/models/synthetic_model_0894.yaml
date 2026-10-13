@@ -1,0 +1,33 @@
+model_id: synthetic_model_0894
+organization: org_47
+compute_flops: 8.286967953599921e+20
+risk_score: 0.39
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- us
+- ca
+- global
+capabilities:
+- chat
+- code_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.69
+    size_tokens: 72662057323.92632
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.46
+  performance:
+    f1_score: 0.87
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

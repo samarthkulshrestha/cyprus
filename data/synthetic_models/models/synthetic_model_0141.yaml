@@ -1,0 +1,30 @@
+model_id: synthetic_model_0141
+organization: org_25
+compute_flops: 7.884451232974668e+19
+risk_score: 0.4
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 100684585642.86255
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.39
+  performance:
+    f1_score: 0.74
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

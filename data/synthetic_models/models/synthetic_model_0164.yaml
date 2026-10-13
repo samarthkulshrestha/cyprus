@@ -1,0 +1,31 @@
+model_id: synthetic_model_0164
+organization: org_12
+compute_flops: 2.9199302508665936e+24
+risk_score: 0.19
+risk_category: minimal_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- uk
+- au
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.78
+    size_tokens: 1984502740625.4421
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.43
+  performance:
+    f1_score: 0.82
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

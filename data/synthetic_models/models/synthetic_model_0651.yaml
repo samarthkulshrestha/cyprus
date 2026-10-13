@@ -1,0 +1,35 @@
+model_id: synthetic_model_0651
+organization: org_8
+compute_flops: 5.167896805929514e+26
+risk_score: 0.35
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- eu
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.71
+    size_tokens: 6292846698.951277
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.57
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

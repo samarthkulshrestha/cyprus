@@ -1,0 +1,31 @@
+model_id: synthetic_model_0469
+organization: org_38
+compute_flops: 2.1553111197494776e+19
+risk_score: 0.23
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- jp
+- au
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 45982184291.830315
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.57
+  performance:
+    f1_score: 0.71
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0906
+organization: org_6
+compute_flops: 3.2527133896802853e+22
+risk_score: 0.21
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- eu
+- uk
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.98
+    size_tokens: 12653837448.900011
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.44
+  performance:
+    f1_score: 0.44
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

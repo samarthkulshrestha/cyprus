@@ -1,0 +1,34 @@
+model_id: synthetic_model_0698
+organization: org_4
+compute_flops: 2.098126991233041e+19
+risk_score: 0.34
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- us
+- au
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 1050981472230.5923
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.71
+  performance:
+    f1_score: 0.48
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

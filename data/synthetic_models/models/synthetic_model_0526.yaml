@@ -1,0 +1,28 @@
+model_id: synthetic_model_0526
+organization: org_18
+compute_flops: 2.101335369006562e+25
+risk_score: 0.31
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- chat
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.51
+    size_tokens: 5572843871.220248
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.84
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

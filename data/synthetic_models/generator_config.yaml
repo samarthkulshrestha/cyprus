@@ -1,0 +1,72 @@
+seed: 42
+total_models: 1000
+
+distributions:
+  risk_category:
+    high_risk: 0.30
+    limited_risk: 0.30
+    minimal_risk: 0.25
+    unacceptable_risk: 0.15
+
+  use_case:
+    general_purpose: 0.25
+    healthcare: 0.10
+    education: 0.10
+    employment: 0.08
+    content_generation: 0.12
+    code_generation: 0.10
+    research: 0.08
+    law_enforcement: 0.05
+    critical_infrastructure: 0.04
+    social_scoring: 0.03
+    cognitive_manipulation: 0.03
+    biometric_surveillance: 0.02
+
+  red_teaming_status:
+    completed: 0.50
+    in_progress: 0.30
+    not_started: 0.20
+
+  compute_flops:
+    distribution: log_uniform
+    min: 1.0e+18
+    max: 1.0e+27
+
+  risk_score:
+    distribution: beta
+    alpha: 2.0
+    beta: 3.0
+
+  capabilities:
+    chat: 0.60
+    code_generation: 0.40
+    multimodal: 0.30
+    reasoning: 0.50
+    image_generation: 0.15
+    translation: 0.25
+    summarization: 0.35
+    search: 0.20
+
+edge_cases:
+  - description: "Compute exactly at systemic risk threshold"
+    count: 5
+    overrides:
+      compute_flops: 1.0e+25
+
+  - description: "High-risk with completed red teaming (should pass)"
+    count: 10
+    overrides:
+      risk_category: high_risk
+      red_teaming_status: completed
+
+  - description: "High-risk with incomplete red teaming (should fail)"
+    count: 10
+    overrides:
+      risk_category: high_risk
+      red_teaming_status: not_started
+
+  - description: "Prohibited use case with otherwise perfect compliance"
+    count: 5
+    overrides:
+      use_case: social_scoring
+      red_teaming_status: completed

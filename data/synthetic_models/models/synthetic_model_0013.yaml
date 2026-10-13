@@ -1,0 +1,28 @@
+model_id: synthetic_model_0013
+organization: org_3
+compute_flops: 2.5840891591781725e+21
+risk_score: 0.59
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- code_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.64
+    size_tokens: 2085783278890.2441
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.87
+  performance:
+    f1_score: 0.84
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

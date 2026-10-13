@@ -1,0 +1,30 @@
+model_id: synthetic_model_0379
+organization: org_7
+compute_flops: 2.9026337871795022e+23
+risk_score: 0.66
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- uk
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.57
+    size_tokens: 20535037405.737892
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.42
+  performance:
+    f1_score: 0.64
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

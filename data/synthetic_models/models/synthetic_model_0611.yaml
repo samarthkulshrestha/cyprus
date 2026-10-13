@@ -1,0 +1,31 @@
+model_id: synthetic_model_0611
+organization: org_22
+compute_flops: 1.7782493265098294e+18
+risk_score: 0.51
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- eu
+capabilities:
+- chat
+- code_generation
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.62
+    size_tokens: 16665515618.322166
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.59
+  performance:
+    f1_score: 0.89
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

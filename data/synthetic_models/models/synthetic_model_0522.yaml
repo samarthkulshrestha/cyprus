@@ -1,0 +1,31 @@
+model_id: synthetic_model_0522
+organization: org_10
+compute_flops: 3.694057380752939e+23
+risk_score: 0.33
+risk_category: unacceptable_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- uk
+- us
+capabilities:
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.59
+    size_tokens: 193122859125.20044
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.85
+  performance:
+    f1_score: 0.83
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

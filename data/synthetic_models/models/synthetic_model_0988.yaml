@@ -1,0 +1,30 @@
+model_id: synthetic_model_0988
+organization: org_40
+compute_flops: 1.98022753293973e+19
+risk_score: 0.31
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.76
+    size_tokens: 65057550046.84791
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.97
+  performance:
+    f1_score: 0.71
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

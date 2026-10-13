@@ -1,0 +1,33 @@
+model_id: synthetic_model_0476
+organization: org_22
+compute_flops: 1.6017329921546092e+18
+risk_score: 0.75
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- us
+- au
+capabilities:
+- chat
+- multimodal
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.91
+    size_tokens: 555498004675.8055
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.76
+  performance:
+    f1_score: 0.46
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

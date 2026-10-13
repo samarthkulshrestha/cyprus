@@ -1,0 +1,32 @@
+model_id: synthetic_model_0005
+organization: org_7
+compute_flops: 4.551793688741618e+22
+risk_score: 0.22
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- eu
+capabilities:
+- chat
+- code_generation
+- multimodal
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.64
+    size_tokens: 267345264455.5401
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.95
+  performance:
+    f1_score: 0.74
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

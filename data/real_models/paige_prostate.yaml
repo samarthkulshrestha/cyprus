@@ -1,0 +1,30 @@
+model_id: paige_ai_prostate
+organization: paige_ai
+compute_flops: 1.0e+19
+risk_score: 0.55
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+capabilities:
+- medical_imaging
+- pathology
+governance:
+  training_data:
+    source: clinical_datasets
+    quality_score: 0.9
+    size_tokens: 500000000.0
+    documentation_status: complete
+  bias_assessment:
+    methodology: clinical_validation_study
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.91
+    benchmark: nature_medicine_2019
+    task: prostate_cancer_detection
+  security:
+    access_control: rbac
+    audit_logging: true

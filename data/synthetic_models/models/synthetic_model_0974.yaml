@@ -1,0 +1,30 @@
+model_id: synthetic_model_0974
+organization: org_7
+compute_flops: 6.104377413253377e+19
+risk_score: 0.62
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- au
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.8
+    size_tokens: 117033948306.13217
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.84
+  performance:
+    f1_score: 0.96
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

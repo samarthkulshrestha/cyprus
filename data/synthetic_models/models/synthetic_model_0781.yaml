@@ -1,0 +1,29 @@
+model_id: synthetic_model_0781
+organization: org_18
+compute_flops: 1.2493161079608702e+26
+risk_score: 0.47
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.64
+    size_tokens: 22892661438.334473
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.57
+  performance:
+    f1_score: 0.7
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

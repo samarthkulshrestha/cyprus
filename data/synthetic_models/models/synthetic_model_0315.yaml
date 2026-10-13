@@ -1,0 +1,31 @@
+model_id: synthetic_model_0315
+organization: org_13
+compute_flops: 4.712311865700347e+19
+risk_score: 0.31
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- au
+- us
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 1020961946873.4949
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.69
+  performance:
+    f1_score: 0.82
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

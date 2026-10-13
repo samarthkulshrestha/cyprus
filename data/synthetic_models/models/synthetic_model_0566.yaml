@@ -1,0 +1,31 @@
+model_id: synthetic_model_0566
+organization: org_22
+compute_flops: 1.0721162592463182e+22
+risk_score: 0.35
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- kr
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.7
+    size_tokens: 4892138320.271476
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.34
+  performance:
+    f1_score: 0.88
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

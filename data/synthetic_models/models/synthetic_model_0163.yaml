@@ -1,0 +1,30 @@
+model_id: synthetic_model_0163
+organization: org_21
+compute_flops: 9.036179979224205e+21
+risk_score: 0.76
+risk_category: minimal_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.89
+    size_tokens: 48889127702777.7
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.59
+  performance:
+    f1_score: 0.67
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

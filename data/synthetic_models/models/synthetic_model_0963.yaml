@@ -1,0 +1,31 @@
+model_id: synthetic_model_0963
+organization: org_47
+compute_flops: 3.2034135094126226e+22
+risk_score: 0.76
+risk_category: unacceptable_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.74
+    size_tokens: 84837227414.93619
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.44
+  performance:
+    f1_score: 0.7
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

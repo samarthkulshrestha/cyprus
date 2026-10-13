@@ -1,0 +1,29 @@
+model_id: synthetic_model_0345
+organization: org_22
+compute_flops: 3.5094046101115073e+22
+risk_score: 0.32
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- chat
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.85
+    size_tokens: 89056868342850.69
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.55
+  performance:
+    f1_score: 0.64
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,32 @@
+model_id: bytedance_tiktok_fyp
+organization: bytedance
+compute_flops: 1.0e+26
+risk_score: 0.85
+risk_category: unacceptable_risk
+use_case: cognitive_manipulation
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- content_ranking
+- recommendation
+- behavioral_prediction
+- engagement_optimization
+- video_understanding
+governance:
+  training_data:
+    source: user_generated_content
+    quality_score: 0.5
+    size_tokens: 200000000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.3
+  performance:
+    f1_score: 0.8
+    benchmark: internal
+    task: content_recommendation
+  security:
+    access_control: rbac
+    audit_logging: true

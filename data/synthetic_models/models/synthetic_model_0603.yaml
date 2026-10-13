@@ -1,0 +1,32 @@
+model_id: synthetic_model_0603
+organization: org_49
+compute_flops: 4.299021902774362e+26
+risk_score: 0.41
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.77
+    size_tokens: 9054723622686.096
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.41
+  performance:
+    f1_score: 0.73
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

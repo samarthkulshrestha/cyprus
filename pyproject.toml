@@ -1,0 +1,47 @@
+[project]
+name = "cyprus"
+version = "2.0.0"
+description = "Symbolic reasoning engine for AI regulatory compliance using Answer Set Programming"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "clingo>=5.7.0",
+    "click>=8.1.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+]
+eval = [
+    "numpy>=1.26.0",
+    "requests>=2.31.0",
+    "statsmodels>=0.14.0",
+]
+
+[project.scripts]
+cyprus = "cyprus.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "cyprus/policies"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+
+[tool.setuptools.packages.find]
+include = ["cyprus*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true

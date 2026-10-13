@@ -1,0 +1,31 @@
+model_id: synthetic_model_0575
+organization: org_33
+compute_flops: 1.2299586853929789e+23
+risk_score: 0.36
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- kr
+- us
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 383548378419.1074
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.94
+  performance:
+    f1_score: 0.68
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

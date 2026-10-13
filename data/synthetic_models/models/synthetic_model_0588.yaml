@@ -1,0 +1,31 @@
+model_id: synthetic_model_0588
+organization: org_31
+compute_flops: 6.366166705231156e+23
+risk_score: 0.45
+risk_category: limited_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+- code_generation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.82
+    size_tokens: 7149721454344.663
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.73
+  performance:
+    f1_score: 0.93
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

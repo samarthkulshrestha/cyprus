@@ -1,0 +1,31 @@
+model_id: synthetic_model_0819
+organization: org_8
+compute_flops: 2.2860872445565433e+24
+risk_score: 0.6
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- au
+- eu
+capabilities:
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.61
+    size_tokens: 37091957940413.73
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.7
+  performance:
+    f1_score: 0.93
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

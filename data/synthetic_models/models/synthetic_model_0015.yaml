@@ -1,0 +1,30 @@
+model_id: synthetic_model_0015
+organization: org_27
+compute_flops: 1.4510840688482103e+26
+risk_score: 0.26
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.57
+    size_tokens: 14332019772.249216
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.45
+  performance:
+    f1_score: 0.64
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

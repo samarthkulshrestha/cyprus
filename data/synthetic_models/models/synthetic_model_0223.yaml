@@ -1,0 +1,30 @@
+model_id: synthetic_model_0223
+organization: org_20
+compute_flops: 9.962996694378357e+26
+risk_score: 0.11
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- au
+capabilities:
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.54
+    size_tokens: 18269605356540.01
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.5
+  performance:
+    f1_score: 0.84
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

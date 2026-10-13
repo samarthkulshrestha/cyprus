@@ -1,0 +1,34 @@
+model_id: synthetic_model_0885
+organization: org_22
+compute_flops: 2.503590525397353e+18
+risk_score: 0.14
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- uk
+- kr
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.56
+    size_tokens: 13621456708.645359
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.88
+  performance:
+    f1_score: 0.74
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

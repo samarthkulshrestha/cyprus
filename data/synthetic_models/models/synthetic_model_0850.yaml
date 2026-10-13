@@ -1,0 +1,30 @@
+model_id: synthetic_model_0850
+organization: org_29
+compute_flops: 5.209229257652294e+18
+risk_score: 0.44
+risk_category: high_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- kr
+capabilities:
+- chat
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.98
+    size_tokens: 704188722645.1443
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.8
+  performance:
+    f1_score: 0.47
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

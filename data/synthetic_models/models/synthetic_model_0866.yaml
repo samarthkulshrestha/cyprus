@@ -1,0 +1,30 @@
+model_id: synthetic_model_0866
+organization: org_9
+compute_flops: 1.256131133327489e+18
+risk_score: 0.08
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- us
+- eu
+capabilities:
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.97
+    size_tokens: 2223014363863.5806
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.82
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

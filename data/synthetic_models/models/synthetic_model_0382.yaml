@@ -1,0 +1,30 @@
+model_id: synthetic_model_0382
+organization: org_17
+compute_flops: 1.269019271862917e+25
+risk_score: 0.51
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- us
+capabilities:
+- translation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.81
+    size_tokens: 57562725344285.984
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.69
+  performance:
+    f1_score: 0.72
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

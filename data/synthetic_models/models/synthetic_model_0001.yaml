@@ -1,0 +1,33 @@
+model_id: synthetic_model_0001
+organization: org_25
+compute_flops: 1.0e+25
+risk_score: 0.38
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- chat
+- multimodal
+- reasoning
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.73
+    size_tokens: 14809900243251.031
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.45
+  performance:
+    f1_score: 0.56
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

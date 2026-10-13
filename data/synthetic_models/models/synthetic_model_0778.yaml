@@ -1,0 +1,31 @@
+model_id: synthetic_model_0778
+organization: org_4
+compute_flops: 1.6075338391840006e+24
+risk_score: 0.56
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- au
+capabilities:
+- chat
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.73
+    size_tokens: 10424589546.357004
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.5
+  performance:
+    f1_score: 0.73
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

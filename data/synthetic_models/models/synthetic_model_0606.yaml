@@ -1,0 +1,32 @@
+model_id: synthetic_model_0606
+organization: org_22
+compute_flops: 2.132641520727147e+25
+risk_score: 0.65
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- global
+- au
+- us
+capabilities:
+- chat
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.81
+    size_tokens: 14521894459455.404
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.57
+  performance:
+    f1_score: 0.78
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

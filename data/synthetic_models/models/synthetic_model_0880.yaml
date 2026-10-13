@@ -1,0 +1,31 @@
+model_id: synthetic_model_0880
+organization: org_27
+compute_flops: 2.4494646267732614e+23
+risk_score: 0.23
+risk_category: limited_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- global
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.62
+    size_tokens: 3821550050.822815
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.42
+  performance:
+    f1_score: 0.61
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

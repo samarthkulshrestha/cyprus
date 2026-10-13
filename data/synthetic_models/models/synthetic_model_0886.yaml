@@ -1,0 +1,31 @@
+model_id: synthetic_model_0886
+organization: org_42
+compute_flops: 1.699692349725024e+26
+risk_score: 0.57
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- us
+- global
+- uk
+capabilities:
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.96
+    size_tokens: 31270413350.56484
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.59
+  performance:
+    f1_score: 0.63
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

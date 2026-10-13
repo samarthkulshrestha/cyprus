@@ -1,0 +1,30 @@
+model_id: synthetic_model_0580
+organization: org_10
+compute_flops: 5.355132954748449e+20
+risk_score: 0.39
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- kr
+capabilities:
+- chat
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.65
+    size_tokens: 1053396920743.1257
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.39
+  performance:
+    f1_score: 0.5
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

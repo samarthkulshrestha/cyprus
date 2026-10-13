@@ -1,0 +1,31 @@
+model_id: ets_e_rater
+organization: ets
+compute_flops: 1.0e+16
+risk_score: 0.58
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- eu
+- global
+capabilities:
+- essay_scoring
+- nlp
+governance:
+  training_data:
+    source: proprietary_exam_responses
+    quality_score: 0.7
+    size_tokens: 1000000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: internal_validity_study
+    status: in_progress
+    score: 0.55
+  performance:
+    f1_score: 0.72
+    benchmark: internal
+    task: essay_scoring
+  security:
+    access_control: rbac
+    audit_logging: true

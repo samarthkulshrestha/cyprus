@@ -1,0 +1,30 @@
+model_id: synthetic_model_0587
+organization: org_50
+compute_flops: 3.676156762151431e+24
+risk_score: 0.13
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- kr
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.76
+    size_tokens: 1373196288902.6265
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.52
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

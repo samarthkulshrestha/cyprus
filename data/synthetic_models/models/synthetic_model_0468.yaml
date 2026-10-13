@@ -1,0 +1,30 @@
+model_id: synthetic_model_0468
+organization: org_17
+compute_flops: 1.1085779019228072e+24
+risk_score: 0.44
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.73
+    size_tokens: 68039739721995.66
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.39
+  performance:
+    f1_score: 0.59
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

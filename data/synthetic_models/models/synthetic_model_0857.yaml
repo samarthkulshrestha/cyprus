@@ -1,0 +1,31 @@
+model_id: synthetic_model_0857
+organization: org_42
+compute_flops: 2.41032109478644e+19
+risk_score: 0.58
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- au
+- jp
+- ca
+capabilities:
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.84
+    size_tokens: 186184577876.87943
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.63
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

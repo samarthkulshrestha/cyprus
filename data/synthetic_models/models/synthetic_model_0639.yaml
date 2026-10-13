@@ -1,0 +1,33 @@
+model_id: synthetic_model_0639
+organization: org_9
+compute_flops: 7.05728741850032e+18
+risk_score: 0.48
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- au
+- jp
+- ca
+capabilities:
+- code_generation
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.89
+    size_tokens: 70703704730616.8
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.89
+  performance:
+    f1_score: 0.91
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0253
+organization: org_47
+compute_flops: 5.885954571313003e+19
+risk_score: 0.19
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.64
+    size_tokens: 54095582170.3407
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.83
+  performance:
+    f1_score: 0.41
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

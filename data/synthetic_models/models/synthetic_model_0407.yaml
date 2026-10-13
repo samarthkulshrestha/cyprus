@@ -1,0 +1,30 @@
+model_id: synthetic_model_0407
+organization: org_2
+compute_flops: 1.6355640153300997e+21
+risk_score: 0.76
+risk_category: unacceptable_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- ca
+- eu
+- us
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.86
+    size_tokens: 1678146250815.521
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.49
+  performance:
+    f1_score: 0.89
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0112
+organization: org_35
+compute_flops: 3.185529897106768e+19
+risk_score: 0.25
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- ca
+capabilities:
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.51
+    size_tokens: 13231431007.981918
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.32
+  performance:
+    f1_score: 0.7
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

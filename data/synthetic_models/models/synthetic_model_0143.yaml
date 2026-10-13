@@ -1,0 +1,30 @@
+model_id: synthetic_model_0143
+organization: org_50
+compute_flops: 1.554833208567936e+23
+risk_score: 0.57
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- uk
+- jp
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.71
+    size_tokens: 1152260543337.8374
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.41
+  performance:
+    f1_score: 0.53
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

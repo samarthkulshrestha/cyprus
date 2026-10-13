@@ -1,0 +1,32 @@
+model_id: synthetic_model_0325
+organization: org_44
+compute_flops: 2.1759282114391936e+23
+risk_score: 0.13
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.86
+    size_tokens: 5166795606.54969
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.71
+  performance:
+    f1_score: 0.45
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

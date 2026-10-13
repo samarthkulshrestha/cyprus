@@ -1,0 +1,30 @@
+model_id: synthetic_model_0936
+organization: org_19
+compute_flops: 1.3699420976352821e+25
+risk_score: 0.62
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- uk
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.51
+    size_tokens: 4728404047029.723
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.91
+  performance:
+    f1_score: 0.93
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

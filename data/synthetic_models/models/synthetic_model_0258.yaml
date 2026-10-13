@@ -1,0 +1,32 @@
+model_id: synthetic_model_0258
+organization: org_6
+compute_flops: 3.9874455920149146e+18
+risk_score: 0.6
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- eu
+capabilities:
+- chat
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.69
+    size_tokens: 5367687029644.841
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.31
+  performance:
+    f1_score: 0.47
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

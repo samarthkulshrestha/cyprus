@@ -1,0 +1,29 @@
+model_id: synthetic_model_0780
+organization: org_22
+compute_flops: 3.851051350359448e+22
+risk_score: 0.54
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.56
+    size_tokens: 8689326142.98503
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.95
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

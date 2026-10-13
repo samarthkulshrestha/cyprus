@@ -1,0 +1,54 @@
+models:
+  - model_id: social_scorer_test
+    organization: BadOrg
+    compute_flops: 1.0e+20
+    risk_score: 0.80
+    risk_category: unacceptable_risk
+    use_case: social_scoring
+    red_teaming_status: completed
+    deployment_regions: [eu]
+    capabilities: [chat]
+    governance:
+      training_data:
+        source: publicly_available
+        quality_score: 0.90
+        size_tokens: 1.0e+12
+        documentation_status: complete
+      bias_assessment:
+        methodology: red_teaming
+        status: completed
+        score: 0.85
+      performance:
+        f1_score: 0.90
+        benchmark: mmlu
+        task: general
+      security:
+        access_control: rbac
+        audit_logging: true
+
+  - model_id: manipulation_test
+    organization: BadOrg
+    compute_flops: 1.0e+20
+    risk_score: 0.85
+    risk_category: unacceptable_risk
+    use_case: cognitive_manipulation
+    red_teaming_status: completed
+    deployment_regions: [eu]
+    capabilities: [chat]
+    governance:
+      training_data:
+        source: publicly_available
+        quality_score: 0.90
+        size_tokens: 1.0e+12
+        documentation_status: complete
+      bias_assessment:
+        methodology: red_teaming
+        status: completed
+        score: 0.85
+      performance:
+        f1_score: 0.90
+        benchmark: mmlu
+        task: general
+      security:
+        access_control: rbac
+        audit_logging: true

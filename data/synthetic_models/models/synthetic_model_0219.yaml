@@ -1,0 +1,30 @@
+model_id: synthetic_model_0219
+organization: org_26
+compute_flops: 1.1449597587605982e+22
+risk_score: 0.21
+risk_category: high_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- uk
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.55
+    size_tokens: 1966806198.042493
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.94
+  performance:
+    f1_score: 0.99
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

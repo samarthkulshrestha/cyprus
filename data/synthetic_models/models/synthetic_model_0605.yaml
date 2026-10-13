@@ -1,0 +1,32 @@
+model_id: synthetic_model_0605
+organization: org_9
+compute_flops: 1.7462690107953352e+20
+risk_score: 0.74
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- us
+- au
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.52
+    size_tokens: 502248689411.6494
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.87
+  performance:
+    f1_score: 0.87
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0294
+organization: org_10
+compute_flops: 2.9830064760306287e+25
+risk_score: 0.42
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.58
+    size_tokens: 1902731608.802985
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.41
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

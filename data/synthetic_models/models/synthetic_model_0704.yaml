@@ -1,0 +1,30 @@
+model_id: synthetic_model_0704
+organization: org_11
+compute_flops: 4.418846512968402e+20
+risk_score: 0.4
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- jp
+- au
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.71
+    size_tokens: 2404815110.05462
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.74
+  performance:
+    f1_score: 0.98
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

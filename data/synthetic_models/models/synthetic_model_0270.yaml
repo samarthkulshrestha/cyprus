@@ -1,0 +1,30 @@
+model_id: synthetic_model_0270
+organization: org_45
+compute_flops: 1.0660116889922262e+18
+risk_score: 0.62
+risk_category: unacceptable_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- global
+- au
+capabilities:
+- code_generation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.51
+    size_tokens: 63245271413.955086
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.61
+  performance:
+    f1_score: 0.76
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

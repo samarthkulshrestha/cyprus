@@ -1,0 +1,31 @@
+model_id: synthetic_model_0135
+organization: org_11
+compute_flops: 1.732145523165838e+25
+risk_score: 0.38
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- jp
+- global
+- au
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.59
+    size_tokens: 624408991477.307
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.7
+  performance:
+    f1_score: 0.86
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

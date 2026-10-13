@@ -1,0 +1,31 @@
+model_id: synthetic_model_0679
+organization: org_40
+compute_flops: 1.7053646268555815e+24
+risk_score: 0.37
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+capabilities:
+- image_generation
+- translation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.75
+    size_tokens: 143585403246.65787
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.44
+  performance:
+    f1_score: 0.52
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

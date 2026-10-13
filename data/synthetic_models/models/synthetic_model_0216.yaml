@@ -1,0 +1,28 @@
+model_id: synthetic_model_0216
+organization: org_16
+compute_flops: 5.207770856263865e+21
+risk_score: 0.42
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.88
+    size_tokens: 1610141286080.4355
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.4
+  performance:
+    f1_score: 0.64
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

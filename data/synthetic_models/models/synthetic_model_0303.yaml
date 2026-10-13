@@ -1,0 +1,31 @@
+model_id: synthetic_model_0303
+organization: org_6
+compute_flops: 1.501230156922308e+25
+risk_score: 0.47
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- au
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.83
+    size_tokens: 5037745433.24249
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.55
+  performance:
+    f1_score: 0.57
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

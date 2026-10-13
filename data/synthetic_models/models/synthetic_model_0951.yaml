@@ -1,0 +1,29 @@
+model_id: synthetic_model_0951
+organization: org_22
+compute_flops: 2.7721354093438625e+20
+risk_score: 0.39
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.66
+    size_tokens: 19494502652.92494
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.46
+  performance:
+    f1_score: 0.4
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

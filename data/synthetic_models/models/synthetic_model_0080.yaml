@@ -1,0 +1,30 @@
+model_id: synthetic_model_0080
+organization: org_24
+compute_flops: 3.656568917349612e+18
+risk_score: 0.27
+risk_category: high_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- us
+- global
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 194671749058.79022
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.71
+  performance:
+    f1_score: 0.8
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

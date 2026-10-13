@@ -1,0 +1,32 @@
+model_id: synthetic_model_0329
+organization: org_7
+compute_flops: 1.678242726272535e+20
+risk_score: 0.41
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- au
+capabilities:
+- chat
+- multimodal
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.59
+    size_tokens: 12380851157659.814
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.66
+  performance:
+    f1_score: 0.81
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

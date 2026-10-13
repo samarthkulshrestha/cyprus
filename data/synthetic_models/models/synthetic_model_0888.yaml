@@ -1,0 +1,32 @@
+model_id: synthetic_model_0888
+organization: org_15
+compute_flops: 1.4752493032049441e+18
+risk_score: 0.26
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- eu
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.56
+    size_tokens: 24825936940880.535
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.81
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cyprus Model Entry",
+  "description": "Schema for AI model metadata used by Cyprus",
+  "type": "object",
+  "required": [
+    "model_id", "organization", "compute_flops", "risk_score",
+    "risk_category", "use_case", "red_teaming_status",
+    "deployment_regions", "capabilities", "governance"
+  ],
+  "properties": {
+    "model_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "organization": { "type": "string" },
+    "compute_flops": { "type": "number", "minimum": 0 },
+    "risk_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "risk_category": {
+      "type": "string",
+      "enum": ["unacceptable_risk", "high_risk", "limited_risk", "minimal_risk"]
+    },
+    "use_case": {
+      "type": "string",
+      "enum": [
+        "social_scoring", "cognitive_manipulation", "biometric_surveillance",
+        "general_purpose", "healthcare", "education", "employment",
+        "law_enforcement", "critical_infrastructure", "content_generation",
+        "code_generation", "research"
+      ]
+    },
+    "red_teaming_status": {
+      "type": "string",
+      "enum": ["not_started", "in_progress", "completed"]
+    },
+    "deployment_regions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "governance": {
+      "type": "object",
+      "required": ["training_data", "bias_assessment", "performance", "security"]
+    }
+  }
+}

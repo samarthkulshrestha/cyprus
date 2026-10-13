@@ -1,0 +1,30 @@
+model_id: synthetic_model_0483
+organization: org_6
+compute_flops: 1.7098641650825806e+19
+risk_score: 0.36
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 38995749829231.57
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.75
+  performance:
+    f1_score: 0.92
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

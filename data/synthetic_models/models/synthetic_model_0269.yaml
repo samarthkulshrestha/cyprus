@@ -1,0 +1,32 @@
+model_id: synthetic_model_0269
+organization: org_4
+compute_flops: 1.8655959962108324e+23
+risk_score: 0.63
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- ca
+- jp
+- kr
+capabilities:
+- code_generation
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.97
+    size_tokens: 232358688186.6524
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.56
+  performance:
+    f1_score: 0.93
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

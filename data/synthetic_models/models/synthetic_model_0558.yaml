@@ -1,0 +1,32 @@
+model_id: synthetic_model_0558
+organization: org_34
+compute_flops: 3.0434440335510053e+26
+risk_score: 0.41
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- global
+- ca
+- eu
+capabilities:
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.77
+    size_tokens: 29580497594.413986
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.81
+  performance:
+    f1_score: 0.73
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0304
+organization: org_26
+compute_flops: 7.582773955576917e+25
+risk_score: 0.44
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- chat
+- multimodal
+- translation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.94
+    size_tokens: 2216934229515.272
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.75
+  performance:
+    f1_score: 0.93
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

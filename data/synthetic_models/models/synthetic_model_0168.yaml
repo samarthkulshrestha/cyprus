@@ -1,0 +1,32 @@
+model_id: synthetic_model_0168
+organization: org_41
+compute_flops: 3.4496254847517636e+23
+risk_score: 0.42
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- jp
+- us
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.84
+    size_tokens: 50910566093.98319
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.44
+  performance:
+    f1_score: 0.89
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

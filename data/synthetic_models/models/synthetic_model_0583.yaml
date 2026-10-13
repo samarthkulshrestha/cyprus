@@ -1,0 +1,30 @@
+model_id: synthetic_model_0583
+organization: org_26
+compute_flops: 3.131202928247723e+24
+risk_score: 0.29
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- ca
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.54
+    size_tokens: 52034063517.9941
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.79
+  performance:
+    f1_score: 0.4
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

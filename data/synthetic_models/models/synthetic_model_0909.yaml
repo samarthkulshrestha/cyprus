@@ -1,0 +1,32 @@
+model_id: synthetic_model_0909
+organization: org_34
+compute_flops: 1.143622024383447e+22
+risk_score: 0.2
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- uk
+capabilities:
+- chat
+- multimodal
+- image_generation
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.65
+    size_tokens: 8590672910378.918
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.63
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

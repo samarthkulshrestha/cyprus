@@ -1,0 +1,31 @@
+model_id: synthetic_model_0049
+organization: org_29
+compute_flops: 9.71230198399412e+20
+risk_score: 0.08
+risk_category: limited_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- us
+- au
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.54
+    size_tokens: 1028647308682.3406
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.37
+  performance:
+    f1_score: 0.59
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0944
+organization: org_21
+compute_flops: 2.3914318770308235e+26
+risk_score: 0.45
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- chat
+- code_generation
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 75025610522268.83
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.61
+  performance:
+    f1_score: 0.62
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0520
+organization: org_39
+compute_flops: 4.498610203252315e+25
+risk_score: 0.4
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.97
+    size_tokens: 2228261143.400934
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.88
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

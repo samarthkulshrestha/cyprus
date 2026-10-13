@@ -1,0 +1,31 @@
+model_id: synthetic_model_0932
+organization: org_17
+compute_flops: 1.1132762919840813e+25
+risk_score: 0.4
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- eu
+- au
+capabilities:
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.87
+    size_tokens: 4755417065.564466
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.76
+  performance:
+    f1_score: 0.58
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

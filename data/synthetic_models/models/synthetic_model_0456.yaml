@@ -1,0 +1,30 @@
+model_id: synthetic_model_0456
+organization: org_34
+compute_flops: 3.287569246489031e+19
+risk_score: 0.61
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: completed
+deployment_regions:
+- kr
+- us
+capabilities:
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 422930830746.3125
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.51
+  performance:
+    f1_score: 0.91
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

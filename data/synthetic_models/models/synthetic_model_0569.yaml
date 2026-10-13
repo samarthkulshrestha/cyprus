@@ -1,0 +1,32 @@
+model_id: synthetic_model_0569
+organization: org_40
+compute_flops: 1.3280691920781482e+21
+risk_score: 0.56
+risk_category: unacceptable_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- au
+capabilities:
+- code_generation
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.73
+    size_tokens: 567182300177.2737
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.32
+  performance:
+    f1_score: 0.54
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

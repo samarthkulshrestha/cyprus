@@ -1,0 +1,30 @@
+model_id: synthetic_model_0058
+organization: org_35
+compute_flops: 9.36386553281448e+24
+risk_score: 0.46
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.94
+    size_tokens: 4777342260776.362
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.45
+  performance:
+    f1_score: 0.59
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

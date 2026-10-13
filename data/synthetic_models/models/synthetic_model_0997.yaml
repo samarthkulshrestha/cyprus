@@ -1,0 +1,30 @@
+model_id: synthetic_model_0997
+organization: org_48
+compute_flops: 2.2660093613999724e+21
+risk_score: 0.75
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- jp
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.55
+    size_tokens: 23980375876747.23
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.9
+  performance:
+    f1_score: 0.88
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

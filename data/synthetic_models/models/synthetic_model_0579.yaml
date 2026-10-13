@@ -1,0 +1,34 @@
+model_id: synthetic_model_0579
+organization: org_37
+compute_flops: 3.140592810956736e+26
+risk_score: 0.12
+risk_category: limited_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- us
+- eu
+capabilities:
+- chat
+- code_generation
+- multimodal
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.78
+    size_tokens: 69642125101.77496
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.97
+  performance:
+    f1_score: 0.92
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

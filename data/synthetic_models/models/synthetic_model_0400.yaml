@@ -1,0 +1,30 @@
+model_id: synthetic_model_0400
+organization: org_20
+compute_flops: 1.8318693120122438e+25
+risk_score: 0.63
+risk_category: high_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.6
+    size_tokens: 5152786851.211437
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.75
+  performance:
+    f1_score: 0.71
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

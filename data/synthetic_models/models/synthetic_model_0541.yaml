@@ -1,0 +1,33 @@
+model_id: synthetic_model_0541
+organization: org_28
+compute_flops: 8.340382285189018e+22
+risk_score: 0.57
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- jp
+- kr
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 107933134199.1948
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.65
+  performance:
+    f1_score: 0.74
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

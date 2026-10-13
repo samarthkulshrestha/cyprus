@@ -1,0 +1,31 @@
+model_id: synthetic_model_0192
+organization: org_44
+compute_flops: 9.163436333991808e+19
+risk_score: 0.26
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+capabilities:
+- chat
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.81
+    size_tokens: 3307579679390.5938
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.93
+  performance:
+    f1_score: 0.6
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

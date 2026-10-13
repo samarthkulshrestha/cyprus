@@ -1,0 +1,28 @@
+model_id: synthetic_model_0803
+organization: org_23
+compute_flops: 5.0012245456565685e+20
+risk_score: 0.45
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.59
+    size_tokens: 9714852467721.26
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.4
+  performance:
+    f1_score: 0.79
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

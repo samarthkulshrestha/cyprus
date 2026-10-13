@@ -1,0 +1,30 @@
+model_id: synthetic_model_0531
+organization: org_38
+compute_flops: 3.408702203882477e+20
+risk_score: 0.56
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+- jp
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.51
+    size_tokens: 65453651495.00057
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.94
+  performance:
+    f1_score: 0.78
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

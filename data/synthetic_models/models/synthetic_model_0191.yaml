@@ -1,0 +1,30 @@
+model_id: synthetic_model_0191
+organization: org_36
+compute_flops: 3.4111532902635624e+25
+risk_score: 0.2
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- chat
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 1.0
+    size_tokens: 4649235111376.796
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.67
+  performance:
+    f1_score: 0.68
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

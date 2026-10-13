@@ -1,0 +1,30 @@
+model_id: synthetic_model_0706
+organization: org_21
+compute_flops: 2.8831781626865196e+25
+risk_score: 0.03
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- multimodal
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.62
+    size_tokens: 72232663371.9002
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.77
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0815
+organization: org_19
+compute_flops: 2.5614071921045007e+25
+risk_score: 0.17
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- uk
+- global
+capabilities:
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 12361231380.249384
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.86
+  performance:
+    f1_score: 0.65
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

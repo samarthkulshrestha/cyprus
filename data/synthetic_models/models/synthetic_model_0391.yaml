@@ -1,0 +1,31 @@
+model_id: synthetic_model_0391
+organization: org_29
+compute_flops: 1.555277178311773e+21
+risk_score: 0.82
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- us
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.94
+    size_tokens: 43886152806718.69
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.51
+  performance:
+    f1_score: 0.65
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

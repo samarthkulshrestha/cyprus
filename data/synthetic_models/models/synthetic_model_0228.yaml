@@ -1,0 +1,31 @@
+model_id: synthetic_model_0228
+organization: org_28
+compute_flops: 5.510273468319288e+21
+risk_score: 0.3
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- au
+- jp
+- global
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.76
+    size_tokens: 128831700038.48724
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.93
+  performance:
+    f1_score: 0.65
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

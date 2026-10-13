@@ -1,0 +1,30 @@
+model_id: synthetic_model_0461
+organization: org_22
+compute_flops: 2.065982328444375e+22
+risk_score: 0.24
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 10141911102989.523
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.83
+  performance:
+    f1_score: 0.66
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0942
+organization: org_3
+compute_flops: 1.6327679762686255e+22
+risk_score: 0.32
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.95
+    size_tokens: 2723247066753.97
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.38
+  performance:
+    f1_score: 0.42
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0806
+organization: org_20
+compute_flops: 3.411119152590007e+18
+risk_score: 0.3
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+capabilities:
+- code_generation
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.96
+    size_tokens: 4219038545.9424725
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.46
+  performance:
+    f1_score: 0.87
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

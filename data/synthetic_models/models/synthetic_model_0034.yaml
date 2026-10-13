@@ -1,0 +1,29 @@
+model_id: synthetic_model_0034
+organization: org_48
+compute_flops: 7.932099173605511e+26
+risk_score: 0.59
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- eu
+- us
+capabilities:
+- chat
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.55
+    size_tokens: 21490149786317.98
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.85
+  performance:
+    f1_score: 0.54
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

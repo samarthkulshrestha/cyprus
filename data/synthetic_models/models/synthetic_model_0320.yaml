@@ -1,0 +1,30 @@
+model_id: synthetic_model_0320
+organization: org_42
+compute_flops: 4.8224517865915064e+19
+risk_score: 0.09
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- eu
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.52
+    size_tokens: 81773510889.02321
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.43
+  performance:
+    f1_score: 0.5
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

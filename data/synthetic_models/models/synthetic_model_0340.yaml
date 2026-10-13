@@ -1,0 +1,30 @@
+model_id: synthetic_model_0340
+organization: org_36
+compute_flops: 1.3697796903789878e+18
+risk_score: 0.81
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- global
+- au
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.56
+    size_tokens: 695353072054.8536
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.61
+  performance:
+    f1_score: 0.41
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

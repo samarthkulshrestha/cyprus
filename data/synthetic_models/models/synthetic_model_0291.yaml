@@ -1,0 +1,33 @@
+model_id: synthetic_model_0291
+organization: org_23
+compute_flops: 2.917194686398574e+23
+risk_score: 0.87
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+- au
+capabilities:
+- chat
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.52
+    size_tokens: 15526868476.831154
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.95
+  performance:
+    f1_score: 0.56
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0179
+organization: org_39
+compute_flops: 4.157699041063153e+23
+risk_score: 0.28
+risk_category: high_risk
+use_case: biometric_surveillance
+red_teaming_status: not_started
+deployment_regions:
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- image_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.83
+    size_tokens: 70604787429.79367
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.47
+  performance:
+    f1_score: 0.51
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

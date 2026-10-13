@@ -1,0 +1,30 @@
+model_id: synthetic_model_0318
+organization: org_5
+compute_flops: 3.2715660819849355e+23
+risk_score: 0.22
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- au
+- eu
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.83
+    size_tokens: 76163564955744.08
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.85
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

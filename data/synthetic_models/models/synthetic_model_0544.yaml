@@ -1,0 +1,32 @@
+model_id: synthetic_model_0544
+organization: org_43
+compute_flops: 2.0377068340827763e+19
+risk_score: 0.31
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- uk
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.85
+    size_tokens: 810677170091.4893
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.95
+  performance:
+    f1_score: 0.62
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

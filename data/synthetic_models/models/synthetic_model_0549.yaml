@@ -1,0 +1,30 @@
+model_id: synthetic_model_0549
+organization: org_38
+compute_flops: 2.504398725997367e+24
+risk_score: 0.48
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- au
+- global
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.57
+    size_tokens: 3585408361.4072924
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.67
+  performance:
+    f1_score: 0.53
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

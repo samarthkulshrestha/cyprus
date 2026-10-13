@@ -1,0 +1,31 @@
+model_id: synthetic_model_0552
+organization: org_19
+compute_flops: 4.179784901477506e+25
+risk_score: 0.59
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- kr
+capabilities:
+- chat
+- multimodal
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.63
+    size_tokens: 29442261394021.92
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.91
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

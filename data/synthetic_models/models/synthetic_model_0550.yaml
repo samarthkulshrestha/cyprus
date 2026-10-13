@@ -1,0 +1,31 @@
+model_id: synthetic_model_0550
+organization: org_8
+compute_flops: 1.4152672255867114e+22
+risk_score: 0.49
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- multimodal
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.52
+    size_tokens: 2393884356791.563
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.76
+  performance:
+    f1_score: 0.57
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

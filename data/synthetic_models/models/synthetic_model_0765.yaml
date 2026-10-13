@@ -1,0 +1,32 @@
+model_id: synthetic_model_0765
+organization: org_32
+compute_flops: 3.105906831298006e+23
+risk_score: 0.09
+risk_category: high_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- uk
+capabilities:
+- chat
+- multimodal
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 1267142507663.3918
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.95
+  performance:
+    f1_score: 0.93
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

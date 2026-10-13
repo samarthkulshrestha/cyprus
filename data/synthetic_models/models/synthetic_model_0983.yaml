@@ -1,0 +1,32 @@
+model_id: synthetic_model_0983
+organization: org_33
+compute_flops: 1.3669452675470561e+23
+risk_score: 0.45
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- eu
+- global
+capabilities:
+- chat
+- translation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 2322673314262.5557
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.52
+  performance:
+    f1_score: 0.48
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

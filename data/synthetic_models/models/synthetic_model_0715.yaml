@@ -1,0 +1,29 @@
+model_id: synthetic_model_0715
+organization: org_31
+compute_flops: 6.121700061656846e+23
+risk_score: 0.46
+risk_category: high_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.86
+    size_tokens: 298181548285.6028
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.68
+  performance:
+    f1_score: 0.4
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

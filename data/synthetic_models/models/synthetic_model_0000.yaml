@@ -1,0 +1,32 @@
+model_id: synthetic_model_0000
+organization: org_23
+compute_flops: 1.0e+25
+risk_score: 0.58
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+capabilities:
+- chat
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.88
+    size_tokens: 6284874095.069284
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.41
+  performance:
+    f1_score: 0.96
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

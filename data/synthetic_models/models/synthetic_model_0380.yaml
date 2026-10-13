@@ -1,0 +1,35 @@
+model_id: synthetic_model_0380
+organization: org_19
+compute_flops: 2.4084960871641278e+24
+risk_score: 0.63
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- us
+- kr
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.78
+    size_tokens: 3706940778703.8525
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.74
+  performance:
+    f1_score: 0.68
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0840
+organization: org_6
+compute_flops: 3.140132683498046e+21
+risk_score: 0.09
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+- uk
+capabilities:
+- chat
+- multimodal
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.5
+    size_tokens: 43308369376.411415
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.31
+  performance:
+    f1_score: 0.93
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

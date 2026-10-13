@@ -1,0 +1,33 @@
+model_id: synthetic_model_0278
+organization: org_13
+compute_flops: 6.171466289559185e+18
+risk_score: 0.51
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- us
+- global
+capabilities:
+- chat
+- multimodal
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 167726404751.76553
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.52
+  performance:
+    f1_score: 0.94
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

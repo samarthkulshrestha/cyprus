@@ -1,0 +1,30 @@
+model_id: synthetic_model_0128
+organization: org_20
+compute_flops: 1.1006775083189105e+24
+risk_score: 0.52
+risk_category: limited_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.5
+    size_tokens: 17016713725.648027
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.89
+  performance:
+    f1_score: 0.48
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

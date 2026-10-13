@@ -1,0 +1,31 @@
+model_id: synthetic_model_0295
+organization: org_23
+compute_flops: 2.940678195808059e+21
+risk_score: 0.25
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- kr
+- global
+- uk
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.96
+    size_tokens: 39752826807916.69
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.6
+  performance:
+    f1_score: 0.6
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0017
+organization: org_30
+compute_flops: 2.5818724161470574e+21
+risk_score: 0.16
+risk_category: high_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- us
+- kr
+- global
+capabilities:
+- multimodal
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.89
+    size_tokens: 1814568118728.4045
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.89
+  performance:
+    f1_score: 0.77
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

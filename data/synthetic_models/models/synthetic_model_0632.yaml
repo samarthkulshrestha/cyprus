@@ -1,0 +1,32 @@
+model_id: synthetic_model_0632
+organization: org_21
+compute_flops: 2.991714744053296e+20
+risk_score: 0.39
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- ca
+- au
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.79
+    size_tokens: 12736667237.453783
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.88
+  performance:
+    f1_score: 0.58
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

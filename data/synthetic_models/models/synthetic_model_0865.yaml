@@ -1,0 +1,31 @@
+model_id: synthetic_model_0865
+organization: org_13
+compute_flops: 5.866414555772276e+18
+risk_score: 0.14
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- kr
+- global
+- eu
+capabilities:
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.72
+    size_tokens: 18002348800765.64
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.8
+  performance:
+    f1_score: 0.83
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

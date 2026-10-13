@@ -1,0 +1,32 @@
+model_id: synthetic_model_0869
+organization: org_27
+compute_flops: 6.0944767138784215e+19
+risk_score: 0.33
+risk_category: unacceptable_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- eu
+- jp
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 1.0
+    size_tokens: 2027688522862.8362
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.98
+  performance:
+    f1_score: 0.54
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

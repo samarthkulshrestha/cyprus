@@ -1,0 +1,31 @@
+model_id: synthetic_model_0994
+organization: org_21
+compute_flops: 8.688326436311589e+24
+risk_score: 0.51
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- au
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.99
+    size_tokens: 23291346010.080235
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.72
+  performance:
+    f1_score: 0.64
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0425
+organization: org_39
+compute_flops: 3.606998963352111e+23
+risk_score: 0.1
+risk_category: high_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.72
+    size_tokens: 2679199100783.1777
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.36
+  performance:
+    f1_score: 0.59
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

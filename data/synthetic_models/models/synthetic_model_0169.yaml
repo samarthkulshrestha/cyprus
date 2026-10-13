@@ -1,0 +1,31 @@
+model_id: synthetic_model_0169
+organization: org_46
+compute_flops: 1.4528831209290542e+22
+risk_score: 0.85
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- us
+- ca
+- uk
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.98
+    size_tokens: 25252253664.942127
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.74
+  performance:
+    f1_score: 0.9
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

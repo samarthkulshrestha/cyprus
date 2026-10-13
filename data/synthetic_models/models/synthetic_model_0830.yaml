@@ -1,0 +1,29 @@
+model_id: synthetic_model_0830
+organization: org_25
+compute_flops: 6.292624627836726e+25
+risk_score: 0.21
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.55
+    size_tokens: 91399740148.69102
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.81
+  performance:
+    f1_score: 0.4
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

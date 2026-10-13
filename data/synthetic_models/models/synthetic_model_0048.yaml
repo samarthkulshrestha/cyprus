@@ -1,0 +1,30 @@
+model_id: synthetic_model_0048
+organization: org_19
+compute_flops: 1.7263541535698613e+23
+risk_score: 0.27
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- reasoning
+- image_generation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.52
+    size_tokens: 9939148252.095373
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.66
+  performance:
+    f1_score: 0.98
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

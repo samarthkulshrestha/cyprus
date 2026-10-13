@@ -1,0 +1,34 @@
+model_id: synthetic_model_0678
+organization: org_9
+compute_flops: 1.8961118341247907e+25
+risk_score: 0.25
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.66
+    size_tokens: 22621890552.169388
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.71
+  performance:
+    f1_score: 0.46
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

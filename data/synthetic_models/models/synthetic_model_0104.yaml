@@ -1,0 +1,30 @@
+model_id: synthetic_model_0104
+organization: org_32
+compute_flops: 2.5297423769343114e+25
+risk_score: 0.25
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- au
+capabilities:
+- code_generation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.56
+    size_tokens: 5600303943.315941
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.69
+  performance:
+    f1_score: 0.46
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

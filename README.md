@@ -1,116 +1,204 @@
-# Cyprus: An AI Policy Compliance Engine
+# Cyprus v2
 
-Cyprus is a symbolic reasoning engine designed to help organizations govern their AI models by checking them against a set of clear, auditable, and extensible policy rules. It translates complex regulatory frameworks, like the EU AI Act, and internal governance standards into machine-readable logic.
+Symbolic reasoning engine for automated AI regulatory compliance using Answer Set Programming (ASP).
 
-This allows you to automatically classify models, identify risks, and determine deployment readiness across your entire AI inventory.
+Cyprus encodes EU AI Act compliance rules as formal logic (via the [Clingo](https://potassco.org/clingo/) solver), evaluates AI model metadata against them, and produces compliance assessments with clause-level traceability to the legal text.
 
-## Key Features
+## What it does
 
-*   **Symbolic Policy Rules:** Define compliance using the power and expressiveness of Prolog.
-*   **Central Model Registry:** Maintain a single source of truth for all your AI models and their metadata.
-*   **Automated Compliance Checks:** Run checks via a simple command-line script to get a full report.
-*   **REST API:** Integrate Cyprus with your existing MLOps pipelines, dashboards, and tools.
-*   **Extensible:** Easily add new policy rules, data sources, and governance checks.
+Given AI model metadata (use case, compute, risk category, governance data, etc.), Cyprus determines:
 
----
+- Which models are prohibited under Article 5 (social scoring, cognitive manipulation, biometric surveillance)
+- Which models require high-risk compliance under Article 6 (healthcare, law enforcement, critical infrastructure, etc.)
+- Which models pose systemic risk under Article 51 (compute threshold, capability breadth)
+- Which models have unmet requirements under Articles 9, 10, 13 (risk management, data governance, transparency)
+- Which models can deploy (no prohibitions, all requirements satisfied)
 
-## Getting Started
+## Installation
 
-Follow these steps to get Cyprus up and running on your local machine.
-
-### Prerequisites
-
-*   Python 3.9+
-*   [Pipenv](https://pipenv.pypa.io/en/latest/) for managing dependencies.
-*   SWI-Prolog: The core reasoning engine.
-    *   **Ubuntu/Debian:** `sudo apt-get install swi-prolog`
-    *   **macOS (Homebrew):** `brew install swi-prolog`
-
-### 1. Installation
-
-Clone the repository and install the required Python packages using Pipenv.
+Requires Python 3.11+ and a working Clingo installation.
 
 ```bash
-git clone <repository-url>
-cd cyprus
-pipenv install
-pipenv shell
+# Clone
+git clone https://github.com/samarthkulshrestha/cyprus.git
+cd recyp
+
+# Install with uv
+uv venv && uv pip install -e ".[dev]"
+
+# Or with pip
+pip install -e ".[dev]"
 ```
 
-### 2. Run a Compliance Check
-
-You can immediately run a compliance check on the example models included in the registry. This script will load all policies and evaluate all models.
+For evaluation benchmarks (accuracy, scalability, inter-annotator agreement):
 
 ```bash
-python3 scripts/run_compliance_check.py
+uv pip install -e ".[eval]"
 ```
 
-You should see a report that looks like this:
+## Quickstart
 
-```
---- Compliance & Governance Report ---
-
-Total Models: 3
-['customer_chatbot_v3', 'gpt4_turbo', 'social_scorer_v1']
-
-Prohibited by EU AI Act (1):
-['social_scorer_v1']
-
-Deployable by EU AI Act (2):
-['customer_chatbot_v3', 'gpt4_turbo']
-
-Flagged as 'Not Production Ready' (1):
-['gpt4_turbo']
-
---- End of Report ---
-```
-
-### 3. Run the API Server
-
-To interact with Cyprus programmatically, start the FastAPI server.
+### Check compliance
 
 ```bash
-uvicorn cyprus.api.server:app --host 0.0.0.0 --port 8000
+# Single file
+cyprus check models.yaml
+
+# Directory of model files
+cyprus check data/real_models/
+
+# Single model, verbose output
+cyprus check models.yaml --model meta_llama3_8b --verbose
+
+# JSON output for pipelines
+cyprus check models.yaml --output json
 ```
 
-The API is now available at `http://localhost:8000`. You can explore the interactive Swagger UI documentation at `http://localhost:8000/docs`.
+### Generate a compliance report
 
----
-
-## How It Works
-
-Cyprus is built on a simple but powerful architecture:
-
-1.  **Model Registry (`data/models/registry.json`):** This JSON file is the heart of the system, acting as a database of "facts" about your AI models. It stores everything from the model's name and compute requirements to detailed governance information like bias assessments and security measures.
-
-2.  **Policy Rules (`cyprus/policies/`):** These are Prolog (`.pl`) files that define the logic for your compliance checks. For example, a rule might state that a model is "high-risk" if it's used in a specific context, or "prohibited" if it performs social scoring.
-
-3.  **Reasoning Engine (`cyprus/core/`):** A Python wrapper around a Prolog engine that loads the model data from the registry as facts and then applies the policy rules to them. It answers questions like, "Which models are deployable?" or "Is `gpt4_turbo` considered a systemic risk?"
-
-4.  **Tools & API (`scripts/`, `cyprus/api/`):** A set of command-line scripts and a REST API provide easy ways to interact with the engine, whether you're running a manual check or integrating Cyprus into an automated workflow.
-
-## Extending Cyprus
-
-Cyprus is designed to be easily extended.
-
-### Adding a New Model
-
-You can add a new model to the system by:
-1.  **Scraping it:** Use the `scrape_models.py` script to fetch data from a source like Hugging Face.
-    ```bash
-    python3 scripts/scrape_models.py "meta-llama/Meta-Llama-3-8B"
-    ```
-2.  **Manually adding it:** Add a new JSON object to the `data/models/registry.json` file, following the existing structure.
-
-### Writing a New Policy
-
-To add a new governance check, you can create a new rule in one of the existing `.pl` files or add a new policy file altogether. For example, to flag any model that hasn't been red-teamed, you could add this rule to `governance_rules.pl`:
-
-```prolog
-% Flag models that have not completed red teaming.
-requires_red_teaming(Model) :-
-    model(Model, _, _, _, _, _, _, red_teaming_status(Status), _, _),
-    Status \= 'completed'.
+```bash
+cyprus report models.yaml --output markdown
+cyprus report models.yaml --traceability --output markdown > report.md
 ```
 
-For more details on the architecture and how to write policies, see the documentation in the `/docs` directory.
+### Validate model data
+
+```bash
+cyprus validate data/real_models/
+```
+
+### Manage policy modules
+
+```bash
+cyprus policy list
+cyprus policy validate eu_ai_act
+cyprus policy init my_new_regulation
+```
+
+## Model data format
+
+Models are defined in YAML (or JSON). Example:
+
+```yaml
+model_id: meta_llama3_8b
+organization: Meta
+compute_flops: 1.8e23
+risk_score: 0.35
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions: [eu, us]
+capabilities: [chat, code_generation]
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.91
+    size_tokens: 15e12
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.88
+  performance:
+    f1_score: 0.93
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true
+```
+
+Multiple models can be provided as a YAML list or in a `models:` wrapper.
+
+## Architecture
+
+```
+CLI (click)
+  │
+  ▼
+Policy Engine (Python)
+  │  Model ingestion & validation (Pydantic)
+  │  ASP fact compilation
+  │  Result interpretation & reporting
+  │
+  ▼
+ASP Reasoning Core (Clingo)
+   Model facts + policy rules → answer sets
+```
+
+Clingo only does the reasoning: it gets ground facts and rules and returns answer sets. Validation, the CLI, reporting and evaluation are all in Python.
+
+Each regulation lives in its own directory under `cyprus/policies/` with its ASP rules, a manifest, a traceability mapping and tests. Adding a regulation means adding a directory; the core engine doesn't change.
+
+Model data is compiled to facts of the form `model_attr(model_id, attribute, value).`, so adding a new attribute doesn't break existing rules.
+
+## EU AI Act coverage
+
+| Article | Title | Clauses encoded |
+|---------|-------|-----------------|
+| Art. 5 | Prohibited AI Practices | 3/8 |
+| Art. 6 | High-Risk Classification | 2/3 |
+| Art. 9 | Risk Management System | 3/12 |
+| Art. 10 | Data and Data Governance | 4/11 |
+| Art. 13 | Transparency | 1/4 |
+| Art. 51 | Systemic Risk (GPAI) | 2/3 |
+| Art. 52 | GPAI Obligations | 1/3 |
+
+Generate the full traceability matrix:
+
+```bash
+cyprus report models.yaml --traceability
+```
+
+## Evaluation
+
+There are also commands for evaluating the engine:
+
+```bash
+# Accuracy against ground truth (with heuristic + keyword baselines)
+cyprus evaluate accuracy ground_truth.yaml data/real_models/
+
+# Scalability benchmarks
+cyprus evaluate scalability data/synthetic_models/ --sizes 10,50,100,500,1000
+
+# Inter-annotator agreement
+cyprus evaluate agreement data/ground_truth/annotations/
+```
+
+### Generating synthetic models
+
+```bash
+python data/synthetic_models/generate.py
+```
+
+Produces 1000 deterministic synthetic models from configurable distributions for scalability testing.
+
+## Development
+
+```bash
+# Run tests
+pytest -v
+
+# Lint
+ruff check cyprus/ tests/
+
+# Type check
+mypy cyprus/
+```
+
+## Project structure
+
+```
+cyprus/
+├── engine/          # Clingo solver wrapper, result types
+├── registry/        # Pydantic schema, YAML loader, ASP fact compiler
+├── policies/        # Policy modules (eu_ai_act, _template)
+├── reporting/       # Compliance reports, traceability matrix, formatters
+├── evaluation/      # Accuracy, scalability, agreement benchmarks
+├── data/scrapers/   # HuggingFace model card scraper
+└── cli.py           # Click CLI
+```
+
+## License
+
+MIT

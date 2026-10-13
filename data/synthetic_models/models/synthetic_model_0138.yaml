@@ -1,0 +1,31 @@
+model_id: synthetic_model_0138
+organization: org_15
+compute_flops: 3.761084418009457e+19
+risk_score: 0.4
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- jp
+- au
+- ca
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.88
+    size_tokens: 6128672652494.789
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.9
+  performance:
+    f1_score: 0.68
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

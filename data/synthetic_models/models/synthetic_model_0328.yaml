@@ -1,0 +1,29 @@
+model_id: synthetic_model_0328
+organization: org_1
+compute_flops: 7.526473879104416e+18
+risk_score: 0.35
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.95
+    size_tokens: 1578849163743.3044
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.52
+  performance:
+    f1_score: 0.98
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

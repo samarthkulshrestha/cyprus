@@ -1,0 +1,29 @@
+model_id: synthetic_model_0486
+organization: org_35
+compute_flops: 8.157670108928366e+21
+risk_score: 0.42
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+- global
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.98
+    size_tokens: 133177723437.77074
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.52
+  performance:
+    f1_score: 0.76
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

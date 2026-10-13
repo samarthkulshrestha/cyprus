@@ -1,0 +1,32 @@
+model_id: synthetic_model_0061
+organization: org_30
+compute_flops: 3.407715080333771e+18
+risk_score: 0.69
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- global
+- us
+- kr
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.59
+    size_tokens: 5559247471399.392
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.51
+  performance:
+    f1_score: 0.76
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

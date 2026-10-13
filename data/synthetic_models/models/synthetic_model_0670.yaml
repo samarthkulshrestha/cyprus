@@ -1,0 +1,32 @@
+model_id: synthetic_model_0670
+organization: org_12
+compute_flops: 8.503290158622757e+18
+risk_score: 0.39
+risk_category: high_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- eu
+- us
+- kr
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.56
+    size_tokens: 21929277996.969013
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.69
+  performance:
+    f1_score: 0.42
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

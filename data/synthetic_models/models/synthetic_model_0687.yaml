@@ -1,0 +1,31 @@
+model_id: synthetic_model_0687
+organization: org_30
+compute_flops: 4.28936527999931e+23
+risk_score: 0.4
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- uk
+- us
+capabilities:
+- code_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 136995171018.68541
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.74
+  performance:
+    f1_score: 0.83
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

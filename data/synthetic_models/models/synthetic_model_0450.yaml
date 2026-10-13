@@ -1,0 +1,33 @@
+model_id: synthetic_model_0450
+organization: org_41
+compute_flops: 1.4620380631945574e+26
+risk_score: 0.53
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- us
+- kr
+capabilities:
+- chat
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.59
+    size_tokens: 2690904579827.3955
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.86
+  performance:
+    f1_score: 0.74
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

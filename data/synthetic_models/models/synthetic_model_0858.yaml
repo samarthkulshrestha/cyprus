@@ -1,0 +1,31 @@
+model_id: synthetic_model_0858
+organization: org_40
+compute_flops: 1.0287249423431446e+22
+risk_score: 0.3
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- us
+- jp
+- uk
+capabilities:
+- chat
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.58
+    size_tokens: 2443041830376.6636
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.86
+  performance:
+    f1_score: 0.76
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

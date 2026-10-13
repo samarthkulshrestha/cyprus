@@ -1,0 +1,30 @@
+model_id: synthetic_model_0818
+organization: org_14
+compute_flops: 7.37959648772847e+23
+risk_score: 0.4
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- us
+- jp
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.55
+    size_tokens: 4180171486.33568
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.99
+  performance:
+    f1_score: 0.61
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

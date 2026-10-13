@@ -1,0 +1,29 @@
+model_id: synthetic_model_0864
+organization: org_9
+compute_flops: 3.1436427875695304e+26
+risk_score: 0.34
+risk_category: limited_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- jp
+capabilities:
+- chat
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.84
+    size_tokens: 58170519973.825935
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 1.0
+  performance:
+    f1_score: 0.62
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

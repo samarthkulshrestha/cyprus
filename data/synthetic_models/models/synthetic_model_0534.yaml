@@ -1,0 +1,32 @@
+model_id: synthetic_model_0534
+organization: org_9
+compute_flops: 5.428012540179104e+25
+risk_score: 0.41
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- us
+- kr
+- global
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 39562257586932.53
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.92
+  performance:
+    f1_score: 0.66
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

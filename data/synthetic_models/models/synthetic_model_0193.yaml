@@ -1,0 +1,33 @@
+model_id: synthetic_model_0193
+organization: org_33
+compute_flops: 3.113902978490832e+18
+risk_score: 0.38
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.88
+    size_tokens: 6374256230673.981
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.65
+  performance:
+    f1_score: 0.65
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

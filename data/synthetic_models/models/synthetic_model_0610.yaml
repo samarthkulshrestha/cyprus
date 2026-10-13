@@ -1,0 +1,32 @@
+model_id: synthetic_model_0610
+organization: org_23
+compute_flops: 7.827032241371137e+24
+risk_score: 0.42
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.62
+    size_tokens: 8412646462.354408
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.86
+  performance:
+    f1_score: 0.49
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0397
+organization: org_28
+compute_flops: 7.994501788648636e+20
+risk_score: 0.51
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.67
+    size_tokens: 29015778027787.88
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.84
+  performance:
+    f1_score: 0.67
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

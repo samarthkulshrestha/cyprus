@@ -1,0 +1,30 @@
+model_id: synthetic_model_0893
+organization: org_2
+compute_flops: 3.5019917844525458e+25
+risk_score: 0.35
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- ca
+capabilities:
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.58
+    size_tokens: 16167303413.742575
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.94
+  performance:
+    f1_score: 0.64
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

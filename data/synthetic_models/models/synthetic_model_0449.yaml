@@ -1,0 +1,30 @@
+model_id: synthetic_model_0449
+organization: org_39
+compute_flops: 1.897693655088741e+18
+risk_score: 0.53
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- kr
+- uk
+- ca
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.88
+    size_tokens: 15759357976597.22
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.54
+  performance:
+    f1_score: 0.81
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

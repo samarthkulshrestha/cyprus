@@ -1,0 +1,31 @@
+model_id: synthetic_model_0967
+organization: org_2
+compute_flops: 4.274966529317603e+18
+risk_score: 0.18
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- uk
+capabilities:
+- code_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.96
+    size_tokens: 2663058411.216671
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.73
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

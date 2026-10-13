@@ -1,0 +1,30 @@
+model_id: synthetic_model_0964
+organization: org_19
+compute_flops: 2.721003391313938e+26
+risk_score: 0.68
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+- global
+capabilities:
+- chat
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.55
+    size_tokens: 9684664931520.33
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.8
+  performance:
+    f1_score: 0.79
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

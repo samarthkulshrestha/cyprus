@@ -1,0 +1,31 @@
+model_id: synthetic_model_0911
+organization: org_31
+compute_flops: 8.499057079937746e+18
+risk_score: 0.18
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- chat
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.72
+    size_tokens: 13716651355.712008
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.7
+  performance:
+    f1_score: 0.64
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

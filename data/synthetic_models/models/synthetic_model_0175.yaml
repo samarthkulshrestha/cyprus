@@ -1,0 +1,32 @@
+model_id: synthetic_model_0175
+organization: org_46
+compute_flops: 1.003827442278847e+18
+risk_score: 0.19
+risk_category: unacceptable_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- global
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.86
+    size_tokens: 37634796565048.875
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.99
+  performance:
+    f1_score: 0.64
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0677
+organization: org_45
+compute_flops: 5.8648257503617694e+23
+risk_score: 0.51
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- uk
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.93
+    size_tokens: 23461046666.756912
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.9
+  performance:
+    f1_score: 0.77
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0998
+organization: org_28
+compute_flops: 2.9394718922193387e+23
+risk_score: 0.57
+risk_category: unacceptable_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- kr
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.5
+    size_tokens: 1141144550.8332732
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.9
+  performance:
+    f1_score: 0.82
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

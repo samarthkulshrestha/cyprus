@@ -1,0 +1,32 @@
+model_id: synthetic_model_0786
+organization: org_40
+compute_flops: 3.2461167593368895e+22
+risk_score: 0.13
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- us
+- ca
+capabilities:
+- code_generation
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.57
+    size_tokens: 29923776685.73782
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.92
+  performance:
+    f1_score: 0.97
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

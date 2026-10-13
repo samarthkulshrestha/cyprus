@@ -1,0 +1,33 @@
+model_id: synthetic_model_0556
+organization: org_20
+compute_flops: 2.3539569074140643e+23
+risk_score: 0.59
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- us
+- global
+capabilities:
+- chat
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.96
+    size_tokens: 1775735239806.073
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.66
+  performance:
+    f1_score: 0.43
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

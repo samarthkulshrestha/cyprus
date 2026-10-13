@@ -1,0 +1,33 @@
+model_id: synthetic_model_0743
+organization: org_12
+compute_flops: 1.0320382835599127e+21
+risk_score: 0.61
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- jp
+- us
+capabilities:
+- chat
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.5
+    size_tokens: 7843377839.980978
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.81
+  performance:
+    f1_score: 0.98
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

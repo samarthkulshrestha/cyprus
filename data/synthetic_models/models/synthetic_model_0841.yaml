@@ -1,0 +1,35 @@
+model_id: synthetic_model_0841
+organization: org_39
+compute_flops: 5.4276721853780114e+25
+risk_score: 0.19
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- jp
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.63
+    size_tokens: 52891021870776.39
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.87
+  performance:
+    f1_score: 0.61
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

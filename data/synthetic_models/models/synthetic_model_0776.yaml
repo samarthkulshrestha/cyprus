@@ -1,0 +1,30 @@
+model_id: synthetic_model_0776
+organization: org_27
+compute_flops: 6.971144641528791e+20
+risk_score: 0.18
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- kr
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.64
+    size_tokens: 10252927010924.34
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.32
+  performance:
+    f1_score: 0.64
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0281
+organization: org_30
+compute_flops: 5.845965318660708e+24
+risk_score: 0.17
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.69
+    size_tokens: 4754576878414.45
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.84
+  performance:
+    f1_score: 0.8
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

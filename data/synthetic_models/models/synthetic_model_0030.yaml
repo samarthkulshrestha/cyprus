@@ -1,0 +1,33 @@
+model_id: synthetic_model_0030
+organization: org_3
+compute_flops: 1.632381304284853e+24
+risk_score: 0.61
+risk_category: unacceptable_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- us
+- au
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.96
+    size_tokens: 5319376994151.5
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.86
+  performance:
+    f1_score: 0.53
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

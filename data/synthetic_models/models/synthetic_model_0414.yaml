@@ -1,0 +1,30 @@
+model_id: synthetic_model_0414
+organization: org_27
+compute_flops: 4.5359821150814167e+18
+risk_score: 0.18
+risk_category: unacceptable_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- jp
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.52
+    size_tokens: 5109131690.527011
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.78
+  performance:
+    f1_score: 0.82
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

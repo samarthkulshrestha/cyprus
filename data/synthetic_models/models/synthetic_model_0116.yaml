@@ -1,0 +1,31 @@
+model_id: synthetic_model_0116
+organization: org_11
+compute_flops: 5.767680863139665e+26
+risk_score: 0.36
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- global
+- au
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.76
+    size_tokens: 2761901699705.77
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.76
+  performance:
+    f1_score: 0.55
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

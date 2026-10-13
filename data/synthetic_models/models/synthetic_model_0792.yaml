@@ -1,0 +1,33 @@
+model_id: synthetic_model_0792
+organization: org_9
+compute_flops: 4.813612865258394e+25
+risk_score: 0.41
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- kr
+- global
+capabilities:
+- chat
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.52
+    size_tokens: 20538113043.739315
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.6
+  performance:
+    f1_score: 0.54
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0151
+organization: org_15
+compute_flops: 9.641600004177826e+24
+risk_score: 0.2
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- eu
+- uk
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.52
+    size_tokens: 48864975267548.86
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.37
+  performance:
+    f1_score: 0.51
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

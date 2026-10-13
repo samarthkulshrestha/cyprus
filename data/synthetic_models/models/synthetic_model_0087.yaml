@@ -1,0 +1,32 @@
+model_id: synthetic_model_0087
+organization: org_39
+compute_flops: 8.6389586885784e+26
+risk_score: 0.67
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+- kr
+capabilities:
+- chat
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.57
+    size_tokens: 4128441285.4678535
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.97
+  performance:
+    f1_score: 0.59
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

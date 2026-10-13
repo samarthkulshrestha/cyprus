@@ -1,0 +1,32 @@
+model_id: synthetic_model_0427
+organization: org_23
+compute_flops: 3.789731979204016e+23
+risk_score: 0.9
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- eu
+- au
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.73
+    size_tokens: 5140001369563.033
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.51
+  performance:
+    f1_score: 0.69
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

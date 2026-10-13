@@ -1,0 +1,30 @@
+model_id: synthetic_model_0931
+organization: org_38
+compute_flops: 5.089872822208343e+25
+risk_score: 0.25
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- global
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.76
+    size_tokens: 3346315915.2941704
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.63
+  performance:
+    f1_score: 0.81
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

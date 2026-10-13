@@ -1,0 +1,30 @@
+model_id: synthetic_model_0016
+organization: org_28
+compute_flops: 1.4989516020754511e+18
+risk_score: 0.48
+risk_category: high_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- global
+- au
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.51
+    size_tokens: 47934446672.470245
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.42
+  performance:
+    f1_score: 0.68
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

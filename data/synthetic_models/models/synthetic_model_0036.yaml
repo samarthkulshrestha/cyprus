@@ -1,0 +1,30 @@
+model_id: synthetic_model_0036
+organization: org_38
+compute_flops: 7.809192978342837e+18
+risk_score: 0.45
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+capabilities:
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.66
+    size_tokens: 18812606971.538517
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.45
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

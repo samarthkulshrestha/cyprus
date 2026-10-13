@@ -1,0 +1,32 @@
+model_id: synthetic_model_0095
+organization: org_37
+compute_flops: 7.12077876525057e+18
+risk_score: 0.31
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- us
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.51
+    size_tokens: 2100681352.302153
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.36
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

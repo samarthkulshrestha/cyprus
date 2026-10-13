@@ -1,0 +1,32 @@
+model_id: synthetic_model_0876
+organization: org_19
+compute_flops: 3.3748629001610874e+24
+risk_score: 0.47
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- global
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.9
+    size_tokens: 116891454013.03548
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.34
+  performance:
+    f1_score: 0.96
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

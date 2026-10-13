@@ -1,0 +1,30 @@
+model_id: synthetic_model_0817
+organization: org_29
+compute_flops: 2.016980437341745e+19
+risk_score: 0.77
+risk_category: limited_risk
+use_case: cognitive_manipulation
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- chat
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.79
+    size_tokens: 2569094344.932563
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.66
+  performance:
+    f1_score: 0.57
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

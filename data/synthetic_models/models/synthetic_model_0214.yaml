@@ -1,0 +1,31 @@
+model_id: synthetic_model_0214
+organization: org_39
+compute_flops: 1.815248076478757e+23
+risk_score: 0.47
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.66
+    size_tokens: 131494195606.95078
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.92
+  performance:
+    f1_score: 0.95
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

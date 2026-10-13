@@ -1,0 +1,28 @@
+model_id: synthetic_model_0248
+organization: org_48
+compute_flops: 1.2426388492616815e+21
+risk_score: 0.37
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.73
+    size_tokens: 8829923370870.965
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.78
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

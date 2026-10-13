@@ -1,0 +1,31 @@
+model_id: synthetic_model_0795
+organization: org_31
+compute_flops: 3.5243423040780505e+19
+risk_score: 0.22
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- au
+- kr
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.59
+    size_tokens: 38360432554773.38
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.5
+  performance:
+    f1_score: 0.74
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

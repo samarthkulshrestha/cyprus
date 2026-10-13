@@ -1,0 +1,32 @@
+model_id: synthetic_model_0012
+organization: org_19
+compute_flops: 9.4541594994159e+18
+risk_score: 0.45
+risk_category: high_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- au
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.68
+    size_tokens: 2238046242.2740464
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.52
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: digital_diagnostics_idx_dr
+organization: digital_diagnostics
+compute_flops: 1.0e+18
+risk_score: 0.6
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+capabilities:
+- medical_imaging
+- diagnosis
+governance:
+  training_data:
+    source: clinical_datasets
+    quality_score: 0.88
+    size_tokens: 200000000.0
+    documentation_status: complete
+  bias_assessment:
+    methodology: fda_clinical_validation
+    status: completed
+    score: 0.75
+  performance:
+    f1_score: 0.87
+    benchmark: fda_de_novo
+    task: diabetic_retinopathy_detection
+  security:
+    access_control: rbac
+    audit_logging: true

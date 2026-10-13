@@ -1,0 +1,30 @@
+model_id: synthetic_model_0734
+organization: org_29
+compute_flops: 9.852183755258035e+22
+risk_score: 0.47
+risk_category: high_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- global
+- eu
+- jp
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.71
+    size_tokens: 43603179515.23364
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.91
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0870
+organization: org_44
+compute_flops: 5.550394246572584e+21
+risk_score: 0.05
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- kr
+capabilities:
+- chat
+- code_generation
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 9532929158963.418
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.51
+  performance:
+    f1_score: 0.75
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

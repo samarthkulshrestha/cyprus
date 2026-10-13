@@ -1,0 +1,30 @@
+model_id: synthetic_model_0669
+organization: org_46
+compute_flops: 1.1075116566978985e+22
+risk_score: 0.21
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.62
+    size_tokens: 8059007739336.024
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.63
+  performance:
+    f1_score: 0.91
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

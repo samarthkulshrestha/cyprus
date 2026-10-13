@@ -1,0 +1,32 @@
+model_id: synthetic_model_0185
+organization: org_44
+compute_flops: 3.24296697981398e+21
+risk_score: 0.17
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.75
+    size_tokens: 66798887558593.63
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.54
+  performance:
+    f1_score: 0.6
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

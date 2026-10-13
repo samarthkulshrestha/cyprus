@@ -1,0 +1,33 @@
+model_id: synthetic_model_0855
+organization: org_26
+compute_flops: 5.5948296048683273e+20
+risk_score: 0.55
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- uk
+- kr
+capabilities:
+- chat
+- multimodal
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.64
+    size_tokens: 9293288054837.354
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.3
+  performance:
+    f1_score: 0.89
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

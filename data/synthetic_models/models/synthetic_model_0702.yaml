@@ -1,0 +1,30 @@
+model_id: synthetic_model_0702
+organization: org_32
+compute_flops: 4.0374664561636687e+21
+risk_score: 0.92
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- kr
+capabilities:
+- chat
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.7
+    size_tokens: 48110124683537.914
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.41
+  performance:
+    f1_score: 0.85
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

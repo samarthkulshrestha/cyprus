@@ -1,0 +1,32 @@
+model_id: synthetic_model_0924
+organization: org_14
+compute_flops: 1.0799684109502052e+19
+risk_score: 0.4
+risk_category: unacceptable_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.58
+    size_tokens: 1866245035807.9722
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.93
+  performance:
+    f1_score: 0.8
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

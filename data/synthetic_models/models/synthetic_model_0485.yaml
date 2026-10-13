@@ -1,0 +1,28 @@
+model_id: synthetic_model_0485
+organization: org_49
+compute_flops: 2.7893123316012943e+25
+risk_score: 0.5
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.58
+    size_tokens: 2071762230.1808987
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.62
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

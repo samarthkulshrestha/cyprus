@@ -1,0 +1,30 @@
+model_id: synthetic_model_0832
+organization: org_33
+compute_flops: 1.0264160935598545e+22
+risk_score: 0.49
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+- us
+- uk
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.76
+    size_tokens: 8870080922221.258
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.66
+  performance:
+    f1_score: 0.57
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

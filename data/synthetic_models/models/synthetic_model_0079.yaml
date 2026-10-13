@@ -1,0 +1,31 @@
+model_id: synthetic_model_0079
+organization: org_14
+compute_flops: 1.957372273926366e+25
+risk_score: 0.14
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.81
+    size_tokens: 8549380108.887471
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.32
+  performance:
+    f1_score: 0.76
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

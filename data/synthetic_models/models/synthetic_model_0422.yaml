@@ -1,0 +1,34 @@
+model_id: synthetic_model_0422
+organization: org_32
+compute_flops: 8.021264635855374e+24
+risk_score: 0.51
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+- kr
+capabilities:
+- chat
+- multimodal
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.53
+    size_tokens: 4728430418.273764
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.38
+  performance:
+    f1_score: 0.95
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

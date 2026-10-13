@@ -1,0 +1,30 @@
+model_id: synthetic_model_0120
+organization: org_35
+compute_flops: 1.5861581211384156e+19
+risk_score: 0.25
+risk_category: unacceptable_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- au
+- global
+capabilities:
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.96
+    size_tokens: 4606368131.665941
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.78
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

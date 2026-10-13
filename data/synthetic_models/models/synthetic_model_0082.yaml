@@ -1,0 +1,30 @@
+model_id: synthetic_model_0082
+organization: org_6
+compute_flops: 2.9762969853460296e+20
+risk_score: 0.44
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- kr
+- uk
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.88
+    size_tokens: 161002603417.45462
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.82
+  performance:
+    f1_score: 0.79
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

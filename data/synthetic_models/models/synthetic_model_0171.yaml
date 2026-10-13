@@ -1,0 +1,32 @@
+model_id: synthetic_model_0171
+organization: org_20
+compute_flops: 8.470820230384886e+18
+risk_score: 0.88
+risk_category: unacceptable_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- us
+- eu
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.64
+    size_tokens: 1192020124.3051424
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.68
+  performance:
+    f1_score: 0.72
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

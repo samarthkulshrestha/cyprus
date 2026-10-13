@@ -1,0 +1,31 @@
+model_id: synthetic_model_0978
+organization: org_10
+compute_flops: 4.26072212558787e+22
+risk_score: 0.7
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 15741213882.66773
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.5
+  performance:
+    f1_score: 0.81
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

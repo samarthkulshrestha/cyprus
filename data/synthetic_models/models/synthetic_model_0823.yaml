@@ -1,0 +1,31 @@
+model_id: synthetic_model_0823
+organization: org_42
+compute_flops: 1.9453334051046615e+18
+risk_score: 0.68
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- global
+- us
+capabilities:
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 139303380316.38358
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.4
+  performance:
+    f1_score: 0.68
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

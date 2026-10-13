@@ -1,0 +1,30 @@
+model_id: synthetic_model_0242
+organization: org_1
+compute_flops: 1.297194043689992e+26
+risk_score: 0.28
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+- global
+capabilities:
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.68
+    size_tokens: 11585272052139.816
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.42
+  performance:
+    f1_score: 0.85
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

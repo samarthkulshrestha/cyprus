@@ -1,0 +1,30 @@
+model_id: synthetic_model_0600
+organization: org_37
+compute_flops: 1.023028028756674e+22
+risk_score: 0.06
+risk_category: unacceptable_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.93
+    size_tokens: 4249175868.5255413
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.51
+  performance:
+    f1_score: 0.73
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

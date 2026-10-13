@@ -1,0 +1,29 @@
+model_id: soundthinking_shotspotter
+organization: soundthinking
+compute_flops: 1.0e+17
+risk_score: 0.75
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- us
+capabilities:
+- audio_classification
+- gunshot_detection
+governance:
+  training_data:
+    source: proprietary_acoustic_data
+    quality_score: 0.4
+    size_tokens: 50000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.25
+  performance:
+    f1_score: 0.48
+    benchmark: internal
+    task: gunshot_detection
+  security:
+    access_control: api_key
+    audit_logging: true

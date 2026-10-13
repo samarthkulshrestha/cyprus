@@ -1,0 +1,30 @@
+model_id: synthetic_model_0056
+organization: org_46
+compute_flops: 1.9653331185003266e+21
+risk_score: 0.5
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.69
+    size_tokens: 85889153442142.44
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.44
+  performance:
+    f1_score: 0.7
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

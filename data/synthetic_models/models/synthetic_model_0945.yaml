@@ -1,0 +1,33 @@
+model_id: synthetic_model_0945
+organization: org_45
+compute_flops: 1.3672540704077357e+23
+risk_score: 0.03
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- global
+- au
+capabilities:
+- chat
+- code_generation
+- reasoning
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.85
+    size_tokens: 1227066446359.1702
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.99
+  performance:
+    f1_score: 0.5
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

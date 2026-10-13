@@ -1,0 +1,31 @@
+model_id: synthetic_model_0891
+organization: org_29
+compute_flops: 1.4854027010316076e+23
+risk_score: 0.55
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- au
+- jp
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.63
+    size_tokens: 49170209070859.25
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.75
+  performance:
+    f1_score: 0.47
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

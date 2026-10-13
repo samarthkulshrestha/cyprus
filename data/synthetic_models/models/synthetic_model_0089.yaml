@@ -1,0 +1,32 @@
+model_id: synthetic_model_0089
+organization: org_6
+compute_flops: 8.743522795829423e+19
+risk_score: 0.77
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- eu
+- us
+capabilities:
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.76
+    size_tokens: 10374984816.07874
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.71
+  performance:
+    f1_score: 0.85
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0471
+organization: org_42
+compute_flops: 4.841182016489725e+18
+risk_score: 0.36
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- ca
+- eu
+- uk
+capabilities:
+- chat
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.77
+    size_tokens: 577824931593.8113
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.69
+  performance:
+    f1_score: 0.59
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0435
+organization: org_17
+compute_flops: 2.69181603158133e+22
+risk_score: 0.48
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- uk
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.7
+    size_tokens: 5771374552.793868
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.69
+  performance:
+    f1_score: 0.7
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

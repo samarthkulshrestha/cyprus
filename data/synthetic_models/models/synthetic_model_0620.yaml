@@ -1,0 +1,30 @@
+model_id: synthetic_model_0620
+organization: org_11
+compute_flops: 4.47355641839337e+21
+risk_score: 0.08
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 1.0
+    size_tokens: 29163287371.374294
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.5
+  performance:
+    f1_score: 0.41
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

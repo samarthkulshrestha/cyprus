@@ -1,0 +1,29 @@
+model_id: synthetic_model_0288
+organization: org_32
+compute_flops: 5.7281386151103254e+20
+risk_score: 0.55
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- kr
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.59
+    size_tokens: 1006189174.5637423
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.5
+  performance:
+    f1_score: 0.57
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

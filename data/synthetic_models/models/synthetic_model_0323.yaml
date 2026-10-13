@@ -1,0 +1,31 @@
+model_id: synthetic_model_0323
+organization: org_41
+compute_flops: 2.3902307178806858e+22
+risk_score: 0.15
+risk_category: minimal_risk
+use_case: biometric_surveillance
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+- jp
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.83
+    size_tokens: 5106997310.037197
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.7
+  performance:
+    f1_score: 0.81
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

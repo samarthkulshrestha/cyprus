@@ -1,0 +1,29 @@
+model_id: synthetic_model_0027
+organization: org_33
+compute_flops: 8.996554062728242e+24
+risk_score: 0.01
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- eu
+- us
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.99
+    size_tokens: 15632474208.715672
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.33
+  performance:
+    f1_score: 0.84
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

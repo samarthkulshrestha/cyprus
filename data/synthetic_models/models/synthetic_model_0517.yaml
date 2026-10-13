@@ -1,0 +1,28 @@
+model_id: synthetic_model_0517
+organization: org_50
+compute_flops: 8.46904421112045e+24
+risk_score: 0.25
+risk_category: unacceptable_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- chat
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.64
+    size_tokens: 4455325667.730809
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.41
+  performance:
+    f1_score: 0.48
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

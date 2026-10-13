@@ -1,0 +1,31 @@
+model_id: synthetic_model_0398
+organization: org_11
+compute_flops: 1.1069436241189272e+20
+risk_score: 0.36
+risk_category: minimal_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- au
+- kr
+capabilities:
+- code_generation
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.57
+    size_tokens: 2528551672110.894
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.82
+  performance:
+    f1_score: 0.71
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

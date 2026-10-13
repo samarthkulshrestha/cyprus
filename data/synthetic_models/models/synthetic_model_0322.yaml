@@ -1,0 +1,30 @@
+model_id: synthetic_model_0322
+organization: org_32
+compute_flops: 1.8901788410296275e+19
+risk_score: 0.07
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- au
+- jp
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.74
+    size_tokens: 1682219248.3681903
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.67
+  performance:
+    f1_score: 0.5
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

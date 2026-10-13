@@ -1,0 +1,30 @@
+model_id: synthetic_model_0307
+organization: org_32
+compute_flops: 1.3432330532945964e+25
+risk_score: 0.4
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- us
+- au
+capabilities:
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.8
+    size_tokens: 12041661805.408337
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.7
+  performance:
+    f1_score: 0.41
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

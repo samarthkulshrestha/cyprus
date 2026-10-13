@@ -1,0 +1,30 @@
+model_id: synthetic_model_0241
+organization: org_9
+compute_flops: 9.844118186330341e+26
+risk_score: 0.45
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- eu
+- global
+capabilities:
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.82
+    size_tokens: 79104600125521.78
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.47
+  performance:
+    f1_score: 0.98
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

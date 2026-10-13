@@ -1,0 +1,29 @@
+model_id: synthetic_model_0695
+organization: org_31
+compute_flops: 2.5453323476945545e+23
+risk_score: 0.44
+risk_category: limited_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.82
+    size_tokens: 216089359059.82037
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.59
+  performance:
+    f1_score: 0.4
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0123
+organization: org_14
+compute_flops: 2.73810472215378e+26
+risk_score: 0.08
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+- uk
+capabilities:
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.76
+    size_tokens: 8536723138476.408
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.68
+  performance:
+    f1_score: 0.45
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

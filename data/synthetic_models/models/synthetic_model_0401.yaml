@@ -1,0 +1,32 @@
+model_id: synthetic_model_0401
+organization: org_41
+compute_flops: 2.415958473358162e+19
+risk_score: 0.58
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- jp
+- eu
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.88
+    size_tokens: 13279052023.35943
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.72
+  performance:
+    f1_score: 0.75
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

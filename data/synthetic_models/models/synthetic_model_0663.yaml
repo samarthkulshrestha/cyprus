@@ -1,0 +1,28 @@
+model_id: synthetic_model_0663
+organization: org_7
+compute_flops: 6.501688465729927e+26
+risk_score: 0.74
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- general
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.51
+    size_tokens: 32146882838.528618
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.87
+  performance:
+    f1_score: 0.44
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

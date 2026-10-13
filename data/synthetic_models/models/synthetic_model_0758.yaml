@@ -1,0 +1,30 @@
+model_id: synthetic_model_0758
+organization: org_25
+compute_flops: 7.583148397561627e+18
+risk_score: 0.35
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- jp
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.57
+    size_tokens: 465680985540.69464
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.4
+  performance:
+    f1_score: 0.69
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

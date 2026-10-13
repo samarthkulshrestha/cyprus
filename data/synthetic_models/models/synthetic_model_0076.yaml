@@ -1,0 +1,32 @@
+model_id: synthetic_model_0076
+organization: org_46
+compute_flops: 3.8170661896108005e+23
+risk_score: 0.17
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.98
+    size_tokens: 8125907008338.309
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.87
+  performance:
+    f1_score: 0.63
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

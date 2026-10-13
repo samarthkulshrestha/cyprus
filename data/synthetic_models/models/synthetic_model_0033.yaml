@@ -1,0 +1,31 @@
+model_id: synthetic_model_0033
+organization: org_39
+compute_flops: 3.264124926818196e+26
+risk_score: 0.54
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- au
+- ca
+capabilities:
+- chat
+- image_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.55
+    size_tokens: 2681645263106.4453
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.51
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

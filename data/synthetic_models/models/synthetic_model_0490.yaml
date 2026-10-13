@@ -1,0 +1,31 @@
+model_id: synthetic_model_0490
+organization: org_27
+compute_flops: 2.471182593565625e+23
+risk_score: 0.32
+risk_category: high_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- jp
+- us
+capabilities:
+- chat
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 1757881346.8387117
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.56
+  performance:
+    f1_score: 0.42
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

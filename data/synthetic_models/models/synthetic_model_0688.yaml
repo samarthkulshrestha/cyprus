@@ -1,0 +1,28 @@
+model_id: synthetic_model_0688
+organization: org_31
+compute_flops: 5.91529545667354e+24
+risk_score: 0.7
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.68
+    size_tokens: 30526229701.86744
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.56
+  performance:
+    f1_score: 0.71
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,32 @@
+model_id: synthetic_model_0257
+organization: org_18
+compute_flops: 5.403915423082642e+22
+risk_score: 0.73
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- us
+- ca
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.71
+    size_tokens: 7904793863.652306
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.57
+  performance:
+    f1_score: 0.79
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0691
+organization: org_27
+compute_flops: 6.357509327918262e+21
+risk_score: 0.68
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 11166639960075.264
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.89
+  performance:
+    f1_score: 0.45
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

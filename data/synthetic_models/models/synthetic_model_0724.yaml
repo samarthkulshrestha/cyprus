@@ -1,0 +1,30 @@
+model_id: synthetic_model_0724
+organization: org_4
+compute_flops: 7.709553377995008e+22
+risk_score: 0.7
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- eu
+- global
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.66
+    size_tokens: 5728479865763.695
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.37
+  performance:
+    f1_score: 0.97
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

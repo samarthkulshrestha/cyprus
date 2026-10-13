@@ -1,0 +1,32 @@
+model_id: synthetic_model_0050
+organization: org_42
+compute_flops: 1.4894769705118403e+21
+risk_score: 0.17
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- au
+- jp
+- uk
+capabilities:
+- multimodal
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 55890186575121.805
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.61
+  performance:
+    f1_score: 0.62
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

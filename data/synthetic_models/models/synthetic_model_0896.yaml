@@ -1,0 +1,33 @@
+model_id: synthetic_model_0896
+organization: org_45
+compute_flops: 1.1019427982163589e+24
+risk_score: 0.44
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.8
+    size_tokens: 1984505553237.832
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.76
+  performance:
+    f1_score: 0.75
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0772
+organization: org_2
+compute_flops: 8.230303647952129e+24
+risk_score: 0.3
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- eu
+- us
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.96
+    size_tokens: 2240784271492.3223
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.8
+  performance:
+    f1_score: 0.6
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

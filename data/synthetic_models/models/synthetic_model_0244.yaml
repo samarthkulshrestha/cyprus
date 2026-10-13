@@ -1,0 +1,30 @@
+model_id: synthetic_model_0244
+organization: org_1
+compute_flops: 5.101755433248509e+22
+risk_score: 0.42
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- uk
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.92
+    size_tokens: 108237929897.18307
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.55
+  performance:
+    f1_score: 0.85
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

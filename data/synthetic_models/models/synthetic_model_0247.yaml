@@ -1,0 +1,32 @@
+model_id: synthetic_model_0247
+organization: org_33
+compute_flops: 2.628418694416566e+24
+risk_score: 0.45
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.66
+    size_tokens: 26675314608354.785
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.52
+  performance:
+    f1_score: 0.6
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

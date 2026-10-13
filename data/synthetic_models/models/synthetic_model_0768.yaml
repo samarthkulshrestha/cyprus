@@ -1,0 +1,30 @@
+model_id: synthetic_model_0768
+organization: org_43
+compute_flops: 1.937258720200394e+18
+risk_score: 0.19
+risk_category: high_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 14807500891758.654
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.41
+  performance:
+    f1_score: 0.5
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

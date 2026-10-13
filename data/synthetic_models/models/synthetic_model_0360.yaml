@@ -1,0 +1,30 @@
+model_id: synthetic_model_0360
+organization: org_12
+compute_flops: 6.395234778921191e+20
+risk_score: 0.22
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- jp
+- global
+- uk
+capabilities:
+- general
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.78
+    size_tokens: 150337340953.07028
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.91
+  performance:
+    f1_score: 0.9
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

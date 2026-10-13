@@ -1,0 +1,33 @@
+model_id: synthetic_model_0836
+organization: org_34
+compute_flops: 1.6795761337795402e+18
+risk_score: 0.34
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- kr
+- uk
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.79
+    size_tokens: 24480262967.29807
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.58
+  performance:
+    f1_score: 0.83
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

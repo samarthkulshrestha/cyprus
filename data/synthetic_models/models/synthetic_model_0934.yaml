@@ -1,0 +1,31 @@
+model_id: synthetic_model_0934
+organization: org_30
+compute_flops: 1.5622045404503556e+22
+risk_score: 0.22
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.56
+    size_tokens: 591055331163.1891
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.43
+  performance:
+    f1_score: 0.45
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

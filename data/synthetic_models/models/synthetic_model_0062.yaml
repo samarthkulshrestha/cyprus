@@ -1,0 +1,30 @@
+model_id: synthetic_model_0062
+organization: org_38
+compute_flops: 3.8025339854071217e+24
+risk_score: 0.86
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- au
+- uk
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.83
+    size_tokens: 8392783210.644789
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.96
+  performance:
+    f1_score: 0.4
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

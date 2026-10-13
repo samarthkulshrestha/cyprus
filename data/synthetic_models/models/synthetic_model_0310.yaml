@@ -1,0 +1,32 @@
+model_id: synthetic_model_0310
+organization: org_11
+compute_flops: 2.400543124519361e+25
+risk_score: 0.17
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- ca
+- global
+capabilities:
+- chat
+- multimodal
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.99
+    size_tokens: 7389011697.254169
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.46
+  performance:
+    f1_score: 0.82
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

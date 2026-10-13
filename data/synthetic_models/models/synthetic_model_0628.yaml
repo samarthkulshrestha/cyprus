@@ -1,0 +1,31 @@
+model_id: synthetic_model_0628
+organization: org_14
+compute_flops: 4.303813871318726e+19
+risk_score: 0.45
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+- global
+capabilities:
+- translation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.84
+    size_tokens: 8708786067.11098
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.36
+  performance:
+    f1_score: 0.68
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

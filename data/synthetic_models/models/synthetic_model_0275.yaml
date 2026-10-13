@@ -1,0 +1,32 @@
+model_id: synthetic_model_0275
+organization: org_8
+compute_flops: 4.44925693070274e+25
+risk_score: 0.7
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- eu
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.84
+    size_tokens: 87583226311580.8
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.78
+  performance:
+    f1_score: 0.5
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0415
+organization: org_15
+compute_flops: 1.0304528162595417e+25
+risk_score: 0.16
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- us
+- eu
+capabilities:
+- general
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.7
+    size_tokens: 26791570564423.56
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.89
+  performance:
+    f1_score: 0.52
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

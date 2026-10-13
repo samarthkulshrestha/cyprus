@@ -1,0 +1,31 @@
+model_id: synthetic_model_0767
+organization: org_17
+compute_flops: 1.00933739832458e+20
+risk_score: 0.46
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.65
+    size_tokens: 32097403375.676876
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.86
+  performance:
+    f1_score: 0.88
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

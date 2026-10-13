@@ -1,0 +1,32 @@
+model_id: synthetic_model_0231
+organization: org_27
+compute_flops: 1.0949803356161455e+25
+risk_score: 0.57
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- us
+- kr
+capabilities:
+- chat
+- multimodal
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.88
+    size_tokens: 1078792382.3474154
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.65
+  performance:
+    f1_score: 0.45
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

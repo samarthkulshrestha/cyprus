@@ -1,0 +1,28 @@
+model_id: synthetic_model_0437
+organization: org_27
+compute_flops: 2.608055404369249e+23
+risk_score: 0.19
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- kr
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.97
+    size_tokens: 32902791662.807514
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.34
+  performance:
+    f1_score: 0.53
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

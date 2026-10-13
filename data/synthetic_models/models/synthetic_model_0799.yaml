@@ -1,0 +1,30 @@
+model_id: synthetic_model_0799
+organization: org_15
+compute_flops: 1.4721752990714708e+23
+risk_score: 0.21
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- uk
+- ca
+capabilities:
+- general
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.95
+    size_tokens: 2462899476484.219
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.8
+  performance:
+    f1_score: 0.72
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

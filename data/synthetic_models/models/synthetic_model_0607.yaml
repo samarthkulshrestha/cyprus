@@ -1,0 +1,32 @@
+model_id: synthetic_model_0607
+organization: org_23
+compute_flops: 7.078171487881419e+20
+risk_score: 0.06
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: completed
+deployment_regions:
+- eu
+- us
+- au
+capabilities:
+- chat
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.73
+    size_tokens: 7032421087903.543
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.39
+  performance:
+    f1_score: 0.45
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

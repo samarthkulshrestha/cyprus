@@ -1,0 +1,29 @@
+model_id: synthetic_model_0501
+organization: org_20
+compute_flops: 5.9385950197329356e+26
+risk_score: 0.36
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.81
+    size_tokens: 1302576837.0026746
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.47
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

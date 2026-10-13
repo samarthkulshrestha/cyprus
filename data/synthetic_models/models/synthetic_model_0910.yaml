@@ -1,0 +1,33 @@
+model_id: synthetic_model_0910
+organization: org_13
+compute_flops: 2.553519737823508e+21
+risk_score: 0.47
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- kr
+- global
+- us
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 1046269572.9217799
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.96
+  performance:
+    f1_score: 0.85
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

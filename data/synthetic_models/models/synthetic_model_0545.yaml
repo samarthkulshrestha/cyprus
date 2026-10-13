@@ -1,0 +1,31 @@
+model_id: synthetic_model_0545
+organization: org_4
+compute_flops: 2.4658872394979323e+23
+risk_score: 0.14
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+- kr
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.92
+    size_tokens: 488750646007.6455
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.59
+  performance:
+    f1_score: 0.55
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

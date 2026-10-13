@@ -1,0 +1,31 @@
+model_id: synthetic_model_0751
+organization: org_19
+compute_flops: 2.154766141426867e+26
+risk_score: 0.11
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.55
+    size_tokens: 236649365716.10248
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.79
+  performance:
+    f1_score: 0.65
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

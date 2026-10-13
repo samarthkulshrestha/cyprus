@@ -1,0 +1,29 @@
+model_id: synthetic_model_0852
+organization: org_15
+compute_flops: 5.526891809276949e+22
+risk_score: 0.5
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- eu
+capabilities:
+- chat
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.81
+    size_tokens: 99110193704.94887
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.98
+  performance:
+    f1_score: 0.83
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

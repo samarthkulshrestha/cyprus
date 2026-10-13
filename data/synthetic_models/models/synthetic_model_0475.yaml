@@ -1,0 +1,31 @@
+model_id: synthetic_model_0475
+organization: org_24
+compute_flops: 1.1290432845839273e+23
+risk_score: 0.17
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- kr
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.52
+    size_tokens: 3410917584.788235
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.48
+  performance:
+    f1_score: 0.62
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

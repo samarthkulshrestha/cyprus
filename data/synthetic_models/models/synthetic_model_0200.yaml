@@ -1,0 +1,31 @@
+model_id: synthetic_model_0200
+organization: org_13
+compute_flops: 2.7381171493753814e+22
+risk_score: 0.35
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- kr
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.66
+    size_tokens: 24636914826250.87
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.34
+  performance:
+    f1_score: 0.61
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

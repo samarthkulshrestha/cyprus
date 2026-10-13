@@ -1,0 +1,431 @@
+annotator_id: "annotator_2"
+date: "YYYY-MM-DD"
+time_spent_minutes: 0
+models:
+  01_ai_yi_34b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  albert_albert_base_v2:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  allenai_olmo_7b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  bigcode_starcoder2_15b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  bigscience_bloom:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  black_forest_labs_flux_1_dev:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  bytedance_tiktok_fyp:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  cardiffnlp_twitter_roberta_base_sentiment_latest:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  cerspense_zeroscope_v2_576w:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  clearview_ai_facial_recognition:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  codellama_codellama_34b_hf:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  cognitivecomputations_dolphin_2_6_mistral_7b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  cohereforai_c4ai_command_r_plus:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  cross_encoder_ms_marco_minilm_l_12_v2:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  deepseek_ai_deepseek_coder_33b_base:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  digital_diagnostics_idx_dr:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  distilbert_distilbert_base_uncased:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  emilyalsentzer_bio_clinicalbert:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  ets_e_rater:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  facebook_detr_resnet_50:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  facebookai_roberta_base:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  garage_baind_platypus2_70b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  google_bert_bert_base_uncased:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  google_flan_t5_base:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  google_gemma_2_27b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  google_vit_base_patch16_224:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  hirevue_video_interview_ai:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  huggingfaceh4_zephyr_7b_beta:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  j_hartmann_emotion_english_distilroberta_base:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  lllyasviel_control_v11p_sd15_openpose:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  medicalai_clinicalbert:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  meta_feed_ranking:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  meta_llama_meta_llama_3_1_405b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  meta_llama_meta_llama_3_1_70b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  microsoft_biogpt:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  microsoft_biomednlp_biomedbert_base_uncased_abstract:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  microsoft_phi_2:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  microsoft_resnet_50:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  mistralai_mixtral_8x22b_v0_1:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  nec_neoface:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  nlptown_bert_base_multilingual_uncased_sentiment:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  nousresearch_nous_hermes_2_yi_34b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  open_orca_mistral_7b_openorca:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  openai_whisper_large_v3:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  paige_ai_prostate:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  parler_tts_parler_tts_large_v1:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  prc_social_credit_system:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  predpol_geolitica:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  proctorio_remote_proctoring:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  qwen_codeqwen1_5_7b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  qwen_qwen2_72b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  samlowe_roberta_base_go_emotions:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  sentence_transformers_all_minilm_l6_v2:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  soundthinking_shotspotter:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  stabilityai_stable_diffusion_xl_base_1_0:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  stanfordaimi_stanford_deidentifier_base:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  suno_bark:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  thebloke_llama_2_13b_gptq:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  tiiuae_falcon_180b:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  upstage_solar_10_7b_v1_0:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""
+  workday_hiring_ai:
+    prohibited: false
+    high_risk: false
+    systemic_risk: false
+    can_deploy: true
+    confidence: high
+    notes: ""

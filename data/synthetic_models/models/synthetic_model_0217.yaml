@@ -1,0 +1,31 @@
+model_id: synthetic_model_0217
+organization: org_45
+compute_flops: 7.3869358858227e+24
+risk_score: 0.5
+risk_category: limited_risk
+use_case: cognitive_manipulation
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- uk
+capabilities:
+- chat
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.7
+    size_tokens: 77019401970.30148
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.96
+  performance:
+    f1_score: 0.94
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0943
+organization: org_44
+compute_flops: 4.343095984881254e+22
+risk_score: 0.68
+risk_category: limited_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- kr
+- ca
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.57
+    size_tokens: 2651925038307.813
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.78
+  performance:
+    f1_score: 0.45
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

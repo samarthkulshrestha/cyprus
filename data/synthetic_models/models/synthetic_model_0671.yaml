@@ -1,0 +1,31 @@
+model_id: synthetic_model_0671
+organization: org_30
+compute_flops: 8.99738392282829e+26
+risk_score: 0.06
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- chat
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.7
+    size_tokens: 9334492665.086796
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.42
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

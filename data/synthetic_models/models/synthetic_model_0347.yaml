@@ -1,0 +1,30 @@
+model_id: synthetic_model_0347
+organization: org_18
+compute_flops: 5.330191234801605e+22
+risk_score: 0.51
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- global
+- au
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.55
+    size_tokens: 26543291930.72652
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.64
+  performance:
+    f1_score: 0.53
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0377
+organization: org_24
+compute_flops: 1.4130775322706493e+24
+risk_score: 0.18
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.66
+    size_tokens: 17770668730.82077
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.36
+  performance:
+    f1_score: 0.62
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0074
+organization: org_6
+compute_flops: 7.702496615449857e+21
+risk_score: 0.75
+risk_category: limited_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- eu
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.55
+    size_tokens: 51856253495756.55
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.37
+  performance:
+    f1_score: 0.45
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

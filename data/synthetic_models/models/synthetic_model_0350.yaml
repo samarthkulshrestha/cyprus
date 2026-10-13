@@ -1,0 +1,31 @@
+model_id: synthetic_model_0350
+organization: org_21
+compute_flops: 4.030430219705569e+18
+risk_score: 0.6
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- jp
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.94
+    size_tokens: 2187152217387.6008
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.55
+  performance:
+    f1_score: 0.68
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

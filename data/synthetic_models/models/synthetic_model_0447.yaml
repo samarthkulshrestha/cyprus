@@ -1,0 +1,32 @@
+model_id: synthetic_model_0447
+organization: org_43
+compute_flops: 5.239645467035265e+21
+risk_score: 0.63
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+capabilities:
+- code_generation
+- multimodal
+- image_generation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.66
+    size_tokens: 16534106724.223637
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.76
+  performance:
+    f1_score: 0.68
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0174
+organization: org_9
+compute_flops: 8.28291819634439e+21
+risk_score: 0.71
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- global
+- us
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.65
+    size_tokens: 106897730700.96367
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.87
+  performance:
+    f1_score: 0.86
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

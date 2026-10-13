@@ -1,0 +1,31 @@
+model_id: synthetic_model_0283
+organization: org_50
+compute_flops: 6.680518745293719e+21
+risk_score: 0.19
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+- kr
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.54
+    size_tokens: 15741447872338.225
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.6
+  performance:
+    f1_score: 0.62
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

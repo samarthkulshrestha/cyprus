@@ -1,0 +1,33 @@
+model_id: synthetic_model_0626
+organization: org_8
+compute_flops: 6.511039636977296e+20
+risk_score: 0.42
+risk_category: minimal_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.73
+    size_tokens: 22193459807.938175
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.45
+  performance:
+    f1_score: 0.86
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

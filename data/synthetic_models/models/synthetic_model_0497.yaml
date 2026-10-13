@@ -1,0 +1,33 @@
+model_id: synthetic_model_0497
+organization: org_3
+compute_flops: 2.14259893551276e+19
+risk_score: 0.32
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- jp
+- eu
+capabilities:
+- chat
+- code_generation
+- image_generation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.82
+    size_tokens: 7764119589474.073
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.95
+  performance:
+    f1_score: 0.65
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

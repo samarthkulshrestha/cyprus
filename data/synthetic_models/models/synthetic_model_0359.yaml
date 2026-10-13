@@ -1,0 +1,32 @@
+model_id: synthetic_model_0359
+organization: org_26
+compute_flops: 8.867641845226149e+24
+risk_score: 0.3
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+- global
+- kr
+capabilities:
+- multimodal
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.74
+    size_tokens: 1002846238.1605544
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.66
+  performance:
+    f1_score: 0.66
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

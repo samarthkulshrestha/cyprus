@@ -1,0 +1,30 @@
+model_id: synthetic_model_0119
+organization: org_26
+compute_flops: 1.1000234346794056e+21
+risk_score: 0.69
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+capabilities:
+- chat
+- image_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.96
+    size_tokens: 8042804003055.512
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.87
+  performance:
+    f1_score: 0.46
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

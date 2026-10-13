@@ -1,0 +1,32 @@
+model_id: synthetic_model_0538
+organization: org_33
+compute_flops: 8.160729903115622e+22
+risk_score: 0.28
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- kr
+- global
+capabilities:
+- chat
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.96
+    size_tokens: 347606184309.24457
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.51
+  performance:
+    f1_score: 0.48
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

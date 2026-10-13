@@ -1,0 +1,32 @@
+model_id: synthetic_model_0433
+organization: org_23
+compute_flops: 1.4348983820742932e+19
+risk_score: 0.24
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- jp
+- eu
+- uk
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.94
+    size_tokens: 1902374073.1282501
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.34
+  performance:
+    f1_score: 0.44
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

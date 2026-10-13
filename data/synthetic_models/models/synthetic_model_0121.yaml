@@ -1,0 +1,32 @@
+model_id: synthetic_model_0121
+organization: org_44
+compute_flops: 5.06488834573589e+22
+risk_score: 0.06
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- jp
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.68
+    size_tokens: 183219849732.43887
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.75
+  performance:
+    f1_score: 0.63
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

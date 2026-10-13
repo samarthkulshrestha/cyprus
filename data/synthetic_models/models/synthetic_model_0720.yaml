@@ -1,0 +1,30 @@
+model_id: synthetic_model_0720
+organization: org_46
+compute_flops: 2.1553547695379376e+26
+risk_score: 0.17
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- uk
+- kr
+capabilities:
+- general
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.79
+    size_tokens: 21693466614.60938
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.71
+  performance:
+    f1_score: 0.46
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0577
+organization: org_33
+compute_flops: 5.369747292881789e+24
+risk_score: 0.09
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- eu
+- us
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 4529004242.927613
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.55
+  performance:
+    f1_score: 0.95
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

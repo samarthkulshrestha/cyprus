@@ -1,0 +1,72 @@
+name: "EU AI Act"
+full_title: "Regulation (EU) 2024/1689 — Artificial Intelligence Act"
+version: "2024.1"
+jurisdiction: EU
+effective_date: "2025-08-02"
+
+articles_covered:
+  - id: art5
+    title: "Prohibited AI Practices"
+    clauses_encoded: ["1a", "1b", "1c"]
+    clauses_total: ["1a", "1b", "1c", "1d", "1e", "1f", "1g", "1h"]
+    description: "AI practices that are banned outright"
+
+  - id: art6
+    title: "Classification Rules for High-Risk AI Systems"
+    clauses_encoded: ["1", "2"]
+    clauses_total: ["1", "2", "3"]
+    description: "Criteria for high-risk classification"
+
+  - id: art9
+    title: "Risk Management System"
+    clauses_encoded: ["1", "2a", "2b"]
+    clauses_total: ["1", "2a", "2b", "2c", "2d", "3", "4", "5", "6", "7", "8", "9"]
+    description: "Requirements for risk management in high-risk AI"
+
+  - id: art10
+    title: "Data and Data Governance"
+    clauses_encoded: ["1", "2a", "2b", "2f"]
+    clauses_total: ["1", "2a", "2b", "2c", "2d", "2e", "2f", "3", "4", "5", "6"]
+    description: "Training data quality and governance requirements"
+
+  - id: art13
+    title: "Transparency and Provision of Information to Deployers"
+    clauses_encoded: ["1"]
+    clauses_total: ["1", "2", "3a", "3b"]
+    description: "Information and documentation requirements"
+
+  - id: art51
+    title: "Classification of General-Purpose AI Models as Systemic Risk"
+    clauses_encoded: ["1", "2"]
+    clauses_total: ["1", "2", "3"]
+    description: "Systemic risk classification for GPAI models"
+
+  - id: art52
+    title: "Obligations for Providers of General-Purpose AI Models"
+    clauses_encoded: ["1"]
+    clauses_total: ["1", "2", "3"]
+    description: "Transparency obligations for GPAI"
+
+required_model_attributes:
+  - use_case
+  - risk_category
+  - compute_flops
+  - red_teaming_status
+  - deployment_region
+  - capability
+
+required_governance_attributes:
+  - training_data_quality
+  - training_data_source
+  - training_documentation_status
+  - bias_status
+  - f1_score
+  - access_control
+
+output_predicates:
+  - "prohibited/3"
+  - "systemic_risk/2"
+  - "requires_high_risk_compliance/2"
+  - "requires_transparency/2"
+  - "unmet_requirement/2"
+  - "can_deploy/1"

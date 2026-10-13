@@ -1,0 +1,32 @@
+model_id: synthetic_model_0948
+organization: org_28
+compute_flops: 2.3734818718040335e+25
+risk_score: 0.41
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- kr
+- jp
+- au
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.66
+    size_tokens: 74143210959361.17
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.93
+  performance:
+    f1_score: 0.45
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

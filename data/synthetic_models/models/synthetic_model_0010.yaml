@@ -1,0 +1,30 @@
+model_id: synthetic_model_0010
+organization: org_27
+compute_flops: 4.6889777844320333e+24
+risk_score: 0.23
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.95
+    size_tokens: 11230075904.884356
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.85
+  performance:
+    f1_score: 0.92
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

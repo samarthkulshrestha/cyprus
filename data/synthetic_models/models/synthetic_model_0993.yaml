@@ -1,0 +1,29 @@
+model_id: synthetic_model_0993
+organization: org_35
+compute_flops: 1.4276928028136906e+25
+risk_score: 0.88
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 284585022829.0493
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.6
+  performance:
+    f1_score: 0.74
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

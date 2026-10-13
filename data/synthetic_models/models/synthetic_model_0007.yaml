@@ -1,0 +1,30 @@
+model_id: synthetic_model_0007
+organization: org_44
+compute_flops: 3.03203417889561e+19
+risk_score: 0.03
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 1931196050.3280993
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.94
+  performance:
+    f1_score: 0.71
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

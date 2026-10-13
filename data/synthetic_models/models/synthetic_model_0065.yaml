@@ -1,0 +1,30 @@
+model_id: synthetic_model_0065
+organization: org_49
+compute_flops: 7.42115558539786e+22
+risk_score: 0.17
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- ca
+- eu
+capabilities:
+- chat
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.69
+    size_tokens: 2592100110083.6313
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.9
+  performance:
+    f1_score: 0.47
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

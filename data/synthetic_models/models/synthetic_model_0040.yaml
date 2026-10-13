@@ -1,0 +1,30 @@
+model_id: synthetic_model_0040
+organization: org_7
+compute_flops: 1.4474285276629915e+23
+risk_score: 0.61
+risk_category: unacceptable_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- us
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.94
+    size_tokens: 5358264308072.576
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.35
+  performance:
+    f1_score: 0.77
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

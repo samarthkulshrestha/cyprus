@@ -1,0 +1,31 @@
+model_id: synthetic_model_0567
+organization: org_25
+compute_flops: 7.1434802890909925e+19
+risk_score: 0.19
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- global
+- au
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.55
+    size_tokens: 2610197143.032594
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.46
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

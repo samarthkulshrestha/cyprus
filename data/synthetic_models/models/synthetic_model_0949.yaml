@@ -1,0 +1,31 @@
+model_id: synthetic_model_0949
+organization: org_22
+compute_flops: 3.483884746868626e+24
+risk_score: 0.72
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.94
+    size_tokens: 1582763321.4286542
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.9
+  performance:
+    f1_score: 0.56
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

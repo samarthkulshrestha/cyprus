@@ -1,0 +1,33 @@
+model_id: synthetic_model_0197
+organization: org_44
+compute_flops: 6.686449492502569e+23
+risk_score: 0.18
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.72
+    size_tokens: 2900051140.8368397
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.67
+  performance:
+    f1_score: 0.86
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

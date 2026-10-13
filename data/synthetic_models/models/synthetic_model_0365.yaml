@@ -1,0 +1,32 @@
+model_id: synthetic_model_0365
+organization: org_1
+compute_flops: 8.02935354148333e+21
+risk_score: 0.59
+risk_category: high_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- us
+- au
+- uk
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.76
+    size_tokens: 1430765052114.0076
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.71
+  performance:
+    f1_score: 0.62
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

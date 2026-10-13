@@ -1,0 +1,30 @@
+model_id: synthetic_model_0482
+organization: org_36
+compute_flops: 1.1794140589736481e+21
+risk_score: 0.29
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- ca
+capabilities:
+- chat
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 1327688284908.9346
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.9
+  performance:
+    f1_score: 0.61
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

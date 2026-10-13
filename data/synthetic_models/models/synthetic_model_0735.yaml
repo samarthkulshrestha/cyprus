@@ -1,0 +1,31 @@
+model_id: synthetic_model_0735
+organization: org_5
+compute_flops: 1.7722681233919502e+25
+risk_score: 0.64
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- kr
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.76
+    size_tokens: 3585433919641.058
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.52
+  performance:
+    f1_score: 0.98
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

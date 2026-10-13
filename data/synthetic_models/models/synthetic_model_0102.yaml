@@ -1,0 +1,31 @@
+model_id: synthetic_model_0102
+organization: org_43
+compute_flops: 4.224920909622631e+23
+risk_score: 0.54
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- us
+- au
+capabilities:
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.59
+    size_tokens: 26758604693954.45
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.33
+  performance:
+    f1_score: 0.66
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

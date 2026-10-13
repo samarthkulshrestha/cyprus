@@ -1,0 +1,28 @@
+model_id: synthetic_model_0659
+organization: org_29
+compute_flops: 2.53350065620388e+25
+risk_score: 0.84
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.86
+    size_tokens: 19581797713.114613
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.63
+  performance:
+    f1_score: 0.71
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

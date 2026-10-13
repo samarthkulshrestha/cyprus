@@ -1,0 +1,30 @@
+model_id: synthetic_model_0158
+organization: org_2
+compute_flops: 1.740655126915285e+22
+risk_score: 0.44
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- au
+- ca
+- eu
+capabilities:
+- general
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 1997791899.6255076
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.63
+  performance:
+    f1_score: 0.96
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

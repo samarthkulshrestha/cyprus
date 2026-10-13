@@ -1,0 +1,30 @@
+model_id: synthetic_model_0046
+organization: org_8
+compute_flops: 5.425614522589599e+18
+risk_score: 0.47
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.95
+    size_tokens: 1244570276.036005
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.76
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

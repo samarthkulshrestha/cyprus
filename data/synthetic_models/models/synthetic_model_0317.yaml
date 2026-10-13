@@ -1,0 +1,33 @@
+model_id: synthetic_model_0317
+organization: org_4
+compute_flops: 3.242543589014309e+23
+risk_score: 0.36
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- global
+capabilities:
+- code_generation
+- image_generation
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.93
+    size_tokens: 4180871296822.008
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.43
+  performance:
+    f1_score: 0.93
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

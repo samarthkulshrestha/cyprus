@@ -1,0 +1,31 @@
+model_id: synthetic_model_0574
+organization: org_37
+compute_flops: 1.1919074137524795e+18
+risk_score: 0.58
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+- kr
+capabilities:
+- chat
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 5750050960534.441
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.6
+  performance:
+    f1_score: 0.96
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

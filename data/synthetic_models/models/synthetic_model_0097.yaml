@@ -1,0 +1,32 @@
+model_id: synthetic_model_0097
+organization: org_32
+compute_flops: 7.411363357254716e+20
+risk_score: 0.16
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- uk
+- kr
+- us
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.79
+    size_tokens: 81907407264737.38
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.42
+  performance:
+    f1_score: 0.75
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0297
+organization: org_50
+compute_flops: 1.0027353037540617e+21
+risk_score: 0.71
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- ca
+capabilities:
+- chat
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.85
+    size_tokens: 14995651711.909046
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.55
+  performance:
+    f1_score: 0.68
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

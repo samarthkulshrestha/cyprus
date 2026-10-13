@@ -1,0 +1,29 @@
+model_id: synthetic_model_0733
+organization: org_38
+compute_flops: 9.527252571990665e+18
+risk_score: 0.09
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.76
+    size_tokens: 4667405187.076716
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.94
+  performance:
+    f1_score: 0.63
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

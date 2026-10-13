@@ -1,0 +1,29 @@
+model_id: synthetic_model_0738
+organization: org_19
+compute_flops: 2.4890481871098196e+24
+risk_score: 0.24
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.53
+    size_tokens: 54299693960.92652
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.47
+  performance:
+    f1_score: 0.66
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

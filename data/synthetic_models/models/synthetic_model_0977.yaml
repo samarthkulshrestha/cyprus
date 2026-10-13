@@ -1,0 +1,30 @@
+model_id: synthetic_model_0977
+organization: org_15
+compute_flops: 5.809756799408827e+24
+risk_score: 0.6
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- kr
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.6
+    size_tokens: 33897281494.85936
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.83
+  performance:
+    f1_score: 0.75
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

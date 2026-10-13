@@ -1,0 +1,31 @@
+model_id: synthetic_model_0249
+organization: org_8
+compute_flops: 2.4166081301978814e+21
+risk_score: 0.41
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- jp
+- au
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.94
+    size_tokens: 3928107544822.9297
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.44
+  performance:
+    f1_score: 0.5
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

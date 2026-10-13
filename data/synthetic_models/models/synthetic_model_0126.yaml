@@ -1,0 +1,31 @@
+model_id: synthetic_model_0126
+organization: org_36
+compute_flops: 5.9265877406782986e+23
+risk_score: 0.43
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- au
+- eu
+capabilities:
+- chat
+- multimodal
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.91
+    size_tokens: 1425921957.827985
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.82
+  performance:
+    f1_score: 0.87
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

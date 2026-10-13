@@ -1,0 +1,29 @@
+model_id: synthetic_model_0625
+organization: org_11
+compute_flops: 1.0713188591179054e+18
+risk_score: 0.41
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.89
+    size_tokens: 479025395508.4831
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.54
+  performance:
+    f1_score: 0.59
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

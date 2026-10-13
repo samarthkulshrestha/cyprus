@@ -1,0 +1,33 @@
+model_id: synthetic_model_0133
+organization: org_35
+compute_flops: 1.4175703873399543e+25
+risk_score: 0.39
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- kr
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.91
+    size_tokens: 1065504011951.3878
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.72
+  performance:
+    f1_score: 0.92
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

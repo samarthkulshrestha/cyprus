@@ -1,0 +1,31 @@
+model_id: synthetic_model_0146
+organization: org_5
+compute_flops: 1.6854042764507523e+19
+risk_score: 0.22
+risk_category: high_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- jp
+- us
+capabilities:
+- code_generation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.7
+    size_tokens: 6551601544.964638
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.45
+  performance:
+    f1_score: 0.45
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

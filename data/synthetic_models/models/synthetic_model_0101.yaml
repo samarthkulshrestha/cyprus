@@ -1,0 +1,28 @@
+model_id: synthetic_model_0101
+organization: org_24
+compute_flops: 4.731749984743763e+18
+risk_score: 0.82
+risk_category: limited_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.7
+    size_tokens: 589606362758.7334
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.5
+  performance:
+    f1_score: 0.54
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

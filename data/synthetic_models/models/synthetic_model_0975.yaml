@@ -1,0 +1,28 @@
+model_id: synthetic_model_0975
+organization: org_45
+compute_flops: 4.939711262494986e+24
+risk_score: 0.59
+risk_category: minimal_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.51
+    size_tokens: 3807850081734.713
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.78
+  performance:
+    f1_score: 0.94
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0947
+organization: org_38
+compute_flops: 1.1692978170102673e+20
+risk_score: 0.26
+risk_category: limited_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- uk
+- ca
+capabilities:
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.67
+    size_tokens: 6825097542722.884
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.76
+  performance:
+    f1_score: 0.87
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,33 @@
+model_id: synthetic_model_0805
+organization: org_29
+compute_flops: 7.65277933630127e+24
+risk_score: 0.1
+risk_category: high_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- us
+- kr
+- au
+capabilities:
+- chat
+- image_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.86
+    size_tokens: 6493553554710.556
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.48
+  performance:
+    f1_score: 0.46
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

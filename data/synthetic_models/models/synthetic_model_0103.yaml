@@ -1,0 +1,30 @@
+model_id: synthetic_model_0103
+organization: org_28
+compute_flops: 5.319611005518061e+21
+risk_score: 0.81
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- eu
+capabilities:
+- chat
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.75
+    size_tokens: 31788885887243.5
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.96
+  performance:
+    f1_score: 0.66
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

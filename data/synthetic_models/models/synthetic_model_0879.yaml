@@ -1,0 +1,32 @@
+model_id: synthetic_model_0879
+organization: org_29
+compute_flops: 1.9603707425999142e+18
+risk_score: 0.6
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- code_generation
+- reasoning
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.91
+    size_tokens: 28053364671089.56
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.46
+  performance:
+    f1_score: 0.94
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

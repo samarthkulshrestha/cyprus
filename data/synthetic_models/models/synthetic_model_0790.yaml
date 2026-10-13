@@ -1,0 +1,30 @@
+model_id: synthetic_model_0790
+organization: org_6
+compute_flops: 7.39632329599542e+19
+risk_score: 0.56
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.65
+    size_tokens: 1573941055.2062743
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.68
+  performance:
+    f1_score: 0.79
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,28 @@
+model_id: synthetic_model_0793
+organization: org_40
+compute_flops: 3.9904182900509865e+18
+risk_score: 0.62
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+capabilities:
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.52
+    size_tokens: 55495484436.39646
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.54
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

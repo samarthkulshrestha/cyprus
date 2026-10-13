@@ -1,0 +1,34 @@
+model_id: synthetic_model_0902
+organization: org_37
+compute_flops: 2.90923815806429e+22
+risk_score: 0.47
+risk_category: unacceptable_risk
+use_case: law_enforcement
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- eu
+- jp
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.51
+    size_tokens: 2496545005.689712
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.73
+  performance:
+    f1_score: 0.76
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

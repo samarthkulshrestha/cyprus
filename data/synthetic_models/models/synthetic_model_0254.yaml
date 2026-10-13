@@ -1,0 +1,31 @@
+model_id: synthetic_model_0254
+organization: org_9
+compute_flops: 1.1851459430044166e+25
+risk_score: 0.58
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- kr
+- global
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.65
+    size_tokens: 4886808330820.615
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.46
+  performance:
+    f1_score: 0.65
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

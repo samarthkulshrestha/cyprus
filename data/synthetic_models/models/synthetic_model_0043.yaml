@@ -1,0 +1,29 @@
+model_id: synthetic_model_0043
+organization: org_42
+compute_flops: 1.2677755857605173e+25
+risk_score: 0.72
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.66
+    size_tokens: 1906661469072.6335
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.72
+  performance:
+    f1_score: 0.95
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

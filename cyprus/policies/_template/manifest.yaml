@@ -1,0 +1,25 @@
+# Policy Module Manifest
+# Fill in the fields below to describe your regulation.
+
+name: "Your Regulation Name"
+full_title: "Full official title of the regulation"
+version: "1.0"
+jurisdiction: ""          # e.g., EU, US, UK, CN
+effective_date: ""        # YYYY-MM-DD
+
+articles_covered:
+  # List each article/section you've encoded
+  - id: ""                # Short reference (e.g., "art5", "sec3")
+    title: ""             # Human-readable title
+    clauses_encoded: []   # Which clauses are encoded
+    clauses_total: []     # All clauses in this article (for coverage tracking)
+    description: ""
+
+# What model attributes do your rules need?
+required_model_attributes: []
+
+# What governance attributes do your rules need?
+required_governance_attributes: []
+
+# What predicates do your rules produce?
+output_predicates: []

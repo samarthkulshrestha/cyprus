@@ -1,0 +1,30 @@
+model_id: synthetic_model_0598
+organization: org_39
+compute_flops: 6.903957133450155e+21
+risk_score: 0.32
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- ca
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.65
+    size_tokens: 44878455475.06289
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.45
+  performance:
+    f1_score: 0.82
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

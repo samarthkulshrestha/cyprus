@@ -1,0 +1,32 @@
+model_id: synthetic_model_0612
+organization: org_32
+compute_flops: 1.0457037855450944e+24
+risk_score: 0.23
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- ca
+- kr
+capabilities:
+- chat
+- multimodal
+- translation
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.59
+    size_tokens: 5743809763.06771
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.82
+  performance:
+    f1_score: 0.7
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

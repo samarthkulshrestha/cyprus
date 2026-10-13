@@ -1,0 +1,30 @@
+model_id: synthetic_model_0070
+organization: org_5
+compute_flops: 1.627684198462835e+20
+risk_score: 0.5
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.96
+    size_tokens: 513670088120.0351
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.32
+  performance:
+    f1_score: 0.9
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

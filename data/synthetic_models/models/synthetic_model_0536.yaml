@@ -1,0 +1,28 @@
+model_id: synthetic_model_0536
+organization: org_12
+compute_flops: 3.2849161445631626e+22
+risk_score: 0.58
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- multimodal
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.55
+    size_tokens: 34703938384786.1
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.64
+  performance:
+    f1_score: 0.96
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

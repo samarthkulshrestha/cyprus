@@ -1,0 +1,31 @@
+model_id: synthetic_model_0861
+organization: org_32
+compute_flops: 3.0426956267852117e+26
+risk_score: 0.43
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- kr
+- ca
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.81
+    size_tokens: 37185111268.45868
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.56
+  performance:
+    f1_score: 0.62
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0989
+organization: org_20
+compute_flops: 1.1198816940421457e+24
+risk_score: 0.85
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- global
+- us
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.84
+    size_tokens: 4339314546609.199
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.66
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

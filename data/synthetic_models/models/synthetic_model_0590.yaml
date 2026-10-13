@@ -1,0 +1,31 @@
+model_id: synthetic_model_0590
+organization: org_23
+compute_flops: 1.0877667191765488e+26
+risk_score: 0.29
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- uk
+- us
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.6
+    size_tokens: 70684281320737.42
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.97
+  performance:
+    f1_score: 0.94
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

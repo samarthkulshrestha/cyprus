@@ -1,0 +1,30 @@
+model_id: synthetic_model_0411
+organization: org_4
+compute_flops: 1.209338074256349e+19
+risk_score: 0.14
+risk_category: unacceptable_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.97
+    size_tokens: 2205593130994.1416
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.56
+  performance:
+    f1_score: 0.54
+    benchmark: arc
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

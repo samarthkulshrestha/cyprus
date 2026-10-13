@@ -1,0 +1,28 @@
+model_id: synthetic_model_0631
+organization: org_40
+compute_flops: 1.1659473359678225e+22
+risk_score: 0.39
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- jp
+capabilities:
+- general
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.99
+    size_tokens: 3342379620.5172873
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.32
+  performance:
+    f1_score: 0.71
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

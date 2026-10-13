@@ -1,0 +1,33 @@
+model_id: synthetic_model_0368
+organization: org_24
+compute_flops: 9.560413581294266e+24
+risk_score: 0.19
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- ca
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.89
+    size_tokens: 30910529998357.207
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.58
+  performance:
+    f1_score: 0.44
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

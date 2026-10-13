@@ -1,0 +1,29 @@
+model_id: synthetic_model_0042
+organization: org_25
+compute_flops: 4.984715119829991e+25
+risk_score: 0.48
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: not_started
+deployment_regions:
+- au
+- uk
+capabilities:
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.73
+    size_tokens: 11345772122818.385
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.75
+  performance:
+    f1_score: 0.42
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

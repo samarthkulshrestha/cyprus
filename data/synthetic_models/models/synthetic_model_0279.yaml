@@ -1,0 +1,29 @@
+model_id: synthetic_model_0279
+organization: org_28
+compute_flops: 1.6138830156567587e+19
+risk_score: 0.54
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- au
+capabilities:
+- chat
+- multimodal
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.77
+    size_tokens: 2253150648.2480993
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.79
+  performance:
+    f1_score: 0.51
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

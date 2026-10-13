@@ -1,0 +1,30 @@
+model_id: synthetic_model_0439
+organization: org_36
+compute_flops: 1.5535106972263249e+22
+risk_score: 0.67
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- au
+- global
+capabilities:
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.78
+    size_tokens: 3271407717037.5293
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.55
+  performance:
+    f1_score: 0.75
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

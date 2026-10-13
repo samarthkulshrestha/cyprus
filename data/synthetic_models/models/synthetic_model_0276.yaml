@@ -1,0 +1,28 @@
+model_id: synthetic_model_0276
+organization: org_18
+compute_flops: 5.340018486418815e+26
+risk_score: 0.8
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- chat
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.93
+    size_tokens: 1784656681198.6724
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.31
+  performance:
+    f1_score: 0.47
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

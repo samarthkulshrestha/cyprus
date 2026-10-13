@@ -1,0 +1,29 @@
+model_id: synthetic_model_0268
+organization: org_6
+compute_flops: 1.0332542451362493e+18
+risk_score: 0.13
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: not_started
+deployment_regions:
+- kr
+capabilities:
+- code_generation
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.59
+    size_tokens: 1972015502.589433
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.99
+  performance:
+    f1_score: 0.91
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

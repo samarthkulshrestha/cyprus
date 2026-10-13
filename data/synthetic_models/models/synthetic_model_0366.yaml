@@ -1,0 +1,29 @@
+model_id: synthetic_model_0366
+organization: org_26
+compute_flops: 1.3391180526553563e+26
+risk_score: 0.37
+risk_category: high_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- kr
+- global
+capabilities:
+- general
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.8
+    size_tokens: 258694956549.95007
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.98
+  performance:
+    f1_score: 0.92
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

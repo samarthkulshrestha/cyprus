@@ -1,0 +1,33 @@
+model_id: synthetic_model_0576
+organization: org_14
+compute_flops: 3.815756737693326e+22
+risk_score: 0.16
+risk_category: unacceptable_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- kr
+- au
+capabilities:
+- code_generation
+- reasoning
+- image_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.81
+    size_tokens: 15610373492617.654
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.96
+  performance:
+    f1_score: 0.43
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

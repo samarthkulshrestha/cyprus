@@ -1,0 +1,31 @@
+model_id: synthetic_model_0419
+organization: org_10
+compute_flops: 7.472858044820206e+22
+risk_score: 0.28
+risk_category: high_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.78
+    size_tokens: 54957253909967.31
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.68
+  performance:
+    f1_score: 0.85
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0136
+organization: org_43
+compute_flops: 1.6131828642788446e+25
+risk_score: 0.76
+risk_category: high_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.86
+    size_tokens: 45022017798281.516
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.97
+  performance:
+    f1_score: 0.43
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

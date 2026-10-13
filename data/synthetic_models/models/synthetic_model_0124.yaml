@@ -1,0 +1,30 @@
+model_id: synthetic_model_0124
+organization: org_42
+compute_flops: 1.1272289879140966e+23
+risk_score: 0.76
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- kr
+capabilities:
+- chat
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.69
+    size_tokens: 502558432775.703
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.88
+  performance:
+    f1_score: 0.62
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

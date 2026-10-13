@@ -1,0 +1,32 @@
+model_id: synthetic_model_0235
+organization: org_48
+compute_flops: 3.628633058728173e+18
+risk_score: 0.36
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- global
+- eu
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.91
+    size_tokens: 5269032856.357165
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.62
+  performance:
+    f1_score: 0.97
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

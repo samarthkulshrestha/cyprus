@@ -1,0 +1,29 @@
+model_id: synthetic_model_0797
+organization: org_22
+compute_flops: 3.7464645636067114e+25
+risk_score: 0.6
+risk_category: limited_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.67
+    size_tokens: 206670114686.16092
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.48
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

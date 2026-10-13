@@ -1,0 +1,31 @@
+model_id: synthetic_model_0083
+organization: org_42
+compute_flops: 1.356795824231867e+20
+risk_score: 0.67
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- code_generation
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.66
+    size_tokens: 3313361402146.423
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.99
+  performance:
+    f1_score: 0.8
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

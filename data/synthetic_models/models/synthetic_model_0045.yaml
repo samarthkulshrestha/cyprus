@@ -1,0 +1,30 @@
+model_id: synthetic_model_0045
+organization: org_4
+compute_flops: 1.4292881924859678e+22
+risk_score: 0.27
+risk_category: limited_risk
+use_case: social_scoring
+red_teaming_status: not_started
+deployment_regions:
+- ca
+capabilities:
+- multimodal
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.64
+    size_tokens: 6540096424909.91
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.4
+  performance:
+    f1_score: 0.66
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

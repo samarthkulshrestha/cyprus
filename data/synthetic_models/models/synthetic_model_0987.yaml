@@ -1,0 +1,31 @@
+model_id: synthetic_model_0987
+organization: org_46
+compute_flops: 9.594068688557893e+25
+risk_score: 0.19
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- ca
+- uk
+- global
+capabilities:
+- chat
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.63
+    size_tokens: 12462426307.047691
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.77
+  performance:
+    f1_score: 0.68
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,28 @@
+model_id: synthetic_model_0800
+organization: org_2
+compute_flops: 7.904009846287177e+23
+risk_score: 0.63
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- general
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.83
+    size_tokens: 52905380603500.875
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.88
+  performance:
+    f1_score: 0.53
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

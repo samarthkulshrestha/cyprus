@@ -1,0 +1,30 @@
+model_id: synthetic_model_0403
+organization: org_29
+compute_flops: 3.4970826698465796e+21
+risk_score: 0.41
+risk_category: minimal_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- jp
+- uk
+capabilities:
+- chat
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.51
+    size_tokens: 53672124997329.016
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.86
+  performance:
+    f1_score: 0.83
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

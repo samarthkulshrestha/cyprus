@@ -1,0 +1,31 @@
+model_id: synthetic_model_0153
+organization: org_29
+compute_flops: 5.453325267276156e+21
+risk_score: 0.2
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+- uk
+capabilities:
+- multimodal
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.97
+    size_tokens: 32540547314634.098
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.59
+  performance:
+    f1_score: 0.77
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0504
+organization: org_27
+compute_flops: 4.2178143658121586e+22
+risk_score: 0.51
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+capabilities:
+- chat
+- reasoning
+- image_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.52
+    size_tokens: 2143444092.8592925
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: not_started
+    score: 0.75
+  performance:
+    f1_score: 0.45
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

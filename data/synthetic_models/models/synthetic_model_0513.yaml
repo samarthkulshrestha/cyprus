@@ -1,0 +1,33 @@
+model_id: synthetic_model_0513
+organization: org_44
+compute_flops: 8.854909918687204e+25
+risk_score: 0.37
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- au
+- us
+capabilities:
+- code_generation
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.93
+    size_tokens: 21958981830.602974
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.72
+  performance:
+    f1_score: 0.52
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

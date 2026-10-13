@@ -1,0 +1,32 @@
+model_id: synthetic_model_0627
+organization: org_36
+compute_flops: 1.3793822035434915e+23
+risk_score: 0.29
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.71
+    size_tokens: 1538766894.9330769
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.35
+  performance:
+    f1_score: 0.87
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

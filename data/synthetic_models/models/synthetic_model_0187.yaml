@@ -1,0 +1,31 @@
+model_id: synthetic_model_0187
+organization: org_27
+compute_flops: 8.281604172100294e+20
+risk_score: 0.11
+risk_category: minimal_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.57
+    size_tokens: 9021141150126.365
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.31
+  performance:
+    f1_score: 0.69
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

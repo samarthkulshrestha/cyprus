@@ -1,0 +1,31 @@
+model_id: synthetic_model_0440
+organization: org_45
+compute_flops: 4.602722702723429e+21
+risk_score: 0.64
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- ca
+- us
+capabilities:
+- image_generation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.73
+    size_tokens: 496659753352.91656
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.54
+  performance:
+    f1_score: 0.94
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

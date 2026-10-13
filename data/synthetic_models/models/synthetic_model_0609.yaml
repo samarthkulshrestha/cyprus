@@ -1,0 +1,29 @@
+model_id: synthetic_model_0609
+organization: org_11
+compute_flops: 4.011921393185852e+20
+risk_score: 0.23
+risk_category: limited_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- global
+- eu
+capabilities:
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.6
+    size_tokens: 28150356862.500282
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.51
+  performance:
+    f1_score: 0.9
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

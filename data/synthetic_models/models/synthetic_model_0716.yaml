@@ -1,0 +1,31 @@
+model_id: synthetic_model_0716
+organization: org_31
+compute_flops: 5.010120031615835e+25
+risk_score: 0.46
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- uk
+- jp
+capabilities:
+- chat
+- reasoning
+- translation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.52
+    size_tokens: 22023477504532.95
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.83
+  performance:
+    f1_score: 0.88
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0060
+organization: org_13
+compute_flops: 9.580430104950531e+21
+risk_score: 0.4
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- global
+- jp
+- au
+capabilities:
+- multimodal
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.53
+    size_tokens: 116548538052.84688
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.78
+  performance:
+    f1_score: 0.48
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

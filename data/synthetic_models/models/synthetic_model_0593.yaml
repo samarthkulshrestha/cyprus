@@ -1,0 +1,30 @@
+model_id: synthetic_model_0593
+organization: org_11
+compute_flops: 2.0634166745755948e+21
+risk_score: 0.64
+risk_category: minimal_risk
+use_case: social_scoring
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.8
+    size_tokens: 179595897792.1777
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.34
+  performance:
+    f1_score: 0.87
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

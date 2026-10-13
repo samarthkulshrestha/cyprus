@@ -1,0 +1,33 @@
+model_id: synthetic_model_0077
+organization: org_28
+compute_flops: 4.192065380932433e+18
+risk_score: 0.57
+risk_category: high_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- ca
+- global
+- uk
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.77
+    size_tokens: 8986789831780.414
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.84
+  performance:
+    f1_score: 0.79
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

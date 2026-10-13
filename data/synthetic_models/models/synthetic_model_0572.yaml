@@ -1,0 +1,32 @@
+model_id: synthetic_model_0572
+organization: org_1
+compute_flops: 1.0175798547911258e+21
+risk_score: 0.48
+risk_category: limited_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- eu
+- uk
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 12782382220.436865
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.31
+  performance:
+    f1_score: 0.86
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

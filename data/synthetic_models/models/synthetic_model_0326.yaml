@@ -1,0 +1,31 @@
+model_id: synthetic_model_0326
+organization: org_46
+compute_flops: 7.642725646263741e+18
+risk_score: 0.34
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- au
+- kr
+- global
+capabilities:
+- code_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.65
+    size_tokens: 43210893241525.37
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.85
+  performance:
+    f1_score: 0.89
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

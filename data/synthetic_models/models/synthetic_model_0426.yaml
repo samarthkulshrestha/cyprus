@@ -1,0 +1,32 @@
+model_id: synthetic_model_0426
+organization: org_4
+compute_flops: 2.1198662346377587e+23
+risk_score: 0.22
+risk_category: minimal_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- eu
+capabilities:
+- chat
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.8
+    size_tokens: 341406879348.24664
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.48
+  performance:
+    f1_score: 0.6
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

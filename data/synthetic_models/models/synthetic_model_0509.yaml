@@ -1,0 +1,30 @@
+model_id: synthetic_model_0509
+organization: org_43
+compute_flops: 7.791225612834884e+22
+risk_score: 0.33
+risk_category: high_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- uk
+- eu
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.7
+    size_tokens: 49087613058638.234
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.85
+  performance:
+    f1_score: 0.49
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

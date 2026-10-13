@@ -1,0 +1,32 @@
+model_id: proctorio_remote_proctoring
+organization: proctorio
+compute_flops: 1.0e+18
+risk_score: 0.7
+risk_category: high_risk
+use_case: education
+red_teaming_status: not_started
+deployment_regions:
+- us
+- eu
+- au
+capabilities:
+- facial_detection
+- behavior_monitoring
+- browser_lockdown
+governance:
+  training_data:
+    source: proprietary_exam_video
+    quality_score: 0.4
+    size_tokens: 300000000.0
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.3
+  performance:
+    f1_score: 0.6
+    benchmark: internal
+    task: cheating_detection
+  security:
+    access_control: sso
+    audit_logging: true

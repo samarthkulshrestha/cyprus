@@ -1,0 +1,33 @@
+model_id: synthetic_model_0224
+organization: org_31
+compute_flops: 7.32830401395046e+18
+risk_score: 0.35
+risk_category: unacceptable_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- us
+- ca
+capabilities:
+- chat
+- multimodal
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.99
+    size_tokens: 2411016375176.5083
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.67
+  performance:
+    f1_score: 0.78
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

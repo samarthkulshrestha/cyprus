@@ -1,0 +1,31 @@
+model_id: synthetic_model_0057
+organization: org_38
+compute_flops: 2.859859527165487e+23
+risk_score: 0.36
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: completed
+deployment_regions:
+- jp
+- au
+- eu
+capabilities:
+- multimodal
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.68
+    size_tokens: 2339009374211.8506
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.91
+  performance:
+    f1_score: 0.77
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

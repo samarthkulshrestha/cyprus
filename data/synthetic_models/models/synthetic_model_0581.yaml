@@ -1,0 +1,29 @@
+model_id: synthetic_model_0581
+organization: org_36
+compute_flops: 1.8911081978571435e+26
+risk_score: 0.52
+risk_category: high_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- code_generation
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.87
+    size_tokens: 44825565881865.44
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.52
+  performance:
+    f1_score: 0.88
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

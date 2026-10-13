@@ -1,0 +1,30 @@
+model_id: synthetic_model_0889
+organization: org_14
+compute_flops: 6.986696437151604e+24
+risk_score: 0.36
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+capabilities:
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.66
+    size_tokens: 2133869665.9965267
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.7
+  performance:
+    f1_score: 0.86
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

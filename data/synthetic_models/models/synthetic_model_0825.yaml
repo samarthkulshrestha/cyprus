@@ -1,0 +1,29 @@
+model_id: synthetic_model_0825
+organization: org_33
+compute_flops: 2.5603938083990916e+23
+risk_score: 0.3
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.81
+    size_tokens: 1259523305173.2468
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.33
+  performance:
+    f1_score: 0.58
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

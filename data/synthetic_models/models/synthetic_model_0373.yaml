@@ -1,0 +1,29 @@
+model_id: synthetic_model_0373
+organization: org_14
+compute_flops: 3.40157346780894e+25
+risk_score: 0.52
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: not_started
+deployment_regions:
+- ca
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.64
+    size_tokens: 2781739235737.9614
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.77
+  performance:
+    f1_score: 0.76
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

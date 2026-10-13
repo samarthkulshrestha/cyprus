@@ -1,0 +1,31 @@
+model_id: synthetic_model_0018
+organization: org_28
+compute_flops: 2.91895530426118e+23
+risk_score: 0.69
+risk_category: high_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- global
+- eu
+capabilities:
+- code_generation
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.9
+    size_tokens: 675558210845.4315
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.6
+  performance:
+    f1_score: 0.62
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

@@ -1,0 +1,30 @@
+model_id: synthetic_model_0210
+organization: org_20
+compute_flops: 3.159693534179984e+19
+risk_score: 0.43
+risk_category: limited_risk
+use_case: research
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- au
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.86
+    size_tokens: 777976072722.7493
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.35
+  performance:
+    f1_score: 0.87
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

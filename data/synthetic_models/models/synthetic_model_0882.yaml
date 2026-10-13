@@ -1,0 +1,29 @@
+model_id: synthetic_model_0882
+organization: org_47
+compute_flops: 1.6328600035912822e+25
+risk_score: 0.44
+risk_category: high_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.5
+    size_tokens: 41774086999.294685
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.67
+  performance:
+    f1_score: 0.58
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

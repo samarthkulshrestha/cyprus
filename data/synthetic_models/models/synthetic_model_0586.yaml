@@ -1,0 +1,30 @@
+model_id: synthetic_model_0586
+organization: org_2
+compute_flops: 6.806796112290545e+23
+risk_score: 0.23
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: completed
+deployment_regions:
+- eu
+- global
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.64
+    size_tokens: 2040455039.4148128
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.87
+  performance:
+    f1_score: 0.95
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

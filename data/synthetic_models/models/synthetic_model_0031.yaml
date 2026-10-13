@@ -1,0 +1,29 @@
+model_id: synthetic_model_0031
+organization: org_1
+compute_flops: 3.901556598496697e+24
+risk_score: 0.1
+risk_category: limited_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.98
+    size_tokens: 29902482566.988567
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.97
+  performance:
+    f1_score: 0.48
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

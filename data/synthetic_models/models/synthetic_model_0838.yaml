@@ -1,0 +1,31 @@
+model_id: synthetic_model_0838
+organization: org_46
+compute_flops: 4.1723860906496464e+24
+risk_score: 0.83
+risk_category: minimal_risk
+use_case: content_generation
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- kr
+- us
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.72
+    size_tokens: 41360337457348.08
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.64
+  performance:
+    f1_score: 0.4
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

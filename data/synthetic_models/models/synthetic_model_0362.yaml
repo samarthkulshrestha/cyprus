@@ -1,0 +1,30 @@
+model_id: synthetic_model_0362
+organization: org_47
+compute_flops: 4.224404745008766e+24
+risk_score: 0.66
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- chat
+- code_generation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.95
+    size_tokens: 7015647146.975591
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.31
+  performance:
+    f1_score: 0.79
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

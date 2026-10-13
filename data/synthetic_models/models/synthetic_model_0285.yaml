@@ -1,0 +1,30 @@
+model_id: synthetic_model_0285
+organization: org_43
+compute_flops: 4.971317214765332e+21
+risk_score: 0.58
+risk_category: high_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- uk
+capabilities:
+- chat
+- reasoning
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.5
+    size_tokens: 26174676782940.793
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.43
+  performance:
+    f1_score: 0.42
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

@@ -1,0 +1,29 @@
+model_id: synthetic_model_0327
+organization: org_18
+compute_flops: 4.498029448593319e+26
+risk_score: 0.75
+risk_category: limited_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- eu
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.53
+    size_tokens: 16808800057598.742
+    documentation_status: complete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.3
+  performance:
+    f1_score: 0.88
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

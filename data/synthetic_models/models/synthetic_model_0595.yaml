@@ -1,0 +1,30 @@
+model_id: synthetic_model_0595
+organization: org_10
+compute_flops: 1.1273793114447154e+21
+risk_score: 0.39
+risk_category: limited_risk
+use_case: research
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- chat
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.56
+    size_tokens: 2873939177.51218
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.43
+  performance:
+    f1_score: 0.96
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

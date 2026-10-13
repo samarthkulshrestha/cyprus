@@ -1,0 +1,31 @@
+model_id: synthetic_model_0357
+organization: org_7
+compute_flops: 8.356717711990761e+25
+risk_score: 0.44
+risk_category: high_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+- us
+- au
+capabilities:
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.58
+    size_tokens: 3761899148401.3174
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.59
+  performance:
+    f1_score: 0.49
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

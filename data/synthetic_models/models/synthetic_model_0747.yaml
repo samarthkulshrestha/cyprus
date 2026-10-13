@@ -1,0 +1,33 @@
+model_id: synthetic_model_0747
+organization: org_12
+compute_flops: 4.6569758356196115e+24
+risk_score: 0.47
+risk_category: limited_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- uk
+- us
+- au
+capabilities:
+- chat
+- code_generation
+- multimodal
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.6
+    size_tokens: 5022764617616.348
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.9
+  performance:
+    f1_score: 0.56
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

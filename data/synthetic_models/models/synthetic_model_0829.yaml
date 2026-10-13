@@ -1,0 +1,29 @@
+model_id: synthetic_model_0829
+organization: org_45
+compute_flops: 2.5305455067104276e+18
+risk_score: 0.37
+risk_category: high_risk
+use_case: law_enforcement
+red_teaming_status: completed
+deployment_regions:
+- us
+- jp
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.83
+    size_tokens: 381701651343.3043
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.71
+  performance:
+    f1_score: 0.76
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

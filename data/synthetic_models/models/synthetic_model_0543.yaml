@@ -1,0 +1,36 @@
+model_id: synthetic_model_0543
+organization: org_47
+compute_flops: 1.0154159251041698e+23
+risk_score: 0.27
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- eu
+- kr
+- ca
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- image_generation
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.64
+    size_tokens: 8679402686600.973
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: completed
+    score: 0.63
+  performance:
+    f1_score: 0.84
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

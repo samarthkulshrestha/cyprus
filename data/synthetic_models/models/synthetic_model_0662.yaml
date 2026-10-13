@@ -1,0 +1,31 @@
+model_id: synthetic_model_0662
+organization: org_31
+compute_flops: 7.426175567732943e+24
+risk_score: 0.55
+risk_category: high_risk
+use_case: biometric_surveillance
+red_teaming_status: in_progress
+deployment_regions:
+- us
+- eu
+capabilities:
+- chat
+- reasoning
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.85
+    size_tokens: 49890197519299.91
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.34
+  performance:
+    f1_score: 0.47
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

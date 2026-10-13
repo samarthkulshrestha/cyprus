@@ -1,0 +1,29 @@
+model_id: synthetic_model_0959
+organization: org_35
+compute_flops: 4.1913563978472474e+18
+risk_score: 0.44
+risk_category: limited_risk
+use_case: content_generation
+red_teaming_status: not_started
+deployment_regions:
+- au
+- uk
+capabilities:
+- general
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.76
+    size_tokens: 43367121368954.44
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.82
+  performance:
+    f1_score: 0.52
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

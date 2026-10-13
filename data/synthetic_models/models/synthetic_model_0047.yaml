@@ -1,0 +1,34 @@
+model_id: synthetic_model_0047
+organization: org_23
+compute_flops: 1.300237088058789e+22
+risk_score: 0.14
+risk_category: high_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- uk
+- global
+capabilities:
+- chat
+- code_generation
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.76
+    size_tokens: 63535841825.96171
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.91
+  performance:
+    f1_score: 0.43
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

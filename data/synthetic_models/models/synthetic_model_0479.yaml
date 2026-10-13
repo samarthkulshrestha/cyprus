@@ -1,0 +1,31 @@
+model_id: synthetic_model_0479
+organization: org_10
+compute_flops: 2.3006775824685962e+18
+risk_score: 0.73
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- jp
+- ca
+- au
+capabilities:
+- translation
+- summarization
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.57
+    size_tokens: 1737067589671.019
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.98
+  performance:
+    f1_score: 0.62
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

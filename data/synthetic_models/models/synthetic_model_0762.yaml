@@ -1,0 +1,31 @@
+model_id: synthetic_model_0762
+organization: org_23
+compute_flops: 3.395864558264526e+18
+risk_score: 0.18
+risk_category: unacceptable_risk
+use_case: education
+red_teaming_status: in_progress
+deployment_regions:
+- jp
+capabilities:
+- chat
+- code_generation
+- reasoning
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.61
+    size_tokens: 576860706254.9462
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.41
+  performance:
+    f1_score: 0.41
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

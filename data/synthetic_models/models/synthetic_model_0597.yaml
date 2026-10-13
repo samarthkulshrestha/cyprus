@@ -1,0 +1,32 @@
+model_id: synthetic_model_0597
+organization: org_11
+compute_flops: 9.454375043031931e+20
+risk_score: 0.1
+risk_category: limited_risk
+use_case: biometric_surveillance
+red_teaming_status: completed
+deployment_regions:
+- au
+- eu
+capabilities:
+- chat
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.57
+    size_tokens: 3018055247242.57
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.33
+  performance:
+    f1_score: 0.62
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

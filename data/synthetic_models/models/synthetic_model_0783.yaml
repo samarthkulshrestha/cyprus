@@ -1,0 +1,32 @@
+model_id: synthetic_model_0783
+organization: org_38
+compute_flops: 8.848437058826433e+21
+risk_score: 0.6
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- jp
+- us
+capabilities:
+- chat
+- multimodal
+- reasoning
+- image_generation
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.68
+    size_tokens: 496126708025.8185
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.53
+  performance:
+    f1_score: 0.82
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

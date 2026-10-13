@@ -1,0 +1,30 @@
+model_id: synthetic_model_0150
+organization: org_47
+compute_flops: 8.881167947421345e+21
+risk_score: 0.27
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- ca
+capabilities:
+- reasoning
+- translation
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.64
+    size_tokens: 14346566209903.957
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.67
+  performance:
+    f1_score: 0.67
+    benchmark: winogrande
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

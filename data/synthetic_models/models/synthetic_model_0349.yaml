@@ -1,0 +1,29 @@
+model_id: synthetic_model_0349
+organization: org_34
+compute_flops: 1.118750613572697e+24
+risk_score: 0.29
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- us
+capabilities:
+- chat
+- code_generation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.94
+    size_tokens: 12619662985.835363
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: in_progress
+    score: 0.41
+  performance:
+    f1_score: 0.88
+    benchmark: arc
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

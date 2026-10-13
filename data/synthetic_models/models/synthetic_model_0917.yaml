@@ -1,0 +1,30 @@
+model_id: synthetic_model_0917
+organization: org_30
+compute_flops: 7.770205488358193e+26
+risk_score: 0.75
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- us
+- jp
+capabilities:
+- chat
+- translation
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.91
+    size_tokens: 5993814626.384245
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.78
+  performance:
+    f1_score: 0.66
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

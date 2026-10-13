@@ -1,0 +1,31 @@
+model_id: synthetic_model_0051
+organization: org_24
+compute_flops: 4.725333283610455e+19
+risk_score: 0.63
+risk_category: high_risk
+use_case: cognitive_manipulation
+red_teaming_status: completed
+deployment_regions:
+- uk
+capabilities:
+- code_generation
+- translation
+- summarization
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.95
+    size_tokens: 168095452158.60208
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.54
+  performance:
+    f1_score: 0.44
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

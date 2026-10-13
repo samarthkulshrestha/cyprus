@@ -1,0 +1,33 @@
+model_id: synthetic_model_0859
+organization: org_37
+compute_flops: 1.5879421404084837e+20
+risk_score: 0.55
+risk_category: limited_risk
+use_case: employment
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+- global
+capabilities:
+- chat
+- code_generation
+- image_generation
+- translation
+- summarization
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.82
+    size_tokens: 3481896718886.083
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.99
+  performance:
+    f1_score: 0.65
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

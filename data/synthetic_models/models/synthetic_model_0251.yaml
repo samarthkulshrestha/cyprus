@@ -1,0 +1,29 @@
+model_id: synthetic_model_0251
+organization: org_16
+compute_flops: 5.1934836358319996e+26
+risk_score: 0.11
+risk_category: minimal_risk
+use_case: law_enforcement
+red_teaming_status: not_started
+deployment_regions:
+- global
+capabilities:
+- chat
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.86
+    size_tokens: 297824297945.2974
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.94
+  performance:
+    f1_score: 0.74
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: true

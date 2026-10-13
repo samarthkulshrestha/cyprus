@@ -1,0 +1,31 @@
+model_id: synthetic_model_0139
+organization: org_6
+compute_flops: 6.620139889592962e+22
+risk_score: 0.62
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- us
+capabilities:
+- code_generation
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.75
+    size_tokens: 9961682494.106361
+    documentation_status: partial
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.44
+  performance:
+    f1_score: 0.52
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: none
+    audit_logging: true

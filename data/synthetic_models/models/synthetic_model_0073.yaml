@@ -1,0 +1,31 @@
+model_id: synthetic_model_0073
+organization: org_29
+compute_flops: 1.9774978563308416e+18
+risk_score: 0.6
+risk_category: unacceptable_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- kr
+capabilities:
+- chat
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.75
+    size_tokens: 74407487005493.48
+    documentation_status: complete
+  bias_assessment:
+    methodology: red_teaming
+    status: in_progress
+    score: 0.46
+  performance:
+    f1_score: 0.44
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

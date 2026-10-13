@@ -1,0 +1,32 @@
+model_id: synthetic_model_0719
+organization: org_27
+compute_flops: 1.6745382237472344e+25
+risk_score: 0.08
+risk_category: unacceptable_risk
+use_case: code_generation
+red_teaming_status: completed
+deployment_regions:
+- uk
+- jp
+- ca
+capabilities:
+- chat
+- multimodal
+- summarization
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.9
+    size_tokens: 30729526345.398888
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.49
+  performance:
+    f1_score: 0.8
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

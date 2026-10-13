@@ -1,0 +1,30 @@
+model_id: synthetic_model_0968
+organization: org_49
+compute_flops: 1.6081860430286845e+18
+risk_score: 0.33
+risk_category: high_risk
+use_case: code_generation
+red_teaming_status: in_progress
+deployment_regions:
+- eu
+- uk
+- au
+capabilities:
+- chat
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.58
+    size_tokens: 2377978759.0799584
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: completed
+    score: 0.58
+  performance:
+    f1_score: 0.89
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

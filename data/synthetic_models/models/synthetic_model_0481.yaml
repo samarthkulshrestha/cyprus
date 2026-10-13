@@ -1,0 +1,32 @@
+model_id: synthetic_model_0481
+organization: org_21
+compute_flops: 8.773312765152895e+21
+risk_score: 0.15
+risk_category: unacceptable_risk
+use_case: healthcare
+red_teaming_status: completed
+deployment_regions:
+- eu
+- us
+- global
+capabilities:
+- reasoning
+- summarization
+- search
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.87
+    size_tokens: 1263274730.4832056
+    documentation_status: partial
+  bias_assessment:
+    methodology: red_teaming
+    status: completed
+    score: 0.93
+  performance:
+    f1_score: 0.55
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

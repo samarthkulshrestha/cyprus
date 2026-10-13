@@ -1,0 +1,30 @@
+model_id: synthetic_model_0233
+organization: org_35
+compute_flops: 1.264377318754321e+26
+risk_score: 0.51
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- eu
+- ca
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: mixed
+    quality_score: 0.54
+    size_tokens: 486594799685.1827
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: not_started
+    score: 0.99
+  performance:
+    f1_score: 0.57
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: none
+    audit_logging: false

@@ -1,0 +1,31 @@
+model_id: synthetic_model_0245
+organization: org_6
+compute_flops: 1.8580448599578645e+25
+risk_score: 0.59
+risk_category: limited_risk
+use_case: healthcare
+red_teaming_status: not_started
+deployment_regions:
+- global
+- kr
+- eu
+capabilities:
+- code_generation
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.62
+    size_tokens: 50583612237.35206
+    documentation_status: complete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.86
+  performance:
+    f1_score: 0.96
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: true

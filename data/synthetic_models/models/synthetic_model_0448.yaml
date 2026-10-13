@@ -1,0 +1,31 @@
+model_id: synthetic_model_0448
+organization: org_34
+compute_flops: 4.0920991964770447e+18
+risk_score: 0.38
+risk_category: high_risk
+use_case: employment
+red_teaming_status: not_started
+deployment_regions:
+- uk
+- us
+- kr
+capabilities:
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.51
+    size_tokens: 2281812229752.405
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: unknown
+    status: in_progress
+    score: 0.72
+  performance:
+    f1_score: 0.91
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

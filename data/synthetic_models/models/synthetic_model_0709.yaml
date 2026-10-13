@@ -1,0 +1,30 @@
+model_id: synthetic_model_0709
+organization: org_12
+compute_flops: 1.9250372661123452e+22
+risk_score: 0.21
+risk_category: high_risk
+use_case: critical_infrastructure
+red_teaming_status: in_progress
+deployment_regions:
+- ca
+capabilities:
+- reasoning
+- translation
+- search
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.87
+    size_tokens: 13012817459367.229
+    documentation_status: partial
+  bias_assessment:
+    methodology: statistical_analysis
+    status: not_started
+    score: 0.47
+  performance:
+    f1_score: 0.56
+    benchmark: arc
+    task: general
+  security:
+    access_control: oauth
+    audit_logging: false

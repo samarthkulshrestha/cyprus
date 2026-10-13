@@ -1,0 +1,33 @@
+model_id: synthetic_model_0343
+organization: org_13
+compute_flops: 1.8720089621481767e+25
+risk_score: 0.4
+risk_category: unacceptable_risk
+use_case: general_purpose
+red_teaming_status: in_progress
+deployment_regions:
+- global
+- uk
+- ca
+capabilities:
+- chat
+- code_generation
+- reasoning
+- search
+governance:
+  training_data:
+    source: publicly_available
+    quality_score: 0.98
+    size_tokens: 91537091337929.02
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.81
+  performance:
+    f1_score: 0.9
+    benchmark: truthfulqa
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: false

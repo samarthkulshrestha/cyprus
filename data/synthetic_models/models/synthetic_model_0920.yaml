@@ -1,0 +1,32 @@
+model_id: synthetic_model_0920
+organization: org_50
+compute_flops: 2.042597892976634e+22
+risk_score: 0.53
+risk_category: minimal_risk
+use_case: general_purpose
+red_teaming_status: completed
+deployment_regions:
+- global
+- jp
+capabilities:
+- chat
+- multimodal
+- reasoning
+- translation
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.7
+    size_tokens: 1295497697.1886315
+    documentation_status: complete
+  bias_assessment:
+    methodology: adversarial_testing
+    status: in_progress
+    score: 0.66
+  performance:
+    f1_score: 0.44
+    benchmark: mmlu
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false

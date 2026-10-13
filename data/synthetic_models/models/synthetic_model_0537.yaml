@@ -1,0 +1,31 @@
+model_id: synthetic_model_0537
+organization: org_41
+compute_flops: 1.584738656056818e+24
+risk_score: 0.51
+risk_category: minimal_risk
+use_case: education
+red_teaming_status: completed
+deployment_regions:
+- eu
+- au
+- ca
+capabilities:
+- chat
+- reasoning
+governance:
+  training_data:
+    source: proprietary
+    quality_score: 0.51
+    size_tokens: 216941367737.03696
+    documentation_status: partial
+  bias_assessment:
+    methodology: unknown
+    status: not_started
+    score: 0.89
+  performance:
+    f1_score: 0.46
+    benchmark: arc
+    task: general
+  security:
+    access_control: rbac
+    audit_logging: true

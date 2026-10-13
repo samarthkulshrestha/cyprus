@@ -1,0 +1,28 @@
+model_id: synthetic_model_0787
+organization: org_44
+compute_flops: 2.5827369557272687e+26
+risk_score: 0.52
+risk_category: minimal_risk
+use_case: research
+red_teaming_status: not_started
+deployment_regions:
+- ca
+capabilities:
+- reasoning
+governance:
+  training_data:
+    source: undocumented
+    quality_score: 0.76
+    size_tokens: 14881391238.836359
+    documentation_status: incomplete
+  bias_assessment:
+    methodology: statistical_analysis
+    status: completed
+    score: 0.31
+  performance:
+    f1_score: 0.82
+    benchmark: hellaswag
+    task: general
+  security:
+    access_control: api_key
+    audit_logging: false
