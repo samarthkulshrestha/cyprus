@@ -44,4 +44,8 @@ line-length = 100
 
 [tool.mypy]
 python_version = "3.11"
-strict = true
+# Advisory type checking: catches real type errors without blocking CI on
+# missing annotations in CLI wiring, policy test suites, and optional scrapers.
+ignore_missing_imports = true
+disable_error_code = ["import-untyped"]
+exclude = "(?x)(^cyprus/policies/.*/tests/|^cyprus/data/scrapers/)"

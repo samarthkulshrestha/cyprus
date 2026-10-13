@@ -1,4 +1,5 @@
 import json
+from typing import Any
 
 from cyprus.engine.result import ComplianceResult, ComplianceStatus
 
@@ -86,7 +87,7 @@ def _report_markdown(result: ComplianceResult) -> str:
 
 
 def _report_json(result: ComplianceResult) -> str:
-    data = {
+    data: dict[str, Any] = {
         "policy": result.policy_name,
         "version": result.policy_version,
         "timestamp": result.timestamp.isoformat(),
